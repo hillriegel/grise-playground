@@ -2,14 +2,11 @@
 
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import './demo.css';
+
 import SelectMenu from './SelectMenu';
-import Link from 'next/link';
 import Grid from '@mui/material/Grid';
-import HeadphonesIcon from '@mui/icons-material/Headphones';
+
 export default function CssDemo() {
-
-
-
     type FlexDirection = 'row' | 'column';
     type AlignItems = 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
 
@@ -17,17 +14,23 @@ export default function CssDemo() {
     const [direction, setDirection] = useState<FlexDirection>('row');
 
     return (
-      <div>
-              <h1>CSS Demo</h1>
-          <main>
-
-
-              
-              <br />
-              <div style={{margin: '20px'}}>
-                <h1>Example of FlexBox styling</h1>
+        <div>
+            <div style={{marginLeft: '40px'}}><h1>CSS Demo</h1></div>
+  
+      <div style={{width: '80%', display: 'flex'}}>
+        
+        <main className="flex min-h-screen flex-col" style={{marginLeft: '20px'}}>
+          <div style={{margin: '20px'}}>
+              <div style={{width: '60%'}}>
+               
+                <h2>Example of FlexBox styling</h2>
+                <p>I never can remember what justify-content vs. align-content vs. align-items does. I made this
+                    handy little interactive display so that I could set the styles and see the layout 
+                    change dynamically.
+                </p>
+            </div>
                 <br />
-                <div className="css-content">
+            <div className="css-content">
                 height: 400px;<br />
                 display: flex;<br />
                 padding: 20px;<br />
@@ -78,8 +81,8 @@ export default function CssDemo() {
                       <iframe  src="https://open.spotify.com/embed/album/0ody1YxJZqNqTMNSqG3vNy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                       <p>The dream that we would have FSD and be able to enjoy a little fun time in the backseat of our car while we 
                         took a trip down the PCH seems forever out of reach.
-                        </p><p>It's the inspiration for this album, a road trip album, and a nod
-                        to the AOR rock of the late 70s (Donald Fagan's "The Nightfly" in particular).
+                        </p><p>It&apos;s the inspiration for this album, a road trip album, and a nod
+                        to the AOR rock of the late 70s (Donald Fagan&apos;s &quot;The Nightfly&quot; in particular).
                         </p>
                         <p><b>cover art by Niko</b></p>
                   </div>
@@ -87,7 +90,7 @@ export default function CssDemo() {
 
               <br />
               <div style={{margin: '20px'}}>
-              <h1>Example of a Grid</h1>
+              <h2>Example of a Grid</h2>
               <br />
               <div className="css-content">
                 display: grid;<br />
@@ -110,7 +113,7 @@ export default function CssDemo() {
               </section>
 
                 <div style={{height: '800px', padding: '20px'}}>
-                    <h1> Custom Select Dropdown</h1>
+                    <h2> Custom Select Dropdown</h2>
                     <p>This was an interview test question to create a custom select menu dropdown from scratch. I found this challenging
                         initially (because I hate coding under pressure and with someone watching) because I have used material-ui for years
                         and a proprietary design system. Whenever I needed a select menu I just imported it.
@@ -126,6 +129,6 @@ export default function CssDemo() {
               </div>
           </main>
     </div>
-      
+    </div>
     );
 };

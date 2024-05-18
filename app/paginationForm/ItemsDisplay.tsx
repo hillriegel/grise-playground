@@ -21,7 +21,7 @@ export default function ItemsDisplay({ items, loading }: ItemsDisplayProps) {
     return (
         <Card style={{
             color: '#444',
-            width: '80%',
+            width: '100%',
             padding: '20px',
             height: '550px',
             position: 'relative'

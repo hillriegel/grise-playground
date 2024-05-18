@@ -130,7 +130,7 @@ const DrawerList = (
             <Button onClick={toggleDrawer(true)}><MenuIcon /></Button> 
           </Grid>
           <Grid item sm={2}>
-            <div style={{marginTop: '5px'}}>Grise's Playground</div>
+            <div style={{marginTop: '5px'}}>Grise&apos;s Playground</div>
           </Grid>
         </Grid>
         </div>

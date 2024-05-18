@@ -6,6 +6,7 @@ import fetchData from './fetchData';
 import FirstPageIcon from '@mui/icons-material/FirstPage';
 import LastPageIcon from '@mui/icons-material/LastPage';
 import {Item, UpdateState, APIResponse, PaginationBarProps} from './types';
+import './pagination.css';
 
 export default function PaginationBar({items, updateItemsDisplayed, setLoading}: PaginationBarProps) {
     const [numItems, setNumItems] = useState(0);
@@ -43,18 +44,15 @@ export default function PaginationBar({items, updateItemsDisplayed, setLoading}:
     }, [items.pageNumber, numPages, updateItemsDisplayed, setLoading]);
 
     return (
-        <div>
-        <div style={{color: '#fff', marginTop: '20px'}}>
-
-            Showing page {items.pageNumber} of {numPages} of {numItems} items
-        </div>
-        <div style={{color: '#fff', marginTop: '20px'}}>
+        <div className="button-bar">
+            <div>
+                Showing page {items.pageNumber} of {numPages} of {numItems} items
+            </div>
             <Button onClick={() => handleGet('first')} variant="contained"><FirstPageIcon /></Button>
             <Button onClick={() => handleGet('prev')} variant="contained">Prev</Button>
             <Button onClick={() => handleGet('next')} variant="contained">Next</Button>
             <Button onClick={() => handleGet('last')} variant="contained"><LastPageIcon /></Button>
         </div>
-        </div>
-    );
+);
 }
 
