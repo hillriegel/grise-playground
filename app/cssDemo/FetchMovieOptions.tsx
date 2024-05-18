@@ -11,7 +11,7 @@ async function FetchMovies() {
 
     // Only add Authorization header if authToken is not undefined
     if (authToken) {
-        headers['Authorization'] = `Bearer ${authToken}`;
+        headers['Authorization'] = `${authToken}`;
     }
 
     const options: RequestInit = {

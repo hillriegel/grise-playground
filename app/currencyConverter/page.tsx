@@ -78,7 +78,7 @@ export default function CurrencyConverter() {
   };
 
   return (
-    <main className="flex  flex-col" style={{margin: '20px'}}>
+    <main className="flex min-h-screen flex-col" style={{margin: '30px'}}>
       <h1>Currency Converter</h1>
         <p>This is a simple currency converter that makes use of a free API to retrieve the list of currencies to populate
             the dropdown menu.

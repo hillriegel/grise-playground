@@ -14,48 +14,54 @@ export default function CssDemo() {
     const [direction, setDirection] = useState<FlexDirection>('row');
 
     return (
-        <div>
-            <div style={{marginLeft: '40px'}}><h1>CSS Demo</h1></div>
-  
-      <div style={{width: '80%', display: 'flex'}}>
-        
-        <main className="flex min-h-screen flex-col" style={{marginLeft: '20px'}}>
+        <main className="flex min-h-screen flex-col" style={{margin: '30px'}}>
+            <div><h1>CSS Demo</h1></div>
           <div style={{margin: '20px'}}>
-              <div style={{width: '60%'}}>
                
                 <h2>Example of FlexBox styling</h2>
-                <p>I never can remember what justify-content vs. align-content vs. align-items does. I made this
-                    handy little interactive display so that I could set the styles and see the layout 
-                    change dynamically.
-                </p>
-            </div>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                        <p>I like to remember what justify-content vs. align-content vs. align-items does. I made this
+                            handy little interactive display so that I could set the styles and see the layout 
+                            change dynamically.
+                        </p>
+                        <br />
+                    </Grid>
+                </Grid>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                        <div className="css-content">
+                            height: 400px;<br />
+                            display: flex;<br />
+                            padding: 20px;<br />
+                            margin: 20px;<br />
+                            justify-content: center;<br />
+                            align-content: flex-start;<br />
+                            border-radius: 10px;<br />
+                        </div>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                     </Grid>
+                </Grid>
+
                 <br />
-            <div className="css-content">
-                height: 400px;<br />
-                display: flex;<br />
-                padding: 20px;<br />
-                 margin: 20px;<br />
-                justify-content: center;<br />
-                align-content: flex-start;<br />
-                border-radius: 10px;<br />
-              </div>
-              <br />
+
             <div className="features-buttons">
                 <i>Align items affects vertical placement</i><br />
-                <button className="btn btn-primary" onClick={()=>setAlignment('flex-start')}>align-items: flex-start</button>
-                <button className="btn btn-primary" onClick={()=>setAlignment('flex-end')}>align-items: flex-end</button>
-                <button className="btn btn-primary" onClick={()=>setAlignment('center')}>align-items: center</button>
-                <button className="btn btn-primary" onClick={()=>setAlignment('baseline')}>align-items: baseline</button>
-                <button className="btn btn-primary" onClick={()=>setAlignment('stretch')}>align-items: stretch</button>
+                <button className={`btn btn-primary ${alignment === 'flex-start' ? 'selected' : ''}`} onClick={()=>setAlignment('flex-start')}>align-items: flex-start</button>
+                <button className={`btn btn-primary ${alignment === 'flex-end' ? 'selected' : ''}`} onClick={()=>setAlignment('flex-end')}>align-items: flex-end</button>
+                <button className={`btn btn-primary ${alignment === 'center' ? 'selected' : ''}`} onClick={()=>setAlignment('center')}>align-items: center</button>
+                <button className={`btn btn-primary ${alignment === 'baseline' ? 'selected' : ''}`} onClick={()=>setAlignment('baseline')}>align-items: baseline</button>
+                <button className={`btn btn-primary ${alignment === 'stretch' ? 'selected' : ''}`} onClick={()=>setAlignment('stretch')}>align-items: stretch</button>
                 <br />
                 <i>Flex-Direction: row or column</i><br />
-                <button className="btn btn-primary" onClick={()=>setDirection('row')}>flex-direction: row</button>
-                <button className="btn btn-primary" onClick={()=>setDirection('column')}>flex-direction: column</button>
+                <button className={`btn btn-primary ${direction === 'row' ? 'selected' : ''}`} onClick={()=>setDirection('row')}>flex-direction: row</button>
+                <button className={`btn btn-primary ${direction === 'column' ? 'selected' : ''}`} onClick={()=>setDirection('column')}>flex-direction: column</button>
     
             </div>
               </div>
               <section className="features" style={{ alignItems: alignment, flexDirection: direction}}>
-                  <div className="feature">
+                  <div className="feature alt-bkg">
                       <h3>Griseconica Remixed</h3>
                       <br />
                       <iframe src="https://open.spotify.com/embed/album/0JkQJUi8MJFNLG7AvpXBeL?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -63,7 +69,7 @@ export default function CssDemo() {
                       from the album <i>Griseconica</i>.</p>
                       <p><b>cover art by Grisecon</b></p>
                   </div>
-                  <div className="feature">
+                  <div className="feature alt-bkg">
                       <h3>Griseconica</h3>
                       <br />
                       <iframe src="https://open.spotify.com/embed/album/0xuPPPmCs1gClEtGP84pAI?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -75,7 +81,7 @@ export default function CssDemo() {
                       </p>
                       <p><b>Cover art by Michael Koehler</b></p>
                   </div>
-                  <div className="feature">
+                  <div className="feature alt-bkg">
                       <h3>Backseat Driving</h3>
                       <br />
                       <iframe  src="https://open.spotify.com/embed/album/0ody1YxJZqNqTMNSqG3vNy?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -92,10 +98,14 @@ export default function CssDemo() {
               <div style={{margin: '20px'}}>
               <h2>Example of a Grid</h2>
               <br />
-              <div className="css-content">
-                display: grid;<br />
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-              </div>
+              <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                        <div className="css-content">
+                            display: grid;<br />
+                            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                        </div>
+                    </Grid>
+                </Grid>
               </div>
               <section className="cards">
                   <div className="card">
@@ -114,21 +124,23 @@ export default function CssDemo() {
 
                 <div style={{height: '800px', padding: '20px'}}>
                     <h2> Custom Select Dropdown</h2>
-                    <p>This was an interview test question to create a custom select menu dropdown from scratch. I found this challenging
-                        initially (because I hate coding under pressure and with someone watching) because I have used material-ui for years
-                        and a proprietary design system. Whenever I needed a select menu I just imported it.
-                    </p>
-                    <p>There are many improvements that could be made to this such as truncating menu options that are too long. The time limit
-                        for this exercise was a little over 2 hours.
-                    </p>
-                    <p>This menu uses Fetch to grab a list of movie genres from a public API.</p>
+                    <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                        <p>This was an interview test question to create a custom select menu dropdown from scratch. I found this challenging
+                            initially (because I hate coding under pressure and with someone watching) because I have used material-ui for years
+                            and a proprietary design system. Whenever I needed a select menu I just imported it.
+                        </p>
+                        <p>There are many improvements that could be made to this such as truncating menu options that are too long. The time limit
+                            for this exercise was a little over 2 hours.
+                        </p>
+                        <p>This menu uses Fetch to grab a list of movie genres from a public API.</p>
+                        </Grid>
+                    </Grid>
                     <br />
                     <section>
                         <SelectMenu />
                     </section>
               </div>
           </main>
-    </div>
-    </div>
     );
 };

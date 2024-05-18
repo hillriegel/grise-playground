@@ -140,8 +140,13 @@ const DrawerList = (
         {DrawerList}
       </Drawer>
       </div>
-      <div className="mainContent" style={{height: '100%'}}>
-        {children}
+      <div className="outer">
+      <div className="container">
+        <div className="content">
+          {children}
+        </div>
+        </div>
+      
       </div>
       </body>
     </html>

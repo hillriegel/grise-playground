@@ -1,8 +1,29 @@
+export interface ImageType {
+    url: string;
+}
 
-    
+export interface Image {
+    height: number;
+    url: string;
+    width: number;
+}
+
 export interface Item {
-    id: number;
+    id: string;
+    href: string;
+    genres: string[];
+    images: Image[];
     name: string;
+    uri: string;
+    external_urls: {
+        spotify: string;
+    };
+    followers: {
+        href: null;
+        total: number;
+    };
+    popularity: number;
+    type: string;
 }
 
 export interface UpdateState {

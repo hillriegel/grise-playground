@@ -3,7 +3,9 @@
 import React, { useState, useEffect } from 'react';
 
 const clientId = '50c77600e4654f609b16f21933b7e5c3'; // Replace with your client ID
-const clientSecret = 'f4daec2b356543008e0ba7ea87583834'; // Replace with your client secret
+//const clientSecret = 'f4daec2b356543008e0ba7ea87583834'; // Replace with your client secret
+
+const clientSecret = process.env.SPOTIFY_API_SECRET;
 
 const FetchSpotify = () => {
   const [token, setToken] = useState('');

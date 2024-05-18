@@ -8,22 +8,9 @@ import SearchBar from './SearchBar';
 import Grid from '@mui/material/Grid';
 import UnstyledPaginationIntroduction from './SampleMuiPagination';
 import FetchSpotify from './fetchSpotify';
+import {Image, Item} from './types';
 
 const Pagination = () => {
-
-  interface Image {
-    height: number;
-    url: string;
-    width: number;
-  }
-
-  interface Item {
-    id: number;
-    genres: string[];
-    images: Image[];
-    name: string;
-    uri: string;
-  }
 
   const [loading, setLoading] = useState(false);
 
@@ -81,21 +68,22 @@ const Pagination = () => {
 
 
   return (
-    <main className="flex min-h-screen flex-col" style={{marginLeft: '20px'}}>
-      
+    <main className="flex min-h-screen flex-col" style={{margin: '30px'}}>
       <h1>Example of a Pagination Display</h1>
-      <div style={{width: '60%'}}>
-      <p>This is another interview task where I was given 1 1/2 hours to complete it. I sort of choked on this, and my excuse is I never work well under pressure, under a time constraint, and while
-        someone is watching me code.
+      <Grid container spacing={2}>
+          <Grid item xs={12} sm={7}>
+      <p>This is another interview task where I was given 1 1/2 hours to complete it. I'm enjoying learning to code under pressure with the clock ticking and someone looking over my shoulder. I may
+        not be great at it now, but I'm excited to get better.
       </p>
       <p>
         It&apos;s also another example where I found myself at a disadvantage having used Material-UI components for so long. Material-UI provides a nice pagination component, and I would always just import and use that:
       </p>
-      </div>
       <div style={{marginTop: '20px'}}>
         <h2>Material-UI Pagination</h2>
         <UnstyledPaginationIntroduction />
-      </div>
+        </div>
+      </Grid>
+      </Grid>
       <p>
         After the test was over, I went back and did the exercise in my own time.
       </p>
@@ -103,17 +91,27 @@ const Pagination = () => {
       <hr />
 
       <Grid container spacing={2}>
-          <Grid item xs={6} sm={6}>
+          <Grid item xs={12} sm={7}>
           <div style={{padding: '24px', backgroundColor: '#dddddd', marginTop: '30px', borderRadius: '10px'}}>
-            <SearchBar />
-            <FetchSpotify />
+            <Grid  container >
+              <Grid xs={6} sm={9} >
+                <h2>Artists similar to Grisecon</h2>
+              </Grid>
+                <Grid xs={4} sm={3} style={{paddingTop: '20px'}}>
+                  <SearchBar />
+                </Grid>
+            </Grid>
+
+            
+           
+
             <br />
             <ItemsDisplay items={items.itemsToDisplay} loading={loading}/>
             <PaginationBar items={items} updateItemsDisplayed={updateItemsDisplayed} setLoading={setLoading} />
           </div>
 
           </Grid>
-          <Grid item xs={6} sm={6} >
+          <Grid item xs={12} sm={5} >
           <div style={{padding: '24px', marginRight: '20px'}}>
             <h2>Coding Task</h2>
             <p>You are tasked with implementing a basic pagination component in React for a web application. 
