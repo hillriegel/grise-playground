@@ -5,6 +5,8 @@ import Button from '@mui/material/Button';
 import fetchData from './fetchData';
 import FirstPageIcon from '@mui/icons-material/FirstPage';
 import LastPageIcon from '@mui/icons-material/LastPage';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import {Item, UpdateState, APIResponse, PaginationBarProps} from './types';
 import './pagination.css';
 
@@ -31,7 +33,7 @@ export default function PaginationBar({items, updateItemsDisplayed, setLoading}:
         }
 
         setLoading(true);
-        fetchData(pn, 20)
+        fetchData(pn, 4)
             .then((result: APIResponse) => {
                 updateItemsDisplayed({ pageNumber: pn, itemsToDisplay: result.data });
                 setNumItems(result.totalItems);
@@ -45,13 +47,16 @@ export default function PaginationBar({items, updateItemsDisplayed, setLoading}:
 
     return (
         <div className="button-bar">
-            <div>
-                Showing page {items.pageNumber} of {numPages} of {numItems} items
+            <div className="rows-per-page">
+                Rows per page: 
             </div>
-            <Button onClick={() => handleGet('first')} variant="contained"><FirstPageIcon /></Button>
-            <Button onClick={() => handleGet('prev')} variant="contained">Prev</Button>
-            <Button onClick={() => handleGet('next')} variant="contained">Next</Button>
-            <Button onClick={() => handleGet('last')} variant="contained"><LastPageIcon /></Button>
+            <div className="pagination-text">
+                1 - 10 of {numItems}
+            </div>
+            <Button className="button-item" onClick={() => handleGet('first')} variant="contained"><FirstPageIcon /></Button>
+            <Button className="button-item" onClick={() => handleGet('prev')} variant="contained"><ArrowBackIosIcon style={{width: '16px'}} /></Button>
+            <Button className="button-item" onClick={() => handleGet('next')} variant="contained"><ArrowForwardIosIcon  style={{width: '16px'}}/></Button>
+            <Button className="button-item" onClick={() => handleGet('last')} variant="contained"><LastPageIcon /></Button>
         </div>
 );
 }

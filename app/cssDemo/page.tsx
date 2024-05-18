@@ -58,7 +58,7 @@ export default function CssDemo() {
                   <div className="feature">
                       <h3>Griseconica Remixed</h3>
                       <br />
-                      <iframe src="https://open.spotify.com/embed/album/0JkQJUi8MJFNLG7AvpXBeL?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                      <iframe src="https://open.spotify.com/embed/album/0JkQJUi8MJFNLG7AvpXBeL?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                       <p>Released in April, 2024, <i>Griseconica Remixed</i> is a collection of dance mixes (120-128 bpm) of tracks
                       from the album <i>Griseconica</i>.</p>
                       <p><b>cover art by Grisecon</b></p>
@@ -66,8 +66,8 @@ export default function CssDemo() {
                   <div className="feature">
                       <h3>Griseconica</h3>
                       <br />
-                      <iframe src="https://open.spotify.com/embed/album/0xuPPPmCs1gClEtGP84pAI?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                      <p>This album is centered around a track called "Behold." "Behold" itself was spawned from "Grass / Ocean's Poem"
+                      <iframe src="https://open.spotify.com/embed/album/0xuPPPmCs1gClEtGP84pAI?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                      <p>This album is centered around a track called &quot;Behold.&quot; &quot;Behold&quot; itself was spawned from &quot;Grass / Ocean&apos;s Poem&quot;
                         a track that has been shazam-ed around the world tens of thousands of times.
                         </p>
                         <p> The album also features a sort of sibling track
@@ -78,7 +78,7 @@ export default function CssDemo() {
                   <div className="feature">
                       <h3>Backseat Driving</h3>
                       <br />
-                      <iframe  src="https://open.spotify.com/embed/album/0ody1YxJZqNqTMNSqG3vNy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                      <iframe  src="https://open.spotify.com/embed/album/0ody1YxJZqNqTMNSqG3vNy?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                       <p>The dream that we would have FSD and be able to enjoy a little fun time in the backseat of our car while we 
                         took a trip down the PCH seems forever out of reach.
                         </p><p>It&apos;s the inspiration for this album, a road trip album, and a nod

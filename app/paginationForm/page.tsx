@@ -7,14 +7,22 @@ import PaginationBar from './PaginationBar';
 import SearchBar from './SearchBar';
 import Grid from '@mui/material/Grid';
 import UnstyledPaginationIntroduction from './SampleMuiPagination';
-
+import FetchSpotify from './fetchSpotify';
 
 const Pagination = () => {
 
+  interface Image {
+    height: number;
+    url: string;
+    width: number;
+  }
 
   interface Item {
     id: number;
+    genres: string[];
+    images: Image[];
     name: string;
+    uri: string;
   }
 
   const [loading, setLoading] = useState(false);
@@ -22,7 +30,35 @@ const Pagination = () => {
   const [items, setItems] = useState (
       {
         pageNumber: 1,
-        itemsToDisplay: [{id: 1, name: 'Item 1'}]
+        itemsToDisplay: [{
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/7Eu1txygG6nJttLHbZdQOh"
+          },
+          "followers" : {
+            "href" : null,
+            "total" : 724298
+          },
+          "genres" : [ "electronica", "folktronica", "indietronica", "intelligent dance music", "trip hop" ],
+          "href" : "https://api.spotify.com/v1/artists/7Eu1txygG6nJttLHbZdQOh",
+          "id" : "7Eu1txygG6nJttLHbZdQOh",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab6761610000e5eb21c0ea7fc21ab3038d111ec2",
+            "width" : 640
+          }, {
+            "height" : 320,
+            "url" : "https://i.scdn.co/image/ab6761610000517421c0ea7fc21ab3038d111ec2",
+            "width" : 320
+          }, {
+            "height" : 160,
+            "url" : "https://i.scdn.co/image/ab6761610000f17821c0ea7fc21ab3038d111ec2",
+            "width" : 160
+          } ],
+          "name" : "Four Tet",
+          "popularity" : 60,
+          "type" : "artist",
+          "uri" : "spotify:artist:7Eu1txygG6nJttLHbZdQOh"
+        }]
       }
   )
 
@@ -52,7 +88,9 @@ const Pagination = () => {
       <p>This is another interview task where I was given 1 1/2 hours to complete it. I sort of choked on this, and my excuse is I never work well under pressure, under a time constraint, and while
         someone is watching me code.
       </p>
-      <p>It&apos;s also another example where I found myself at a disadvantage having used Material-UI components for so long. Material-UI provides a nice pagination component, and I would always just import and use that:</p>
+      <p>
+        It&apos;s also another example where I found myself at a disadvantage having used Material-UI components for so long. Material-UI provides a nice pagination component, and I would always just import and use that:
+      </p>
       </div>
       <div style={{marginTop: '20px'}}>
         <h2>Material-UI Pagination</h2>
@@ -63,10 +101,12 @@ const Pagination = () => {
       </p>
       <br />
       <hr />
+
       <Grid container spacing={2}>
           <Grid item xs={6} sm={6}>
           <div style={{padding: '24px', backgroundColor: '#dddddd', marginTop: '30px', borderRadius: '10px'}}>
             <SearchBar />
+            <FetchSpotify />
             <br />
             <ItemsDisplay items={items.itemsToDisplay} loading={loading}/>
             <PaginationBar items={items} updateItemsDisplayed={updateItemsDisplayed} setLoading={setLoading} />
@@ -79,8 +119,9 @@ const Pagination = () => {
             <p>You are tasked with implementing a basic pagination component in React for a web application. 
             The component should display a list of items fetched from a server, showing only a limited number of items per page and allowing the user to navigate through different pages.
             </p>
-            <p>
+            <br />
             <h2>Requirements</h2>
+            <p>
             <b>Component Structure</b><br /> 
             Create a Pagination component that accepts props for totalItems (total number of items to paginate), 
             itemsPerPage (number of items to display per page), and fetchData (a function to fetch data for the current page).
@@ -99,7 +140,7 @@ const Pagination = () => {
             </p>
             <p> 
             <b>Display Items</b><br />
-            Render the items for the current page, displaying some placeholder content for each item (e.g., "Item #1", "Item #2", etc.).
+            Render the items for the current page, displaying some placeholder content for each item (e.g., &quot;Item #1&quot;, &quot;Item #2&quot;, etc.).
             </p>
             <p>
             <b>Efficiency and Code Quality</b><br /> 

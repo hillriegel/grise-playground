@@ -17,25 +17,24 @@ export default function Homebody() {
                 </Grid>
                 <Grid item>
                     <h1>A Collection of Exercises and Ideas </h1>
-                <p>
-                    This is a basic React/Next.js app set up to demonstrate creating app functionality.
-                </p>
-                <p>
-                    It includes Material-ui, lodash (for debouncing), Axios (for API calls),
-                </p>
-                <p>
-                    The repository of this project and all its examples can be retrieved from GitHub here:<br />
-                        <br />
+                    <p>
+                        This is a basic React/Next.js app set up to demonstrate creating app functionality.
+                    </p>
+                    <p>
+                        It includes Material-ui, lodash (for debouncing), Axios (for API calls),
+                    </p>
+                    <p>
+                        The repository of this project and all its examples can be retrieved from GitHub here:
+                    </p>
+                    <br />
                             <div className="link-button">
-                            <a href="https://github.com/hillriegel/grise-playground" target="new">github: grise-playground</a>
+                                <a href="https://github.com/hillriegel/grise-playground" target="new">github: grise-playground</a>
                             </div>
-                    <br />
-                    <br />
-                    Feel free to take it and make it your own.
-                </p>
+                    <p>
+                        Feel free to take it and make it your own.
+                    </p>
                 </Grid>
             </Grid>
-
         </Box>
     )
 }

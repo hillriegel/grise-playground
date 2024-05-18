@@ -21,10 +21,10 @@ const Resume = () => {
             <div>
               <h2>About Me</h2>
               <p>
-            I'm an experienced Frontend Developer with over 15 years of experience using <b>JavaScript</b> frameworks, and 4 years of experience using <b>React.js</b> to develop enterprise web applications.
+            I&apos;m an experienced Frontend Developer with over 15 years of experience using <b>JavaScript</b> frameworks, and 4 years of experience using <b>React.js</b> to develop enterprise web applications.
             </p>
             <p>
-              With extensive <b>UI/UX</b> experience and emphasis on building Web applications that are data-intensive and user-friendly, I'm recognized for my ability to collaborate with cross-functional teams.
+              With extensive <b>UI/UX</b> experience and emphasis on building Web applications that are data-intensive and user-friendly, I&apos;m recognized for my ability to collaborate with cross-functional teams.
             </p>
             </div>
         
