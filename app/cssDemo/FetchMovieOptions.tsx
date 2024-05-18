@@ -2,12 +2,12 @@
 // FetchMovies.js
 async function FetchMovies() {
 
-    const apiKey = process.env.REACT_APP_API_KEY;
+    const authToken = process.env.REACT_APP_API_KEY;
     const options = {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: apiKey,
+            Authorization: authToken,
         }
     };
 

@@ -42,6 +42,16 @@ p {
   color: #394E5A;
 }
 
+.link-button {
+  cursor: pointer;
+  border: solid 1px #444444;
+  background-color: #c2fbf6;
+  padding: 10px; 
+  border-radius: 10px;
+  text-align: center;
+  width: 250px
+}
+
 .header {
   background-color: #ffffff;
   height: 50px;
@@ -55,6 +65,14 @@ h1 {
   font-family: "Freeman";
   font-weight: 400;
   color: #1f605f;
+}
+
+h2 {
+  font-size: 1em;
+  font-family: "Freeman";
+  font-weight: 400;
+  color: #1f605f;
+  margin-bottom: 15px;
 }
 
 

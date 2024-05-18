@@ -64,7 +64,7 @@ const DrawerList = (
         </Link>
       </ListItem>
 
-      <ListItem key={"currencyEx"} disablePadding>
+      <ListItem key={"sampleForm"} disablePadding>
           <Link href="/sampleForm">
         <ListItemButton>
           <ListItemIcon>
@@ -100,15 +100,6 @@ const DrawerList = (
         <Grid container spacing-={2}>
           <Grid item>
             <Button onClick={toggleDrawer(true)}><MenuIcon /></Button> 
-          </Grid>
-          <Grid item sm={2}>
-            <Image
-                src="/images/navan_logo2.jpg"
-                alt="Navan Logo"
-                width={100}
-                height={24}
-                priority
-             />
           </Grid>
         </Grid>
         </div>

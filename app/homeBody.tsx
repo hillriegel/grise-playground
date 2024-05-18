@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-
+import Link from 'next/link';
 
 export default function Homebody() {
 
@@ -22,6 +22,16 @@ export default function Homebody() {
                 </p>
                 <p>
                     It includes Material-ui, lodash (for debouncing), Axios (for API calls),
+                </p>
+                <p>
+                    The repository of this project and all its examples can be retrieved from GitHub here:<br />
+                        <br />
+                            <div className="link-button">
+                            <a href="https://github.com/hillriegel/grise-playground" target="new">github: grise-playground</a>
+                            </div>
+                    <br />
+                    <br />
+                    Feel free to take it and make it your own.
                 </p>
                 </Grid>
             </Grid>

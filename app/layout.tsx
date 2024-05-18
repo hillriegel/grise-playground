@@ -27,6 +27,7 @@ import Link from 'next/link';
 import PagesIcon from '@mui/icons-material/Pages';
 import Footer from './footer';
 import CodeIcon from '@mui/icons-material/Code';
+import SummarizeIcon from '@mui/icons-material/Summarize';
 
 export default function RootLayout({
   children,
@@ -91,28 +92,30 @@ const DrawerList = (
 
       <ListItem key={"cssDemo"} disablePadding>
           <Link href="/cssDemo">
-        <ListItemButton>
-          <ListItemIcon>
-            <CodeIcon/>
-          </ListItemIcon>
-          <ListItemText primary="CSS Demo" />
-        </ListItemButton>
+            <ListItemButton>
+              <ListItemIcon>
+                <CodeIcon/>
+              </ListItemIcon>
+              <ListItemText primary="CSS Demo" />
+            </ListItemButton>
         </Link>
       </ListItem>
               
     </List>
     <Divider />
     <List>
-      {['All mail', 'Trash', 'Spam'].map((text, index) => (
-        <ListItem key={text} disablePadding>
+     
+        <ListItem key={'Resume'} disablePadding>
+        <Link href="/resume">
           <ListItemButton>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItemButton>
+            
+              <ListItemIcon>
+              <SummarizeIcon />
+              </ListItemIcon>
+              <ListItemText primary={'Resume'} />
+            </ListItemButton>
+            </Link>
         </ListItem>
-      ))}
     </List>
   </Box>
 );
