@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState } from 'react';
 import './demo.css';
-
 import SelectMenu from './SelectMenu';
 import Grid from '@mui/material/Grid';
 
@@ -14,9 +13,16 @@ export default function CssDemo() {
     const [direction, setDirection] = useState<FlexDirection>('row');
 
     return (
-        <main className="flex min-h-screen flex-col" style={{margin: '30px'}}>
-            <div><h1>CSS Demo</h1></div>
-          <div style={{margin: '20px'}}>
+        <main className="flex min-h-screen flex-col" >
+            <div style={{border: 'solid 1px', 
+            padding: '20px', 
+            marginLeft: '-40px', 
+            width: '810px',
+            backgroundColor: '#155263'}}>
+                <h1>CSS Demo</h1></div>
+
+
+          <div className="main-content">
                
                 <h2>Example of FlexBox styling</h2>
                 <Grid container spacing={2}>
@@ -37,7 +43,7 @@ export default function CssDemo() {
                             margin: 20px;<br />
                             justify-content: center;<br />
                             align-content: flex-start;<br />
-                            border-radius: 10px;<br />
+                            border-radius: 5px;<br />
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -62,7 +68,7 @@ export default function CssDemo() {
               </div>
               <section className="features" style={{ alignItems: alignment, flexDirection: direction}}>
                   <div className="feature alt-bkg">
-                      <h3>Griseconica Remixed</h3>
+                      <div><h3>Griseconica Remixed</h3></div>
                       <br />
                       <iframe src="https://open.spotify.com/embed/album/0JkQJUi8MJFNLG7AvpXBeL?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                       <p>Released in April, 2024, <i>Griseconica Remixed</i> is a collection of dance mixes (120-128 bpm) of tracks

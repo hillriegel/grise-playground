@@ -1,8 +1,5 @@
 /* Grid layout for features */
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
 
 h3 {
@@ -11,27 +8,6 @@ h3 {
     font-weight: 400;
     font-size: 1em;
   }
-
-.features {
-    border: solid 1px #aaaaaa;
-    flex-direction: column;
-    display: flex;
-    padding: 20px;
-    margin: 20px;
-    align-items: flex-start;
-    justify-content: center;
-    align-content: flex-start;
-    border-radius: 10px;
-    background-color: #dddddd;
-}
-
-.feature {
-    flex-grow: 0;
-    margin: 20px;
-    border-radius: 10px;
-    padding: 20px;
-    border: solid 1px #bbbbbb;
-}
 
 /* Keyframes animation */
 @keyframes pulse {
@@ -46,21 +22,6 @@ h3 {
     }
 }
 
-.btn-primary:hover {
-    animation: pulse 1s infinite;
-}
-
-.button-link {
-    border: solid 1px #9878ab;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: .7em;
-    cursor: pointer;
-}
-
-.button-link:hover{
-    background-color: #d8b0ef;
-}
 
 /* Additional card layout */
 .cards {
@@ -70,17 +31,6 @@ h3 {
     padding: 20px;
 }
 
-button {
-    padding: 10px 20px 10px 20px;
-    margin: 10px;
-    border: solid 1px #cccccc;
-    border-radius: 10px
-}
-
-button:hover {
-    background-color: #9878ab;
-    color: #ffffff;
-}
 
 .card {
     background: #fff;
@@ -171,13 +121,4 @@ button:hover {
 
 .menu-option:hover {
     background-color: #bad6f1;
-}
-
-.css-content {
-    border: solid 1px #888888;
-    background-color: #aaaaaa;
-    color: #dddddd;
-    padding: 20px;
-    font-family: 'Fira Code', monospace;
-    font-size: .8em
 }

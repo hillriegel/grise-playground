@@ -68,10 +68,20 @@ const Pagination = () => {
 
 
   return (
-    <main className="flex min-h-screen flex-col" style={{margin: '30px'}}>
+    <main className="flex min-h-screen flex-col" >
+    <div style={{border: 'solid 1px', 
+    padding: '20px', 
+    marginLeft: '-40px', 
+    width: '810px',
+    backgroundColor: '#155263'}}>
+        <h1>React Components: Pagination</h1>
+    </div>
+
+
+  <div className="main-content">
       <h1>Example of a Pagination Display</h1>
       <Grid container spacing={2}>
-          <Grid item xs={12} sm={7}>
+          <Grid item xs={12} sm={6}>
       <p>This is another interview task where I was given 1 1/2 hours to complete it. I'm enjoying learning to code under pressure with the clock ticking and someone looking over my shoulder. I may
         not be great at it now, but I'm excited to get better.
       </p>
@@ -91,26 +101,25 @@ const Pagination = () => {
       <hr />
 
       <Grid container spacing={2}>
-          <Grid item xs={12} sm={7}>
-          <div style={{padding: '24px', backgroundColor: '#dddddd', marginTop: '30px', borderRadius: '10px'}}>
-            <Grid  container >
-              <Grid xs={6} sm={9} >
-                <h2>Artists similar to Grisecon</h2>
-              </Grid>
-                <Grid xs={4} sm={3} style={{paddingTop: '20px'}}>
-                  <SearchBar />
+          <Grid item xs={12} sm={6}>
+            <div className="features">
+              <Grid  container >
+                <Grid xs={6} sm={9} >
+                  <h2 style={{color: '#ffffff'}}>Artists similar to Grisecon</h2>
                 </Grid>
-            </Grid>
-
-            
-           
-
-            <br />
-            <ItemsDisplay items={items.itemsToDisplay} loading={loading}/>
-            <PaginationBar items={items} updateItemsDisplayed={updateItemsDisplayed} setLoading={setLoading} />
-          </div>
+                  <Grid xs={4} sm={3} style={{paddingTop: '20px'}}>
+                    <SearchBar />
+                  </Grid>
+              </Grid>
+                <br />
+                <ItemsDisplay items={items.itemsToDisplay} loading={loading}/>
+                <PaginationBar items={items} updateItemsDisplayed={updateItemsDisplayed} setLoading={setLoading} />
+            </div>
 
           </Grid>
+
+
+
           <Grid item xs={12} sm={5} >
           <div style={{padding: '24px', marginRight: '20px'}}>
             <h2>Coding Task</h2>
@@ -171,7 +180,7 @@ const Pagination = () => {
          
         </div>
       </div>
-
+    </div>
     </main>
   );
 }

@@ -7,6 +7,7 @@ import {
   TextField,
   List,
   ListItem,
+  Card,
 } from '@mui/material'
 import Grid from '@mui/material/Grid';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
@@ -34,7 +35,7 @@ const Resume = () => {
         <Paper style={{padding: '20px', marginTop: '20px'}}>
             <div>
               <h2>Work Experience</h2>
-              <p>
+                <Card>
                 <b>Sinch</b><br />
                 Sr. Frontend Developer<br />
                Sweden · Remote • 11/2020 - 04/2024 Sr. Developer • Full-time
@@ -58,7 +59,8 @@ const Resume = () => {
                 
 
             </List>
-            </p>
+            </Card>
+
             </div>
         
   

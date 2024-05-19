@@ -3,7 +3,6 @@
 import React, {useState, useEffect} from 'react';
 import SearchField from './SearchField';
 import OptionsWindow from './OptionsWindow';
-import './demo.css';
 import FetchMovies from './FetchMovieOptions';
 
 

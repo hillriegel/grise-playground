@@ -4,6 +4,8 @@ async function FetchMovies() {
 
     const authToken = process.env.REACT_APP_API_KEY;
 
+    console.log('authToken = ', authToken);
+
     // Using HeadersInit to ensure correct typing
     const headers: HeadersInit = {
         'Accept': 'application/json',

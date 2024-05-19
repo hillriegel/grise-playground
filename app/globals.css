@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
 :root {
   --foreground-rgb: 130, 32, 246;
@@ -18,6 +17,13 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+.radio-canada-big-button {
+  font-family: "Radio Canada Big", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -38,7 +44,6 @@ p {
 }
 
 
-
 .mainContent {
   padding: 20px;
   color: #394E5A;
@@ -46,12 +51,19 @@ p {
 
 .link-button {
   cursor: pointer;
-  border: solid 1px #444444;
-  background-color: #c2fbf6;
+  border: solid 1px #75adbf;
+  background-color: #d2fbc2;
   padding: 10px; 
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
-  width: 250px
+  width: 240px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Ubuntu Sans";
+  font-weight: 600;
+  font-size: .8em;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .header {
@@ -62,22 +74,95 @@ p {
   font-family: "Freeman";
   box-shadow: 0px 10% 15px rgba(0, 128, 128, 0.3);
   border-bottom: solid 1px rgba(0, 128, 128, 0.3);
+  position: relative;
+  z-index: 100;
 }
 
 .outer {
-  background-color: #B3DEE5;
+  background-color: #c0d8dc;
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: flex-start; /* Aligns items to the top */
+  position: relative;
+  background-image:
+  radial-gradient(circle, #b0bec5 1px, transparent 1px);
+background-size: 30px 30px;
+box-shadow: inset 0px 10px 8px -8px rgba(14, 101, 122, 0.4);
+}
+
+.titleBar {
+  background-color: #155263;
+  color: #ffffff;
+  padding: '20px';
+  margin-left: '-20px';
+  height: '50px';
 }
 
 .container {
-  background-color: #f4f2f2;
+  background-color: #e1ebf7;
   padding-top: 20px;
+  padding: 20px;
   height: 100%;
+  width: 80%;
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: flex-start; /* Aligns items to the top */
+  box-shadow: 0 0 30px 10px rgba(0, 128, 128, 0.2); /* Soft, spread blueish teal shadow */
+
+}
+
+.menu-font {
+  font-size: .8em;
+  font-family: "Ubuntu Sans";
+}
+
+.my-menu-button {
+  margin-top: '15px';
+    color:#155263
+}
+
+.my-menu-button:hover {
+  background-color: #ffffff;
+  color:#155263
+}
+
+.my-listitem-button {
+  width: 300px;
+  font-family: "Ubuntu Sans";
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.my-listitem-button:hover {
+  background-color: #c1e7e8;
+}
+
+.my-listitem-text {
+  font-size: .75em;
+  color: #1e425a;
+  font-family: "Ubuntu Sans";
+}
+
+
+.softCard {
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px;
+
+}
+
+.image-border {
+  border: solid 20px #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.blog-card {
+  padding: 20px;
+  border-radius: 5px; 
+  margin: 20px;
 }
 
 .contrast {
@@ -85,7 +170,16 @@ p {
 }
 
 .alt-bkg {
-  background-color: #FAE6B1;
+  background-color: #b1d8fa;
+}
+
+.card-date {
+  font-size: .7em;
+}
+.card-title {
+  font-style: italic;
+  font-size: .85em;
+  color: #666666;
 }
 
 .standard-bkg {
@@ -113,6 +207,12 @@ h2 {
 }
 
 
+.left-quote {
+  text-align: right;
+  margin-top: 150px;
+  width: 300px;
+}
+
 
 /*
 Primary (Teal): #32BEBB
@@ -128,4 +228,187 @@ Highlight (Warm Yellow): #FFC857
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+h3 {
+    font-size: 1.5em;
+    font-family: "Freeman";
+    font-weight: 400;
+    font-size: 1em;
+  }
+
+.features {
+    flex-direction: column;
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    border-radius: 7px;
+    background-color: #4c6ddb;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.feature {
+    flex-grow: 0;
+    margin: 20px;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+/* Keyframes animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-primary {
+  font-family: "Ubuntu Sans";
+  font-weight: 600;
+  font-size: .8em;
+}
+
+.btn-primary:hover {
+    animation: pulse 1s infinite;
+}
+
+.button-link {
+    border: solid 1px #9878ab;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: .7em;
+    cursor: pointer;
+}
+
+.button-link:hover{
+    background-color: #d8b0ef;
+}
+
+/* Additional card layout */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    border: solid 1px #cccccc;
+    border-radius: 5px
+}
+
+button:hover {
+    background-color: #9878ab;
+    color: #ffffff;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* SELECT MENU */
+
+
+.searchfield-text {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.searchfield-close {
+    font-size: 5;
+    flex-basis: 0;
+    cursor: pointer;
+    color: #aaaaaa
+}
+
+.hidden { display: none; }
+
+.visible { display: flex; }
+
+
+.searchfield-arrow {
+    flex-basis: 0;
+    transition: transform 0.3s ease; /* Smooth transition for the rotation */
+    color: #aaaaaa
+}
+
+.search-field {
+    border-radius: 10px;
+    border: solid 1px #aaaaaa;
+    padding: 20px;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    background-color: #fafafa;
+}
+
+.search-field:hover {
+   border: solid 1px hsl(201, 85%, 37%);
+}
+
+.options-window {
+    border-radius: 10px;
+    border: solid 1px #dddddd;
+    width: 300px;
+    height: 300px;
+    align-items: start;
+    overflow: scroll;
+    background-color: #fafafa;
+}
+
+.menu-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.selected {
+    background-color: #94dedd;
+}
+
+.menu-option {
+    cursor: pointer;
+    flex-grow: 1;              /* Take up available space vertically */
+    width: 100%;               /* Full width of the container */
+    padding: 10px;             /* Provides some spacing inside each option */    /* Border for visibility */
+    box-sizing: border-box;    /* Includes padding and border in the width calculation */
+    text-align: left;          /* Aligns text to the left */
+    padding-left: 20px;
+}
+
+.menu-option:hover {
+    background-color: #bad6f1;
+}
+
+.css-content {
+    border: solid 1px #888888;
+    background-color: #aaaaaa;
+    color: #e6e3e3;
+    padding: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: .8em
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import React, {useState} from 'react';
-import './demo.css';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CloseIcon from '@mui/icons-material/Close';
 

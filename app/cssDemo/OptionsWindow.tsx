@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react';
-import './demo.css';
 
 interface OptionsWindowProps {
     options: Options;

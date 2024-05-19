@@ -76,11 +76,18 @@ const RegistrationForm = () => {
     };
 
     return (
-      <main className="flex  flex-col">
-         <div className="min-h-screen flex-1" style={{padding: '20px', width: '100%'}}>
-          <br />
+      <main className="flex min-h-screen flex-col">
+      <div style={{border: 'solid 1px', 
+padding: '20px', 
+marginLeft: '-40px', 
+width: '810px',
+backgroundColor: '#155263'}}>
+<h1>React Components: Sample Form</h1>
+</div>
+<br />
+<div className="main-content">
           <Paper style={{padding: '20px'}}>
-          <h1><b>Sample Registration Form</b></h1>
+          <h1><b>Registration Form</b></h1>
         
             <div style={{marginTop: '40px'}}>
             <form onSubmit={handleSubmit}>
