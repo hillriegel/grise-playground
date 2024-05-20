@@ -1,24 +1,26 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, ChangeEvent } from 'react';
-import HomeBody from '@/app/homeBody';
 import ItemsDisplay from './ItemsDisplay';
 import PaginationBar from './PaginationBar';
 import SearchBar from './SearchBar';
 import Grid from '@mui/material/Grid';
 import UnstyledPaginationIntroduction from './SampleMuiPagination';
-import FetchSpotify from './fetchSpotify';
-import {Image, Item} from './types';
-import '../../globals.css';
+//import FetchSpotify from './fetchSpotify';
+
 
 const Pagination = () => {
-
-
   const [loading, setLoading] = useState(false);
 
-  const [items, setItems] = useState (
+  /*initialize the items to display with the first 5 items
+  this would be set when the component first loads and the initial items are retrieved
+  from the API. In this case, they are hardcoded. For this to work as designed, the API
+  would need to accept a page number and a number of items to return */
+  const [itemsDisplayed, setItemsDisplayed] = useState (
       {
         pageNumber: 1,
+        rangeStart: 1,
+        rangeEnd: 5,
         itemsToDisplay: [      {
           "external_urls" : {
             "spotify" : "https://open.spotify.com/artist/7Eu1txygG6nJttLHbZdQOh"
@@ -131,16 +133,38 @@ const Pagination = () => {
           "popularity" : 54,
           "type" : "artist",
           "uri" : "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
-        }, ]
+        },
+        {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/7zrkALJ9ayRjzysp4QYoEg"
+          },
+          "followers" : {
+            "href" : null,
+            "total" : 379306
+          },
+          "genres" : [ "electronica", "future garage", "indie soul" ],
+          "href" : "https://api.spotify.com/v1/artists/7zrkALJ9ayRjzysp4QYoEg",
+          "id" : "7zrkALJ9ayRjzysp4QYoEg",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab6761610000e5ebbeaea33eaf23808b73167155",
+            "width" : 640
+          }, {
+            "height" : 320,
+            "url" : "https://i.scdn.co/image/ab67616100005174beaea33eaf23808b73167155",
+            "width" : 320
+          }, {
+            "height" : 160,
+            "url" : "https://i.scdn.co/image/ab6761610000f178beaea33eaf23808b73167155",
+            "width" : 160
+          } ],
+          "name" : "Maribou State",
+          "popularity" : 61,
+          "type" : "artist",
+          "uri" : "spotify:artist:7zrkALJ9ayRjzysp4QYoEg"
+        } ]
       }
   )
-
-  const updateItemsDisplayed = (newState:any) => {
-    setItems(prevState => ({
-        ...prevState,
-        ...newState
-    }));
-  };
 
   return (
     <main className="flex min-h-screen flex-col" >
@@ -152,7 +176,7 @@ const Pagination = () => {
   <div className="main-content">
       <h1>Example of a Pagination Display</h1>
       <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={7}>
             <p>This is another interview task where I was given 1 1/2 hours to complete it. I'm enjoying learning to code under pressure with the clock ticking and someone looking over my shoulder. I may
               not be great at it now, but I'm excited to get better.
             </p>
@@ -179,8 +203,8 @@ const Pagination = () => {
                     </Grid>
                 </Grid>
                   <br />
-                  <ItemsDisplay items={items.itemsToDisplay} loading={loading}/>
-                  <PaginationBar items={items} updateItemsDisplayed={updateItemsDisplayed} setLoading={setLoading} />
+                  <ItemsDisplay items={itemsDisplayed.itemsToDisplay} loading={loading}/>
+                  <PaginationBar itemsDisplayed={itemsDisplayed} setItemsDisplayed={setItemsDisplayed} setLoading={setLoading} />
               </div>
           </Grid>
 

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react';
-import './demo.css';
 import Grid from '@mui/material/Grid';
 
 

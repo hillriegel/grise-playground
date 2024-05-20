@@ -1,8 +1,6 @@
 'use client'
 
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 import Button from '@mui/material/Button';
 import * as React from 'react';
@@ -16,21 +14,11 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
-import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import HomeIcon from '@mui/icons-material/Home';
-import ViewStream from '@mui/icons-material/ViewStream';
 import Link from 'next/link';
-import PagesIcon from '@mui/icons-material/Pages';
-import Footer from './footer';
 import CodeIcon from '@mui/icons-material/Code';
 import SummarizeIcon from '@mui/icons-material/Summarize';
 import ListSubheader from '@mui/material/ListSubheader';
-import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
 import StyleIcon from '@mui/icons-material/Style';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import ChairIcon from '@mui/icons-material/Chair';

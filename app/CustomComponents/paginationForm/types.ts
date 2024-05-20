@@ -27,8 +27,10 @@ export interface Item {
 }
 
 export interface UpdateState {
-    pageNumber?: number;
-    itemsToDisplay?: Item[];
+    pageNumber: number;
+    rangeStart: number;
+    rangeEnd: number;
+    itemsToDisplay: Item[];
 }
 
 export interface APIResponse {
@@ -37,14 +39,18 @@ export interface APIResponse {
     itemsPerPage: number;
     totalItems: number;
     totalPages: number;
+    rangeStart: number;
+    rangeEnd: number;
 }
 
 export interface PaginationBarProps {
-    items: {
+    itemsDisplayed: {
         pageNumber: number;
+        rangeStart: number;
+        rangeEnd: number;
         itemsToDisplay: Item[];
         
     };
     setLoading: Function;
-    updateItemsDisplayed: (newState: UpdateState) => void; 
+    setItemsDisplayed: (newState: UpdateState) => void; 
 }

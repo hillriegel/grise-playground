@@ -19,7 +19,7 @@ interface ItemsDisplayProps {
 
 export default function ItemsDisplay({ items, loading }: ItemsDisplayProps) {
     return (
-        <Card style={{height: '550px', width: '100%'}}>
+        <Card className="similar-artists">
             <TableContainer component={Paper} style={{display: 'flex', alignItems: 'stretch', justifyContent: 'center'}}>
                 <Table sx={{ width: '100%' }} aria-label="simple table">
                     <TableHead>
@@ -31,8 +31,13 @@ export default function ItemsDisplay({ items, loading }: ItemsDisplayProps) {
                     </TableHead>
                     {loading ? (
                         // If loading, display the spinner centrally
-                        <TableBody style={{ height: '520px', minWidth: 650, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                        <TableBody style={{ height: '520px', minWidth: 650}}>
+                            <TableRow>
+                                <TableCell colSpan={3} style={{textAlign: 'center'}}>
                                 <CircularProgress/>
+                                </TableCell>
+                            </TableRow>
+                                
                         </TableBody>
                     ) : (
                         <TableBody>
