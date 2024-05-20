@@ -1,5 +1,6 @@
 export const GriseconRelatedArtists = {
-    "artists" : [ {
+    "artists" : [ 
+      {
       "external_urls" : {
         "spotify" : "https://open.spotify.com/artist/7Eu1txygG6nJttLHbZdQOh"
       },
