@@ -52,7 +52,7 @@ export default function CssDemo() {
 
                 <br />
 
-            <div className="features-buttons">
+            <div className="features-buttons" style={{margin: '20px'}}>
                 <i>Align items affects vertical placement</i><br />
                 <button className={`btn btn-primary ${alignment === 'flex-start' ? 'selected' : ''}`} onClick={()=>setAlignment('flex-start')}>align-items: flex-start</button>
                 <button className={`btn btn-primary ${alignment === 'flex-end' ? 'selected' : ''}`} onClick={()=>setAlignment('flex-end')}>align-items: flex-end</button>
