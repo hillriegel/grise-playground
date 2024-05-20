@@ -12,16 +12,19 @@ export default function Homebody() {
 
 
     return (
+        <div className="body-container">
         <Box>
             <Grid container spacing={3}>
-                <Grid item>
+                <Grid item  xs={12} sm={2}></Grid>
+                <Grid item xs={12} sm={3}>
+
                     <Image src="/images/grise_bw.png" alt="photo of Grise" width="300" height="600" className="image-border" />
-                    <div className="left-quote">
+                    <div className="left-quote" style={{paddingRight: '25px'}}>
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
                     </div>
                 </Grid>
-                <Grid item>
+                <Grid item xs={12} sm={7}>
                     <h1>A Collection of Exercises and Ideas </h1>
                     <p>
                         This is a basic React/Next.js app set up to demonstrate creating app functionality.
@@ -46,7 +49,31 @@ export default function Homebody() {
                  
                 </Grid>
             </Grid>
+            <div style={{margin: '20px'}}>
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={12}>
+                    <h2>Current Challenge</h2>
+                    <div className="challenge">
+                        <h2 className="white">Custom Pagination Component</h2>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} sm={5}>
+                                <Image src="/images/pagination.jpg" alt="pagination bar" height="100" width="700" className="image-border"></Image>
+                            </Grid>
+                            <Grid item xs={12} sm={7}>
+                                This challenge (1.5 hours) is surprisingly complex. Maintaining state requires passing a lot of
+                                information around the component.
+                                <br /><br />
+                                <div className="link-button" style={{border: 'solid 1px #155263'}}>
+                                    <Link href="./CustomComponents/paginationForm" >View the progress here</Link>
+                                </div>
+                            </Grid>
+                        </Grid>
+                    </div>
+                </Grid>
+            </Grid>
+            </div>
         </Box>
+        </div>
     )
 }
 

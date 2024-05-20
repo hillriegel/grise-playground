@@ -57,8 +57,6 @@ export default function PaginationBar({itemsDisplayed, setItemsDisplayed, setLoa
 
         fetchData(pn, rowsPerPage)
             .then((result: APIResponse) => {
-                console.log('result = ', result);
-                console.log('setting rangeStart to ', result.rangeStart);
                 setItemsDisplayed({ pageNumber: pn, rangeStart: result.rangeStart, rangeEnd: result.rangeEnd, itemsToDisplay: result.data });
                 setNumItems(result.totalItems);
                 setLoading(false);
@@ -75,7 +73,7 @@ export default function PaginationBar({itemsDisplayed, setItemsDisplayed, setLoa
     return (
         <div className="button-bar">
             <div className="rows-per-page">
-                Rows per page: <select className="row-select" onChange={(e)=>changeNumberOfRows(e)}>
+                Rows per page: &nbsp;<select className="row-select" onChange={(e)=>changeNumberOfRows(e)}>
                         <option value={5}>5</option>
                         <option value={10}>10</option>
                         <option value={20}>20</option>

@@ -159,32 +159,31 @@ const DrawerList = (
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div className="header" style={{width: '100%'}}>
-        <Grid container spacing-={2}>
-          <Grid item style={{width: '95px'}}>
-            <Button sx={{ '& svg':  { width: '80px' } }} className="my-menu-button" onClick={toggleDrawer(true)}>
-              <MenuIcon style={{height: '30px'}}/>
-            </Button> 
+        <div className="header" style={{width: '100%'}}>
+          <Grid container spacing-={2}>
+            <Grid item style={{width: '95px'}}>
+              <Button sx={{ '& svg':  { width: '80px' } }} className="my-menu-button" onClick={toggleDrawer(true)}>
+                <MenuIcon style={{height: '30px'}}/>
+              </Button> 
+            </Grid>
+            <Grid item sm={2}>
+              <div style={{marginTop: '5px'}}>:playground:</div>
+            </Grid>
           </Grid>
-          <Grid item sm={2}>
-            <div style={{marginTop: '5px'}}>:playground:</div>
-          </Grid>
-        </Grid>
+          </div>
+        <div>
+        
+        <Drawer  open={open} onClose={toggleDrawer(false)}>
+          {DrawerList}
+        </Drawer>
         </div>
-      <div>
-      
-      <Drawer  open={open} onClose={toggleDrawer(false)}>
-        {DrawerList}
-      </Drawer>
-      </div>
-      <div className="outer">
-      <div className="container">
-        <div className="content">
-          {children}
+        <div className="outer">
+          <div className="main-container">
+            <div className="content">
+              {children}
+            </div>
+          </div>
         </div>
-        </div>
-      
-      </div>
       </body>
     </html>
   );
