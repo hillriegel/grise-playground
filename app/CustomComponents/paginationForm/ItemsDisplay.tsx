@@ -19,7 +19,7 @@ interface ItemsDisplayProps {
 
 export default function ItemsDisplay({ items, loading }: ItemsDisplayProps) {
     return (
-        <Card style={{height: '520px', width: '100%'}}>
+        <Card style={{height: '550px', width: '100%'}}>
             <TableContainer component={Paper} style={{display: 'flex', alignItems: 'stretch', justifyContent: 'center'}}>
                 <Table sx={{ width: '100%' }} aria-label="simple table">
                     <TableHead>

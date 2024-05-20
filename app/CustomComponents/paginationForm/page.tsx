@@ -9,15 +9,17 @@ import Grid from '@mui/material/Grid';
 import UnstyledPaginationIntroduction from './SampleMuiPagination';
 import FetchSpotify from './fetchSpotify';
 import {Image, Item} from './types';
+import '../../globals.css';
 
 const Pagination = () => {
+
 
   const [loading, setLoading] = useState(false);
 
   const [items, setItems] = useState (
       {
         pageNumber: 1,
-        itemsToDisplay: [{
+        itemsToDisplay: [      {
           "external_urls" : {
             "spotify" : "https://open.spotify.com/artist/7Eu1txygG6nJttLHbZdQOh"
           },
@@ -45,7 +47,91 @@ const Pagination = () => {
           "popularity" : 60,
           "type" : "artist",
           "uri" : "spotify:artist:7Eu1txygG6nJttLHbZdQOh"
-        }]
+        }, {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/4aEnNH9PuU1HF3TsZTru54"
+          },
+          "followers" : {
+            "href" : null,
+            "total" : 661469
+          },
+          "genres" : [ "alternative dance", "art pop", "electronica", "folktronica", "indietronica", "intelligent dance music", "trip hop" ],
+          "href" : "https://api.spotify.com/v1/artists/4aEnNH9PuU1HF3TsZTru54",
+          "id" : "4aEnNH9PuU1HF3TsZTru54",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab6761610000e5ebf9da16d673af005d53bab9cc",
+            "width" : 640
+          }, {
+            "height" : 320,
+            "url" : "https://i.scdn.co/image/ab67616100005174f9da16d673af005d53bab9cc",
+            "width" : 320
+          }, {
+            "height" : 160,
+            "url" : "https://i.scdn.co/image/ab6761610000f178f9da16d673af005d53bab9cc",
+            "width" : 160
+          } ],
+          "name" : "Caribou",
+          "popularity" : 52,
+          "type" : "artist",
+          "uri" : "spotify:artist:4aEnNH9PuU1HF3TsZTru54"
+        }, {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/5oOhM2DFWab8XhSdQiITry"
+          },
+          "followers" : {
+            "href" : null,
+            "total" : 681949
+          },
+          "genres" : [ "chillwave", "downtempo", "electronica", "indietronica", "intelligent dance music" ],
+          "href" : "https://api.spotify.com/v1/artists/5oOhM2DFWab8XhSdQiITry",
+          "id" : "5oOhM2DFWab8XhSdQiITry",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab6761610000e5eb4dc28dcee5516d2e89690525",
+            "width" : 640
+          }, {
+            "height" : 320,
+            "url" : "https://i.scdn.co/image/ab676161000051744dc28dcee5516d2e89690525",
+            "width" : 320
+          }, {
+            "height" : 160,
+            "url" : "https://i.scdn.co/image/ab6761610000f1784dc28dcee5516d2e89690525",
+            "width" : 160
+          } ],
+          "name" : "Tycho",
+          "popularity" : 53,
+          "type" : "artist",
+          "uri" : "spotify:artist:5oOhM2DFWab8XhSdQiITry"
+        }, {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+          },
+          "followers" : {
+            "href" : null,
+            "total" : 715317
+          },
+          "genres" : [ "electronica", "indietronica" ],
+          "href" : "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+          "id" : "2exkZbmNqMKnT8LRWuxWgy",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab6761610000e5eb55a94b7fa21c9dbb2b986229",
+            "width" : 640
+          }, {
+            "height" : 320,
+            "url" : "https://i.scdn.co/image/ab6761610000517455a94b7fa21c9dbb2b986229",
+            "width" : 320
+          }, {
+            "height" : 160,
+            "url" : "https://i.scdn.co/image/ab6761610000f17855a94b7fa21c9dbb2b986229",
+            "width" : 160
+          } ],
+          "name" : "Moderat",
+          "popularity" : 54,
+          "type" : "artist",
+          "uri" : "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+        }, ]
       }
   )
 
@@ -56,25 +142,10 @@ const Pagination = () => {
     }));
   };
 
-
-
-/**
- * Simulates fetching paginated data from an API.
- * @param {number} currentPage - The current page number to fetch data for.
- * @param {number} itemsPerPage - The number of items to fetch per page.
- * @returns {Promise<Object>} A promise that resolves to an object containing the data for the current page.
- */
-
-
-
   return (
     <main className="flex min-h-screen flex-col" >
-    <div style={{border: 'solid 1px', 
-    padding: '20px', 
-    marginLeft: '-40px', 
-    width: '810px',
-    backgroundColor: '#155263'}}>
-        <h1>React Components: Pagination</h1>
+    <div className="page-title">
+        <h1>React Components: Custom Pagination</h1>
     </div>
 
 
@@ -82,43 +153,36 @@ const Pagination = () => {
       <h1>Example of a Pagination Display</h1>
       <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-      <p>This is another interview task where I was given 1 1/2 hours to complete it. I'm enjoying learning to code under pressure with the clock ticking and someone looking over my shoulder. I may
-        not be great at it now, but I'm excited to get better.
-      </p>
-      <p>
-        It&apos;s also another example where I found myself at a disadvantage having used Material-UI components for so long. Material-UI provides a nice pagination component, and I would always just import and use that:
-      </p>
-      <div style={{marginTop: '20px'}}>
-        <h2>Material-UI Pagination</h2>
-        <UnstyledPaginationIntroduction />
-        </div>
-      </Grid>
-      </Grid>
-      <p>
-        After the test was over, I went back and did the exercise in my own time.
-      </p>
-      <br />
-      <hr />
-
-      <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-            <div className="features">
-              <Grid  container >
-                <Grid xs={6} sm={9} >
-                  <h2 style={{color: '#ffffff'}}>Artists similar to Grisecon</h2>
-                </Grid>
-                  <Grid xs={4} sm={3} style={{paddingTop: '20px'}}>
-                    <SearchBar />
+            <p>This is another interview task where I was given 1 1/2 hours to complete it. I'm enjoying learning to code under pressure with the clock ticking and someone looking over my shoulder. I may
+              not be great at it now, but I'm excited to get better.
+            </p>
+            <p>
+              It&apos;s also another example where I found myself at a disadvantage having used Material-UI components for so long. Material-UI provides a nice pagination component, and I would always just import and use that:
+            </p>
+            <div style={{marginTop: '20px'}}>
+              <h2>Material-UI Pagination</h2>
+              <UnstyledPaginationIntroduction />
+              </div>
+    
+              <p>
+                After the test was over, I went back and did the exercise in my own time.
+              </p>
+              <br />
+              <h2>Custom Pagination Component</h2>
+              <div className="component">
+                <Grid  container >
+                  <Grid xs={6} sm={9} >
+                    <h2 className="white">Artists similar to Grisecon</h2>
                   </Grid>
-              </Grid>
-                <br />
-                <ItemsDisplay items={items.itemsToDisplay} loading={loading}/>
-                <PaginationBar items={items} updateItemsDisplayed={updateItemsDisplayed} setLoading={setLoading} />
-            </div>
-
+                    <Grid xs={4} sm={3} style={{paddingTop: '20px'}}>
+                      <SearchBar />
+                    </Grid>
+                </Grid>
+                  <br />
+                  <ItemsDisplay items={items.itemsToDisplay} loading={loading}/>
+                  <PaginationBar items={items} updateItemsDisplayed={updateItemsDisplayed} setLoading={setLoading} />
+              </div>
           </Grid>
-
-
 
           <Grid item xs={12} sm={5} >
           <div style={{padding: '24px', marginRight: '20px'}}>
@@ -173,13 +237,8 @@ const Pagination = () => {
             </p>
             </div>
           </Grid>
-      </Grid>
-    
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-         
-        </div>
-      </div>
+        </Grid>
+
     </div>
     </main>
   );

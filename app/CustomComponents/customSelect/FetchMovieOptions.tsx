@@ -2,9 +2,7 @@
 // FetchMovies.js
 async function FetchMovies() {
 
-    const authToken = process.env.REACT_APP_API_KEY;
-
-    console.log('authToken = ', authToken);
+    const authToken = process.env.NEXT_PUBLIC_API_AUTH_TOKEN;
 
     // Using HeadersInit to ensure correct typing
     const headers: HeadersInit = {

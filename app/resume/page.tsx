@@ -35,7 +35,7 @@ const Resume = () => {
         <Paper style={{padding: '20px', marginTop: '20px'}}>
             <div>
               <h2>Work Experience</h2>
-                <Card>
+                <div style={{margin: '20px'}}>
                 <b>Sinch</b><br />
                 Sr. Frontend Developer<br />
                Sweden · Remote • 11/2020 - 04/2024 Sr. Developer • Full-time
@@ -59,7 +59,7 @@ const Resume = () => {
                 
 
             </List>
-            </Card>
+            </div>
 
             </div>
         

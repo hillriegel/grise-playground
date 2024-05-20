@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import './demo.css';
-import SelectMenu from './SelectMenu';
 import Grid from '@mui/material/Grid';
+
 
 export default function CssDemo() {
     type FlexDirection = 'row' | 'column';
@@ -19,7 +19,7 @@ export default function CssDemo() {
             marginLeft: '-40px', 
             width: '810px',
             backgroundColor: '#155263'}}>
-                <h1>CSS Demo</h1></div>
+                <h1>CSS Exercises | FlexBox Playground</h1></div>
 
 
           <div className="main-content">
@@ -66,7 +66,7 @@ export default function CssDemo() {
     
             </div>
               </div>
-              <section className="features" style={{ alignItems: alignment, flexDirection: direction}}>
+              <section className="component flexbox-row" style={{ alignItems: alignment, flexDirection: direction}}>
                   <div className="feature alt-bkg">
                       <div><h3>Griseconica Remixed</h3></div>
                       <br />
@@ -128,25 +128,7 @@ export default function CssDemo() {
                   </div>
               </section>
 
-                <div style={{height: '800px', padding: '20px'}}>
-                    <h2> Custom Select Dropdown</h2>
-                    <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6}>
-                        <p>This was an interview test question to create a custom select menu dropdown from scratch. I found this challenging
-                            initially (because I hate coding under pressure and with someone watching) because I have used material-ui for years
-                            and a proprietary design system. Whenever I needed a select menu I just imported it.
-                        </p>
-                        <p>There are many improvements that could be made to this such as truncating menu options that are too long. The time limit
-                            for this exercise was a little over 2 hours.
-                        </p>
-                        <p>This menu uses Fetch to grab a list of movie genres from a public API.</p>
-                        </Grid>
-                    </Grid>
-                    <br />
-                    <section>
-                        <SelectMenu />
-                    </section>
-              </div>
+             
           </main>
     );
 };

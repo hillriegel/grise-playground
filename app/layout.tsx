@@ -31,8 +31,9 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
-
+import StyleIcon from '@mui/icons-material/Style';
+import DataObjectIcon from '@mui/icons-material/DataObject';
+import ChairIcon from '@mui/icons-material/Chair';
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -75,15 +76,15 @@ const DrawerList = (
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader" style={{fontSize: '1em', fontFamily: 'Freeman', color: '#888888'}} >
-          React Components
+           <ChairIcon  style={{width: '20px'}}/> &nbsp; React Components
         </ListSubheader>
       }
     >
         <ListItem key={"currencyEx"} disablePadding>
-          <Link href="/currencyConverter">
+          <Link href="/CustomComponents/currencyConverter">
         <ListItemButton className="my-listitem-button">
           <ListItemIcon>
-            <CurrencyExchangeIcon  style={{width: '20px'}}/>
+               <DataObjectIcon style={{width: '20px'}} />
           </ListItemIcon>
           <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Currency Exchange" />
         </ListItemButton>
@@ -91,10 +92,10 @@ const DrawerList = (
       </ListItem>
 
       <ListItem key={"sampleForm"} disablePadding>
-          <Link href="/sampleForm">
+          <Link href="/CustomComponents/sampleForm">
         <ListItemButton className="my-listitem-button">
           <ListItemIcon >
-            <ViewStream  style={{width: '20px'}}/>
+          <DataObjectIcon style={{width: '20px'}} />
           </ListItemIcon>
           <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Sample Form" />
         </ListItemButton>
@@ -102,33 +103,47 @@ const DrawerList = (
       </ListItem>
       
       <ListItem key={"pagination"} disablePadding>
-          <Link href="/paginationForm">
+          <Link href="/CustomComponents/paginationForm">
         <ListItemButton className="my-listitem-button">
           <ListItemIcon>
-            <PagesIcon  style={{width: '20px'}}/>
+          <DataObjectIcon style={{width: '20px'}} />
           </ListItemIcon>
           <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Pagination" />
         </ListItemButton>
         </Link>
       </ListItem>
+
+      <ListItem key={"pagination"} disablePadding>
+          <Link href="/CustomComponents/customSelect">
+        <ListItemButton className="my-listitem-button">
+          <ListItemIcon>
+          <DataObjectIcon style={{width: '20px'}} />
+          </ListItemIcon>
+          <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Custom Select" />
+        </ListItemButton>
+        </Link>
+      </ListItem>
     </List>
+
+
+    
     <List
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader" style={{fontSize: '1em', fontFamily: 'Freeman', color: '#888888'}} >
-          CSS Exercises
+          <StyleIcon /> &nbsp; CSS Exercises
         </ListSubheader>
       }
     >
       <ListItem key={"cssDemo"} disablePadding>
-          <Link href="/cssDemo">
+          <Link href="/CssExercises/flexBoxDemo">
             <ListItemButton className="my-listitem-button">
               <ListItemIcon>
                 <CodeIcon  style={{width: '20px'}}/>
               </ListItemIcon>
-              <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Flex Box Styling" />
+              <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Flex Box Playground" />
             </ListItemButton>
         </Link>
       </ListItem>
