@@ -52,7 +52,7 @@ export default function CssDemo() {
 
                 <br />
 
-            <div className="features-buttons" style={{margin: '20px'}}>
+            <div className="features-buttons">
                 <i>Align items affects vertical placement</i><br />
                 <button className={`btn btn-primary ${alignment === 'flex-start' ? 'selected' : ''}`} onClick={()=>setAlignment('flex-start')}>align-items: flex-start</button>
                 <button className={`btn btn-primary ${alignment === 'flex-end' ? 'selected' : ''}`} onClick={()=>setAlignment('flex-end')}>align-items: flex-end</button>
@@ -66,6 +66,7 @@ export default function CssDemo() {
     
             </div>
               </div>
+              <div style={{margin: '20px'}}>
               <section className="component flexbox-row" style={{ alignItems: alignment, flexDirection: direction}}>
                   <div className="feature alt-bkg">
                       <div><h3>Griseconica Remixed</h3></div>
@@ -99,7 +100,7 @@ export default function CssDemo() {
                         <p><b>cover art by Niko</b></p>
                   </div>
               </section>
-
+              </div>
               <br />
               <div style={{margin: '20px'}}>
               <h2>Example of a Grid</h2>
