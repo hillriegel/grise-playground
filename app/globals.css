@@ -227,6 +227,7 @@ h3 {
   font-family: "Freeman";
   font-weight: 400;
   font-size: 1em;
+  margin-top: 20px;
 }
 
 
@@ -417,14 +418,25 @@ button:hover {
     font-size: .9em
 }
 
+.terminal-content {
+  background-color: #313030;
+  color: #e6e3e3;
+  padding: 20px;
+  font-family: 'Fira Code', monospace;
+  font-size: .9em
+}
+
 .code-content {
   border: solid 1px #000000;
   background-color: #444444;
   color: #e6e3e3;
-  padding: 20px;
   font-family: 'Fira Code', monospace;
   font-size: .9em;
+  page-break-inside: avoid;
+  font-family: monospace;
+  word-wrap: break-word;
 }
+
 
 .features {
   flex-direction: column;

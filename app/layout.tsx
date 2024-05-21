@@ -142,6 +142,8 @@ const DrawerList = (
     </List>
     <Divider />
 
+
+{/* NODE FUN */}
     <List
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       component="nav"
@@ -162,8 +164,18 @@ const DrawerList = (
             </ListItemButton>
         </Link>
       </ListItem>
-              
-      </List>
+      
+      <ListItem key={"cssDemo"} disablePadding>
+          <Link href="/NodeFun/redux">
+            <ListItemButton className="my-listitem-button">
+              <ListItemIcon>
+                <CodeIcon  style={{width: '20px'}}/>
+              </ListItemIcon>
+              <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Using Redux" />
+            </ListItemButton>
+        </Link>
+      </ListItem>
+    </List>
 
     <Divider />
     <List>
@@ -171,7 +183,6 @@ const DrawerList = (
         <ListItem key={'Resume'} disablePadding>
         <Link href="/resume">
           <ListItemButton className="my-listitem-button">
-            
               <ListItemIcon sx={{ '& svg':  { width: '20px' } }} >
               <SummarizeIcon  style={{width: '20px', color: '#4c6ddb'}}/>
               </ListItemIcon>
@@ -179,6 +190,7 @@ const DrawerList = (
             </ListItemButton>
             </Link>
         </ListItem>
+        
     </List>
   </Box>
 );
