@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
-
+import Image from 'next/image';
 
 export default function CssDemo() {
     type FlexDirection = 'row' | 'column';
@@ -23,112 +23,102 @@ export default function CssDemo() {
 
           <div className="main-content">
                
-                <h2>Example of FlexBox styling</h2>
+                <h2>Creating a Server (Express)</h2>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6}>
-                        <p>I like to remember what justify-content vs. align-content vs. align-items does. I made this
-                            handy little interactive display so that I could set the styles and see the layout 
-                            change dynamically.
+                    <Grid item xs={12} sm={9}>
+                        <p>Developing and understanding NoSQL database techniques, setting up a server and connecting it 
+                            to a MongoDB Atlas instance is the exercise.
+                        </p>
+                        <p>
+                            <h3>Creating the server in Express is straightforward:</h3>
+                            <br />
+                        </p>
+                        <Image alt="server code" src="/images/express-server1.jpg" width="800" height="630" />
+                    </Grid>
+                </Grid>
+
+                <br />
+
+                <Grid container spacing={2}>
+                    <Grid item xs={12} sm={9}>
+                        <h3>Schema (Model)</h3>
+                        <p>Each route needs a schema. This example is creating a user account database that will
+                            keep track of users. Because each account includes a password, passwords are encrypted
+                            using bcrypt.
                         </p>
                         <br />
+                        <Image alt="server code" src="/images/express-schema.jpg" width="800" height="630" />
                     </Grid>
                 </Grid>
+
+                <br />
+
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6}>
-                        <div className="css-content">
-                            height: 400px;<br />
-                            display: flex;<br />
-                            padding: 20px;<br />
-                            margin: 20px;<br />
-                            justify-content: center;<br />
-                            align-content: flex-start;<br />
-                            border-radius: 5px;<br />
-                        </div>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                     </Grid>
-                </Grid>
-
-                <br />
-
-            <div className="features-buttons">
-                <i>Align items affects vertical placement</i><br />
-                <button className={`btn btn-primary ${alignment === 'flex-start' ? 'selected' : ''}`} onClick={()=>setAlignment('flex-start')}>align-items: flex-start</button>
-                <button className={`btn btn-primary ${alignment === 'flex-end' ? 'selected' : ''}`} onClick={()=>setAlignment('flex-end')}>align-items: flex-end</button>
-                <button className={`btn btn-primary ${alignment === 'center' ? 'selected' : ''}`} onClick={()=>setAlignment('center')}>align-items: center</button>
-                <button className={`btn btn-primary ${alignment === 'baseline' ? 'selected' : ''}`} onClick={()=>setAlignment('baseline')}>align-items: baseline</button>
-                <button className={`btn btn-primary ${alignment === 'stretch' ? 'selected' : ''}`} onClick={()=>setAlignment('stretch')}>align-items: stretch</button>
-                <br />
-                <i>Flex-Direction: row or column</i><br />
-                <button className={`btn btn-primary ${direction === 'row' ? 'selected' : ''}`} onClick={()=>setDirection('row')}>flex-direction: row</button>
-                <button className={`btn btn-primary ${direction === 'column' ? 'selected' : ''}`} onClick={()=>setDirection('column')}>flex-direction: column</button>
-    
-            </div>
-              </div>
-              <div style={{margin: '20px'}}>
-              <section className="component flexbox-row" style={{ alignItems: alignment, flexDirection: direction}}>
-                  <div className="feature alt-bkg">
-                      <div><h3>Griseconica Remixed</h3></div>
-                      <br />
-                      <iframe src="https://open.spotify.com/embed/album/0JkQJUi8MJFNLG7AvpXBeL?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                      <p>Released in April, 2024, <i>Griseconica Remixed</i> is a collection of dance mixes (120-128 bpm) of tracks
-                      from the album <i>Griseconica</i>.</p>
-                      <p><b>cover art by Grisecon</b></p>
-                  </div>
-                  <div className="feature alt-bkg">
-                      <h3>Griseconica</h3>
-                      <br />
-                      <iframe src="https://open.spotify.com/embed/album/0xuPPPmCs1gClEtGP84pAI?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                      <p>This album is centered around a track called &quot;Behold.&quot; &quot;Behold&quot; itself was spawned from &quot;Grass / Ocean&apos;s Poem&quot;
-                        a track that has been shazam-ed around the world tens of thousands of times.
+                    <Grid item xs={12} sm={9}>
+                        <h3>Route</h3>
+                        <p>With Express.js, a route is a section of Express code that associates an HTTP method (GET, POST, PUT, DELETE, etc.), 
+                            a URL path, and a function that will be executed when that path and method are matched to an incoming HTTP request.
                         </p>
-                        <p> The album also features a sort of sibling track
-                        called "Tight Monolith / Song of Myself." Both tracks feature spoken word readings of excerpts from the poetry of Walt Whitman.
-                      </p>
-                      <p><b>Cover art by Michael Koehler</b></p>
-                  </div>
-                  <div className="feature alt-bkg">
-                      <h3>Backseat Driving</h3>
-                      <br />
-                      <iframe  src="https://open.spotify.com/embed/album/0ody1YxJZqNqTMNSqG3vNy?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                      <p>The dream that we would have FSD and be able to enjoy a little fun time in the backseat of our car while we 
-                        took a trip down the PCH seems forever out of reach.
-                        </p><p>It&apos;s the inspiration for this album, a road trip album, and a nod
-                        to the AOR rock of the late 70s (Donald Fagan&apos;s &quot;The Nightfly&quot; in particular).
+                        <p>
+                            The route is defined by this part of the code:
+
+
+                                <pre><code>
+                                    .post('/', async (req, res) => {
+                                    // Function logic here
+                                    });
+                                    </code>
+                                </pre>
+                        
+
                         </p>
-                        <p><b>cover art by Niko</b></p>
-                  </div>
-              </section>
-              </div>
-              <br />
-              <div style={{margin: '20px'}}>
-              <h2>Example of a Grid</h2>
-              <br />
-              <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6}>
-                        <div className="css-content">
-                            display: grid;<br />
-                            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                        </div>
+                        <br />
+                        <Image alt="server code" src="/images/express-route.jpg" width="800" height="630" />
+                        
+                        <p>
+                            <b>HTTP Method: POST</b> - This defines the type of request that is expected. 
+                            The POST method is often used for creating new resources.
+                        </p>
+
+                        <p>
+                            <b>Path:</b> '/' - This specifies the URL path at which the route will be available. 
+                            In this case, it is the root of the route, but when used with a router that is 
+                            mounted at a specific path, this would be relative to the mount point. 
+                            This route is meant to be accessed at /users.
+                        </p>
+                        <p>
+                            <b>Handler Function:</b> This is the async function 
+                                <pre><code>
+                                    <b>async (req, res) => { } </b>
+                                </code></pre>
+                                It takes the request object req and the response object res as parameters. 
+                                The function handles the incoming data, interacts with the MongoDB/Atlas database 
+                                to create a new user, and sends a response back to the client.
+                        </p>
+                        <p>
+                                Inside the handler function, you create a new user by extracting data from req.body, 
+                                saving it to the database using newUser.save(), 
+                                and then sending back a successful response including some 
+                                of the user details if the database operation is successful. 
+                                If there is an error (e.g., if required fields are missing or there's a 
+                                database connection issue), an error response is sent back to the client.
+                        </p>
+                        <p>
+                                <b>Response:</b> Depending on the execution of the handler function, 
+                                this route sends a HTTP status 201 with the new user data on success, 
+                                or a HTTP status 400 with an error message on failure.
+                       </p>
                     </Grid>
                 </Grid>
-              </div>
-              <section className="cards">
-                  <div className="card">
-                      <h3>Card 1</h3>
-                      <p>This is a description of card 1.</p>
-                  </div>
-                  <div className="card">
-                      <h3>Card 2</h3>
-                      <p>This is a description of card 2.</p>
-                  </div>
-                  <div className="card">
-                      <h3>Card 3</h3>
-                      <p>This is a description of card 3.</p>
-                  </div>
-              </section>
 
-             
+               <br /><br />
+                <h2>Creating the MongoDB in Atlas</h2>
+
+               <p>MongoDB can be hosted on your own server. I chose to create a db using Atlas, Mongo's cloud platform</p>
+               
+               <br />
+               <Image src="/images/atlas-db.png" alt="atlas db" width="800" height="600" />
+              </div>
           </main>
     );
 };
