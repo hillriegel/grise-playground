@@ -6,7 +6,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Link from 'next/link';
-
+import ChairIcon from '@mui/icons-material/Chair';
+import HexagonIcon from '@mui/icons-material/Hexagon';
 
 export default function Homebody() {
 
@@ -52,7 +53,7 @@ export default function Homebody() {
             <div style={{margin: '20px'}}>
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={12}>
-                    <h2>Current Challenge</h2>
+                    <h2><ChairIcon /> &nbsp; Current Component Challenge</h2>
                     <div className="challenge">
                         <h2 className="white">Custom Pagination Component</h2>
                         <Grid container spacing={2}>
@@ -75,8 +76,8 @@ export default function Homebody() {
             <div style={{margin: '20px'}}>
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={12}>
-                    <h2>Current Challenge</h2>
-                    <div className="challenge">
+                <h2><HexagonIcon /> &nbsp; Current Node Fun</h2>
+                    <div className="node-challenge">
                         <h2 className="white">Build an Express Backend with MongoDB Integration</h2>
                         <Grid container spacing={2}>
                             <Grid item xs={12} sm={5}>
