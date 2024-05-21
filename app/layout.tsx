@@ -22,6 +22,9 @@ import ListSubheader from '@mui/material/ListSubheader';
 import StyleIcon from '@mui/icons-material/Style';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import ChairIcon from '@mui/icons-material/Chair';
+import HexagonIcon from '@mui/icons-material/Hexagon';
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -113,7 +116,7 @@ const DrawerList = (
       </ListItem>
     </List>
 
-
+    <Divider />
     
     <List
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
@@ -137,6 +140,31 @@ const DrawerList = (
       </ListItem>
               
     </List>
+    <Divider />
+
+    <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+      subheader={
+        <ListSubheader component="div" id="nested-list-subheader" style={{fontSize: '1em', fontFamily: 'Freeman', color: '#888888'}} >
+          <HexagonIcon /> &nbsp; Node Fun
+        </ListSubheader>
+      }>
+      
+      <ListItem key={"cssDemo"} disablePadding>
+          <Link href="/NodeFun/expressBackend">
+            <ListItemButton className="my-listitem-button">
+              <ListItemIcon>
+                <CodeIcon  style={{width: '20px'}}/>
+              </ListItemIcon>
+              <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Express Backend" />
+            </ListItemButton>
+        </Link>
+      </ListItem>
+              
+      </List>
+
     <Divider />
     <List>
      

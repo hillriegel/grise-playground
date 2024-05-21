@@ -72,6 +72,29 @@ export default function Homebody() {
                 </Grid>
             </Grid>
             </div>
+            <div style={{margin: '20px'}}>
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={12}>
+                    <h2>Current Challenge</h2>
+                    <div className="challenge">
+                        <h2 className="white">Build an Express Backend with MongoDB Integration</h2>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} sm={5}>
+                                <Image src="/images/pagination.jpg" alt="pagination bar" height="100" width="700" className="image-border"></Image>
+                            </Grid>
+                            <Grid item xs={12} sm={7}>
+                                This challenge (1.5 hours) is surprisingly complex. Maintaining state requires passing a lot of
+                                information around the component.
+                                <br /><br />
+                                <div className="link-button" style={{border: 'solid 1px #155263'}}>
+                                    <Link href="./CustomComponents/paginationForm" >View the progress here</Link>
+                                </div>
+                            </Grid>
+                        </Grid>
+                    </div>
+                </Grid>
+            </Grid>
+            </div>
         </Box>
         </div>
     )
