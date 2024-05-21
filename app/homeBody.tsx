@@ -58,7 +58,7 @@ export default function Homebody() {
                         <h2 className="white">Custom Pagination Component</h2>
                         <Grid container spacing={2}>
                             <Grid item xs={12} sm={5}>
-                                <Image src="/images/pagination.jpg" alt="pagination bar" height="100" width="700" className="image-border"></Image>
+                                <Image src="/images/pagination.jpg" alt="pagination bar" height="100" width="700" className="image-border-thin"></Image>
                             </Grid>
                             <Grid item xs={12} sm={7}>
                                 This challenge (1.5 hours) is surprisingly complex. Maintaining state requires passing a lot of

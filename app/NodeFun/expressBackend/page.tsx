@@ -64,19 +64,6 @@ export default function CssDemo() {
                         <p>With Express.js, a route is a section of Express code that associates an HTTP method (GET, POST, PUT, DELETE, etc.), 
                             a URL path, and a function that will be executed when that path and method are matched to an incoming HTTP request.
                         </p>
-                        <p>
-                            The route is defined by this part of the code:
-
-
-                                <pre><code>
-                                    .post('/', async (req, res) => {
-                                    // Function logic here
-                                    });
-                                    </code>
-                                </pre>
-                        
-
-                        </p>
                         <br />
                         <Image alt="server code" src="/images/express-route.jpg" width="800" height="630" />
                         
@@ -92,10 +79,7 @@ export default function CssDemo() {
                             This route is meant to be accessed at /users.
                         </p>
                         <p>
-                            <b>Handler Function:</b> This is the async function 
-                                <pre><code>
-                                    <b>async (req, res) => { } </b>
-                                </code></pre>
+                            <b>Handler Function:</b> This is the async function.
                                 It takes the request object req and the response object res as parameters. 
                                 The function handles the incoming data, interacts with the MongoDB/Atlas database 
                                 to create a new user, and sends a response back to the client.
