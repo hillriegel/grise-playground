@@ -81,14 +81,14 @@ export default function Homebody() {
                         <h2 className="white">Build an Express Backend with MongoDB Integration</h2>
                         <Grid container spacing={2}>
                             <Grid item xs={12} sm={5}>
-                                <Image src="/images/pagination.jpg" alt="pagination bar" height="100" width="700" className="image-border"></Image>
+                                <Image src="/images/express-architecture.png" alt="express architecture" height="100" width="700"></Image>
                             </Grid>
                             <Grid item xs={12} sm={7}>
-                                This challenge (1.5 hours) is surprisingly complex. Maintaining state requires passing a lot of
-                                information around the component.
+                                Create a MongoDB on Atlas, create an Express server and API that interacts with a simple
+                                user account management form in a client app.
                                 <br /><br />
                                 <div className="link-button" style={{border: 'solid 1px #155263'}}>
-                                    <Link href="./CustomComponents/paginationForm" >View the progress here</Link>
+                                    <Link href="./NodeFun/expressBackend" >View the progress here</Link>
                                 </div>
                             </Grid>
                         </Grid>

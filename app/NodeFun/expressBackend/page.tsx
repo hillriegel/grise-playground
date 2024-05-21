@@ -18,7 +18,7 @@ export default function CssDemo() {
             marginLeft: '-40px', 
             width: '810px',
             backgroundColor: '#155263'}}>
-                <h1>Node Fun | Express Background with MongoDB in the Cloud</h1></div>
+                <h1>Node Fun :: Express Background with MongoDB in the Cloud</h1></div>
 
 
           <div className="main-content">
@@ -31,6 +31,11 @@ export default function CssDemo() {
                         </p>
                         <p>
                             <h3>Creating the server in Express is straightforward:</h3>
+                            <br />
+                            checkout the repository here:
+                            <div className="link-button">
+                                <a href="https://github.com/hillriegel/grise_express_backend" target="new">github: grise_express_backend</a>
+                            </div>
                             <br />
                         </p>
                         <Image alt="server code" src="/images/express-server1.jpg" width="800" height="630" />
