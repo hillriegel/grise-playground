@@ -41,7 +41,7 @@ body {
   font-family: "Freeman";
   box-shadow: 0px 10% 15px rgba(0, 128, 128, 0.3);
   border-bottom: solid 1px rgba(0, 128, 128, 0.3);
-  position: relative;
+  position: fixed;
   z-index: 100;
 }
 
@@ -53,14 +53,16 @@ body {
   position: relative;
   background-image:
   radial-gradient(circle, #b0bec5 1px, transparent 1px);
-background-size: 30px 30px;
-box-shadow: inset 0px 10px 8px -8px rgba(14, 101, 122, 0.4);
+  background-size: 30px 30px;
+  box-shadow: inset 0px 10px 8px -8px rgba(14, 101, 122, 0.4);
 }
 
 .main-container {
   background-color: #e1ebf7;
-  padding-top: 20px;
-  padding: 20px;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 80px;
   height: 100%;
   width: 1200px;
   display: flex;
