@@ -219,7 +219,7 @@ export default function CurrencyConverter() {
         <br />
         <h2>useExchangeRate Custom Hook</h2>
         <pre>
-          <div className="code-content">
+          <div className="code-content" style={{padding: '20px'}}>
            <code>
 
 
@@ -231,11 +231,11 @@ export default function CurrencyConverter() {
        <br />
         <h2>useCurrencyList Custom Hook</h2>
         <pre>
-          <div className="code-content">
+          <div className="code-content" style={{padding: '20px'}}>
            <code>
 
 
-          {customHook2Code}
+            {customHook2Code}
           </code>
           </div>
        </pre>

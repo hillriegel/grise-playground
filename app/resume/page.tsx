@@ -18,6 +18,8 @@ const Resume = () => {
       <main className="flex  flex-col">
         <div className="min-h-screen flex-1" style={{padding: '20px', width: '100%'}}>
          <h1><b>Resume</b></h1> <PictureAsPdfIcon />
+         <Grid container spacing={2}>
+          <Grid item xs={12} sm={7}>
           <Paper style={{padding: '20px', marginTop: '20px'}}>
             <div>
               <h2>About Me</h2>
@@ -28,9 +30,22 @@ const Resume = () => {
               With extensive <b>UI/UX</b> experience and emphasis on building Web applications that are data-intensive and user-friendly, I&apos;m recognized for my ability to collaborate with cross-functional teams.
             </p>
             </div>
-        
-  
         </Paper>
+          </Grid>
+          <Grid item xs={12} sm={5}>
+          <Paper style={{padding: '20px', marginTop: '20px'}}>
+            <div>
+              <h2>Education</h2>
+              <h3>Masters - New Media Design</h3>
+              Academy of Art University, San Francisco, CA
+              <br />
+              <h3>Bachelors - Music Theory</h3>
+              Oberlin College, Oberlin, OH
+            </div>
+        </Paper>
+          </Grid>
+         </Grid>
+
 
         <Paper style={{padding: '20px', marginTop: '20px'}}>
             <div>
