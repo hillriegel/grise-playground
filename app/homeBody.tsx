@@ -19,7 +19,7 @@ export default function Homebody() {
                 <Grid item  xs={12} sm={2}></Grid>
                 <Grid item xs={12} sm={3}>
 
-                    <Image src="/images/grise_bw.png" alt="photo of Grise" width="300" height="600" className="image-border" />
+                    <Image src="/images/grise_profile_pic_sm.png" alt="photo of Grise" width="300" height="600" className="image-border" />
                     <div className="left-quote" style={{paddingRight: '25px'}}>
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
@@ -28,7 +28,8 @@ export default function Homebody() {
                 <Grid item xs={12} sm={7}>
                     <h1>A Collection of Exercises and Ideas </h1>
                     <p>
-                        This is a basic React/Next.js app set up to demonstrate creating app functionality.
+                        This is a React/Next.js app set up to demonstrate creating app functionality. Redux, MongoDB/Atlas, Material-UI, custom components, 
+                        coding challenges.
                     </p>
                     <p>
                         The repository of this project and all its examples can be retrieved from GitHub here:
