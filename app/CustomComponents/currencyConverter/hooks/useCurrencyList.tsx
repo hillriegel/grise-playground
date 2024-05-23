@@ -22,7 +22,7 @@ const authKey = process.env.NEXT_PUBLIC_X_RAPID_API_KEY;
     }).catch(error => {
       console.error('Error fetching currency list:', error);
     });
-  }, []); // Include apiKey in the dependency array
+  }, [authKey]); // Include apiKey in the dependency array
 
   return data;
 };
