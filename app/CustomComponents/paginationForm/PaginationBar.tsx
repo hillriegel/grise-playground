@@ -33,7 +33,7 @@ export default function PaginationBar({ itemsDisplayed, setItemsDisplayed, setLo
                 console.error('Error fetching data:', error);
                 setLoading(false);
             });
-    }, [rowsPerPage, setItemsDisplayed, setLoading]);
+    }, [rowsPerPage, setItemsDisplayed, setLoading, totalItems]);
 
     useEffect(() => {
         handleGet(1); // Initial fetch on component mount or rowsPerPage change
