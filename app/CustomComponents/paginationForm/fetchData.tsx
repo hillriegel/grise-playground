@@ -2,7 +2,7 @@
 import {Item, APIResponse} from './types';
 import {GriseconRelatedArtists} from './GriseconRelatedArtists';
 
-export default function fetchData(currentPage: number, itemsPerPage: number): Promise<APIResponse> {
+export default function FetchData(currentPage: number, itemsPerPage: number): Promise<APIResponse> {
 
     // Mock data array with 20 items
     const artists = GriseconRelatedArtists.artists;

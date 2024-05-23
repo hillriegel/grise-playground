@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, ChangeEvent } from 'react';
 import Button from '@mui/material/Button';
-import fetchData from './fetchData';
+import FetchData from './FetchData';
 import FirstPageIcon from '@mui/icons-material/FirstPage';
 import LastPageIcon from '@mui/icons-material/LastPage';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -22,7 +22,7 @@ export default function PaginationBar({ itemsDisplayed, setItemsDisplayed, setLo
         setCurrentPage(newPageNumber);
         setLoading(true);
 
-        fetchData(newPageNumber, rowsPerPage)
+        FetchData(newPageNumber, rowsPerPage)
             .then((result: APIResponse) => {
                 setItemsDisplayed({ pageNumber: newPageNumber, rangeStart: result.rangeStart, rangeEnd: result.rangeEnd, itemsToDisplay: result.data });
                 setTotalItems(result.totalItems);
