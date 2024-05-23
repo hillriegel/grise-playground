@@ -49,7 +49,7 @@ export default function ItemsDisplay({ items, loading }: ItemsDisplayProps) {
                                         </TableCell>
                                         <TableCell>
                                             {item.images.length > 0 && (
-                                                <Image src={item.images[0].url} alt={`${item.name} album cover`} width={100} height={100} layout="fixed" />
+                                                <Image src={item.images[0].url} alt={`${item.name} album cover`} width={100} height={100} />
                                             )}
                                         </TableCell>
                                         <TableCell>

@@ -19,7 +19,7 @@ export default function Homebody() {
                 <Grid item  xs={12} sm={2}></Grid>
                 <Grid item xs={12} sm={3}>
 
-                    <Image src="/images/grise_profile_pic_sm.png" alt="photo of Grise" width="300" height="600" className="image-border" />
+                    <Image src="/images/grise_profile_pic_sm.png" alt="photo of Grise" width="300" height="600" className="image-border" priority/>
                     <div className="left-quote" style={{paddingRight: '25px'}}>
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
