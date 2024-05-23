@@ -9,7 +9,7 @@ import { APIResponse, PaginationBarProps } from './types';
 import './pagination.css';
 
 export default function PaginationBar({ itemsDisplayed, setItemsDisplayed, setLoading }: PaginationBarProps) {
-    const [numItems, setNumItems] = useState(20);
+    const [totalItems, setTotalItems] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
     const [numPages, setNumPages] = useState(4);
     const [currentPage, setCurrentPage] = useState(1);
@@ -25,8 +25,9 @@ export default function PaginationBar({ itemsDisplayed, setItemsDisplayed, setLo
         fetchData(newPageNumber, rowsPerPage)
             .then((result: APIResponse) => {
                 setItemsDisplayed({ pageNumber: newPageNumber, rangeStart: result.rangeStart, rangeEnd: result.rangeEnd, itemsToDisplay: result.data });
-                setNumItems(result.totalItems);
+                setTotalItems(result.totalItems);
                 setLoading(false);
+                setNumPages(Math.ceil(totalItems/rowsPerPage));
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
@@ -49,7 +50,7 @@ export default function PaginationBar({ itemsDisplayed, setItemsDisplayed, setLo
                 </select>
             </div>
             <div className="pagination-text">
-                {itemsDisplayed.rangeStart} - {itemsDisplayed.rangeEnd} of {numItems}
+                {itemsDisplayed.rangeStart} - {itemsDisplayed.rangeEnd} of {totalItems}
             </div>
             <Button className="button-item" onClick={() => handleGet(1)} variant="contained" disabled={currentPage === 1}><FirstPageIcon /></Button>
             <Button className="button-item" onClick={() => handleGet(currentPage - 1)} variant="contained" disabled={currentPage === 1}><ArrowBackIosIcon style={{width: '16px'}} /></Button>
