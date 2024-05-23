@@ -8,7 +8,6 @@ import Grid from '@mui/material/Grid';
 import UnstyledPaginationIntroduction from './SampleMuiPagination';
 //import FetchSpotify from './fetchSpotify';
 
-
 const Pagination = () => {
   const [loading, setLoading] = useState(false);
 
