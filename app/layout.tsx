@@ -83,12 +83,12 @@ const DrawerList = (
       </ListItem>
 
       <ListItem key={"sampleForm"} disablePadding>
-          <Link href="/CustomComponents/sampleForm">
+          <Link href="/CustomComponents/PinochleScorer">
         <ListItemButton className="my-listitem-button">
           <ListItemIcon >
           <DataObjectIcon style={{width: '20px'}} />
           </ListItemIcon>
-          <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Sample Form" />
+          <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Pinochle Scorer" />
         </ListItemButton>
         </Link>
       </ListItem>

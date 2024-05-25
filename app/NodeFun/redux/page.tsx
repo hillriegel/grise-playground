@@ -127,24 +127,27 @@ export default function CssDemo() {
                         <Grid container spacing={1}>
                             <Grid item xs={12} sm={9}>
                             <div style={{marginTop: '20px'}}>
-                            <h1>Simple Redux Demo</h1>
-                            <iframe 
-                                src="https://grisecon-redux-demo.netlify.app/"
-                                title="Embedded React App"
-                                width="100%"
-                                height="200px"
-                                style={{ border: 'none' }}
-                            />
+                                <h1>Simple Redux Demo</h1>
+                                <br />
+                                <div style={{backgroundColor: '#ffffff', padding: '6px', width: '95%', borderRadius: '8px'}}>
+                               
+                                    <iframe 
+                                        src="https://grisecon-redux-demo.netlify.app/"
+                                        title="Embedded React App"
+                                        width="100%"
+                                        height="200px"
+                                    />
+                                </div>
                             </div>
                                            
                             </Grid>
                             <Grid item xs={12} sm={3}>
                                 <div style={{marginTop: '60px'}}>
-                            checkout the repository here:
-                            <div className="link-button">
-                                <a href="https://github.com/hillriegel/grise_express_backend" target="new">github: my-redux-app</a>
-                            </div>
-                            </div>
+                                    checkout the repository here:
+                                    <div className="link-button">
+                                        <a href="https://github.com/hillriegel/grise_express_backend" target="new">github: my-redux-app</a>
+                                    </div>
+                                </div>
                             <br />
                             </Grid>
                         </Grid>
