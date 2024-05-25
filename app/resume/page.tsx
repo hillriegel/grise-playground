@@ -17,7 +17,19 @@ const Resume = () => {
     return (
       <main className="flex  flex-col">
         <div className="min-h-screen flex-1" style={{padding: '20px', width: '100%'}}>
-         <h1><b>Resume</b></h1> <PictureAsPdfIcon />
+          <div style={{display: 'flex', alignContent: 'center'}}>
+            <div style={{flexGrow: '3'}}>
+            <h1><b>Resume</b></h1>
+            </div>
+            <div>
+            <PictureAsPdfIcon />
+            </div>
+         </div>
+         <br />
+         <br />
+         <h2>Grise Hillriegel</h2>
+         Oakland, CA 94605<br/>
+         hillriegel@gmail.com<br />
          <Grid container spacing={2}>
           <Grid item xs={12} sm={7}>
           <Paper style={{padding: '20px', marginTop: '20px'}}>
@@ -33,7 +45,7 @@ const Resume = () => {
         </Paper>
           </Grid>
           <Grid item xs={12} sm={5}>
-          <Paper style={{padding: '20px', marginTop: '20px'}}>
+          <Paper style={{padding: '20px', marginTop: '20px', height: '237px'}}>
             <div>
               <h2>Education</h2>
               <h3>Masters - New Media Design</h3>
