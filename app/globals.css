@@ -68,7 +68,8 @@ body {
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: flex-start; /* Aligns items to the top */
-  box-shadow: 0 0 30px 10px rgba(0, 128, 128, 0.2); /* Soft, spread blueish teal shadow */
+  background-image: linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% );
+  box-shadow: 0 0 30px 10px rgba(0, 71, 71, 0.2); /* Soft, spread blueish teal shadow */
 }
 
 .page-title {
@@ -76,6 +77,10 @@ body {
     margin-left: -40px;
     width: 810px;
     background-color: #155263;
+}
+
+.page-title h1 {
+  color: #6fccde;
 }
 
 p {
@@ -230,6 +235,7 @@ h3 {
   font-weight: 400;
   font-size: 1em;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 

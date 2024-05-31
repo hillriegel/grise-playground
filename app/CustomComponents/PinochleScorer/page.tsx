@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react';
+import GithubButton from '../../DesignComponents/GithubButton';
 import CodeToHTMLDisplay from '../../utils/convertCodeToHtml';
 import {
   Paper,
@@ -161,12 +162,8 @@ const PinochleScorer = () => {
             </p>
           </Grid>
           <Grid item xs={12} sm={5}>
-            <div style={{marginTop: '60px', marginLeft: '20px'}}>
-                checkout the repository here:
-                <div className="link-button">
-                    <a href="https://github.com/hillriegel/pinochle-scorer" target="new">github: pinochle-scorer</a>
-                </div>
-            </div>
+            <GithubButton label="pinochle-scorer" link="https://github.com/hillriegel/pinochle-scorer"/>
+      
           </Grid>
         </Grid>
         <Grid container spacing={2}>

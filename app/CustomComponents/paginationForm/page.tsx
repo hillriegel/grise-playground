@@ -168,7 +168,7 @@ const Pagination = () => {
   return (
     <main className="flex min-h-screen flex-col" >
     <div className="page-title">
-        <h1>React Components: Custom Pagination</h1>
+        <h1>React Components :: Custom Pagination</h1>
     </div>
 
 

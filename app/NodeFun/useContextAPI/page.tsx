@@ -97,10 +97,12 @@ const InternalComponent: React.FC = () => {
 
     return (
         <main className="flex min-h-screen flex-col">
-            <div style={{border: 'solid 1px', padding: '20px', marginLeft: '-40px', width: '810px', backgroundColor: '#155263'}}>
-                <h1>Node Fun :: Using the Context API for Shared State</h1>
-            </div>
-            <div className="main-content">
+        <div className="page-title">
+        <h1>Node Fun :: Using the Context API for Shared State</h1>
+      </div>
+
+      <div className="main-content">
+            
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={5}>
                                 <h2>Components Sharing State with Context </h2>

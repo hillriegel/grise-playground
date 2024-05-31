@@ -78,11 +78,22 @@ export const useCurrencyList = () => {
 };
 `;
 export default function CurrencyConverter() {
-  const [currencyFrom, setCurrencyFrom] = useState('USD');
+
+  const [currencyFrom, setCurrencyFrom] = useState('');
+  const [currencyTo, setCurrencyTo] = useState('');
   const [amountFrom, setAmountFrom] = useState('0.00');
-  const [currencyTo, setCurrencyTo] = useState('USD');
 
   const currencies = useCurrencyList();
+
+  useEffect(() => {
+    if (currencies.length > 0) {
+      setCurrencyFrom(currencies[0]);
+      setCurrencyTo(currencies[0]);
+    }
+  }, [currencies]); // Dependency on the currencies array
+
+
+
 
   const [amountTo] = useExchangeRate(currencyFrom, currencyTo, amountFrom);
 
@@ -104,7 +115,7 @@ export default function CurrencyConverter() {
   return (
     <main className="flex min-h-screen flex-col">
         <div className="page-title">
-        <h1>React Components: Currency Exchange</h1>
+        <h1>React Components :: Currency Exchange</h1>
       </div>
 
       <div className="main-content">
@@ -146,6 +157,8 @@ export default function CurrencyConverter() {
                           <Box sx={{ minWidth: 50 }}>
                             <FormControl fullWidth>
                               <InputLabel id="demo-simple-select-label">Currency</InputLabel>
+                              {currencies.length === 0 && <div>Loading currencies...</div>}
+                              {currencies.length > 0 &&
                               <Select
                                 labelId="demo-simple-select-label"
                                 id="currencyFrom"
@@ -157,6 +170,7 @@ export default function CurrencyConverter() {
                                   <MenuItem key={'fr.'+index} value={curr}>{curr}</MenuItem>
                                 ))}
                               </Select>
+                              }
                             </FormControl>
                           </Box>
                         </Grid>
@@ -176,17 +190,20 @@ export default function CurrencyConverter() {
                           <Box sx={{ minWidth: 50 }}>
                             <FormControl fullWidth>
                               <InputLabel id="demo-simple-select-label">Currency</InputLabel>
-                              <Select
-                                labelId="demo-simple-select-label"
-                                id="currencyTo"
-                                value={currencyTo}
-                                label="Currency"
-                                onChange={handleChangeTo}
-                              >
-                                {currencies.map((curr, index) => (
-                                  <MenuItem key={'to.'+index} value={curr}>{curr}</MenuItem>
-                                ))}
-                              </Select>
+                              {currencies.length === 0 && <div>Loading currencies...</div>}
+                              {currencies.length > 0 &&
+                                <Select
+                                  labelId="demo-simple-select-label"
+                                  id="currencyTo"
+                                  value={currencyTo}
+                                  label="Currency"
+                                  onChange={handleChangeTo}
+                                >
+                                  {currencies.map((curr, index) => (
+                                    <MenuItem key={'to.'+index} value={curr}>{curr}</MenuItem>
+                                  ))}
+                                </Select>
+                              }
                             </FormControl>
                           </Box>
                         </Grid>

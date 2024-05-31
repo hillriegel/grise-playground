@@ -2,9 +2,8 @@
 
 import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
-import Image from 'next/image';
 import CodeToHTMLDisplay from '../../utils/convertCodeToHtml';
-
+import GithubButton from '../../DesignComponents/GithubButton';
 
 export default function CssDemo() {
     type FlexDirection = 'row' | 'column';
@@ -81,16 +80,12 @@ export default function CssDemo() {
     `;
 
     return (
-        <main className="flex min-h-screen flex-col" >
-            <div style={{border: 'solid 1px', 
-            padding: '20px', 
-            marginLeft: '-40px', 
-            width: '810px',
-            backgroundColor: '#155263'}}>
-                <h1>Node Fun :: Simple React App Using Redux</h1></div>
+        <main className="flex min-h-screen flex-col">
+        <div className="page-title">
+        <h1>Node Fun :: Simple React App Using Redux</h1>
+      </div>
 
-
-          <div className="main-content">
+      <div className="main-content">
             
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={9}>
@@ -143,23 +138,16 @@ export default function CssDemo() {
                             </Grid>
                             <Grid item xs={12} sm={3}>
                                 <div style={{marginTop: '60px'}}>
-                                    checkout the repository here:
-                                    <div className="link-button">
-                                        <a href="https://github.com/hillriegel/grise_express_backend" target="new">github: my-redux-app</a>
-                                    </div>
+                                    <GithubButton link="https://github.com/hillriegel/grise_express_backend" label="my-redux-app" />
+                                  
                                 </div>
                             <br />
                             </Grid>
                         </Grid>
                             
-
-
-
-                        <p>
-                            <h2>Creating a simple React app that uses Redux</h2>
-                            <br />
-                           
-                        </p>
+                        <br />
+                        <h2>Creating a simple React app that uses Redux</h2>
+                        <br />
                        <div className="terminal-content">
                             npx create-react-app my-redux-app<br />
                             npm start<br />

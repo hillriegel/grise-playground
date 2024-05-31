@@ -12,16 +12,13 @@ export default function CssDemo() {
     const [direction, setDirection] = useState<FlexDirection>('row');
 
     return (
-        <main className="flex min-h-screen flex-col" >
-            <div style={{border: 'solid 1px', 
-            padding: '20px', 
-            marginLeft: '-40px', 
-            width: '810px',
-            backgroundColor: '#155263'}}>
-                <h1>CSS Exercises | FlexBox Playground</h1></div>
+        <main className="flex min-h-screen flex-col">
+            <div className="page-title">
+            <h1>React Components :: FlexBox Playground</h1>
+        </div>
 
+        <div className="main-content">
 
-          <div className="main-content">
                
                 <h2>Example of FlexBox styling</h2>
                 <Grid container spacing={2}>

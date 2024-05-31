@@ -8,6 +8,8 @@ import Card from '@mui/material/Card';
 import Link from 'next/link';
 import ChairIcon from '@mui/icons-material/Chair';
 import HexagonIcon from '@mui/icons-material/Hexagon';
+import GithubButton from './DesignComponents/GithubButton';
+import LinkButton from './DesignComponents/LinkButton';
 
 export default function Homebody() {
 
@@ -36,10 +38,7 @@ export default function Homebody() {
                     <p>
                         The repository of this project and all its examples can be retrieved from GitHub here:
                     </p>
-                    <br />
-                        <div className="link-button">
-                            <a href="https://github.com/hillriegel/grise-playground" target="new">github: grise-playground</a>
-                        </div>
+                        <GithubButton link="https://github.com/hillriegel/grise-playground" label="grise-playground" />
            
                         <Card className="blog-card" style={{marginLeft: '0px'}}>
                             <span className="card-date">May 18, 2024</span><br />
@@ -68,12 +67,12 @@ export default function Homebody() {
                                 </Grid>
                                 <Grid item xs={12} sm={7}>
                                     <div style={{marginLeft: '30px'}}>
-                                    It took me about 2.5 hours from start to finish to write this just for fun.
-                                    <br /><br />
-                                    <div className="link-button" style={{border: 'solid 1px #155263'}}>
-                                        <Link href="https://pinochle-scorer.vercel.app/" target="new">View the progress here</Link>
-                                        
-                                    </div>
+                                    It took me about 2.5 hours from start to finish to write this just for fun. I'm working to see how to test and find bugs
+                                    by looking at the behavior I would never think of... like hitting a reducer button and not thinking to not let the value
+                                    go negative... an obvious guardrail that I just didn't think of, because every time I tested I stopped decrementing when the value 
+                                    got to zero.
+                                    
+                                    <GithubButton link="https://pinochle-scorer.vercel.app/" label="pinochle-scorer" />
                                     <br />
                                     Often my dining room table looks like a pinochle parlor. My mother and sister play a few quick games almost every day. They use a big stack of scratch paper and keep score by hand. Watching them scribble on the paper and keep track of the scores for different melds and then counting up the points from the tricks made me think there could be an easier way to do it with an app.
                                     </div>
@@ -118,10 +117,8 @@ export default function Homebody() {
                                     <div style={{marginLeft: '30px'}}>
                                     This challenge (1.5 hours) is surprisingly complex. Maintaining state requires passing a lot of
                                     information around the component.
-                                    <br /><br />
-                                    <div className="link-button" style={{border: 'solid 1px #155263'}}>
-                                        <Link href="./CustomComponents/paginationForm" >View the progress here</Link>
-                                    </div>
+                                    <LinkButton link="./CustomComponents/paginationForm" label="View the progress here" />
+                                    
                                     </div>
                                 </Grid>
                             </Grid>
@@ -141,13 +138,10 @@ export default function Homebody() {
                                 <Image src="/images/express-architecture.png" alt="express architecture" height="100" width="700"></Image>
                             </Grid>
                             <Grid item xs={12} sm={7}>
-                            <div style={{marginLeft: '30px'}}>
-                                Create a MongoDB on Atlas, create an Express server and API that interacts with a simple
-                                user account management form in a client app.
-                                <br /><br />
-                                <div className="link-button" style={{border: 'solid 1px #155263'}}>
-                                    <Link href="./NodeFun/expressBackend" >View the progress here</Link>
-                                </div>
+                                <div style={{marginLeft: '30px'}}>
+                                    Create a MongoDB on Atlas, create an Express server and API that interacts with a simple
+                                    user account management form in a client app.
+                                    <LinkButton link="./NodeFun/expressBackend" label="View the progress here" />
                                 </div>
                             </Grid>
                         </Grid>

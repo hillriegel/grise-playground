@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
+import GithubButton from '../../DesignComponents/GithubButton';
 
 export default function CssDemo() {
     type FlexDirection = 'row' | 'column';
@@ -12,16 +13,12 @@ export default function CssDemo() {
     const [direction, setDirection] = useState<FlexDirection>('row');
 
     return (
-        <main className="flex min-h-screen flex-col" >
-            <div style={{border: 'solid 1px', 
-            padding: '20px', 
-            marginLeft: '-40px', 
-            width: '810px',
-            backgroundColor: '#155263'}}>
-                <h1>Node Fun :: Express Background with MongoDB in the Cloud</h1></div>
+        <main className="flex min-h-screen flex-col">
+        <div className="page-title">
+        <h1>Node Fun :: Express Background with MongoDB in the Cloud</h1>
+      </div>
 
-
-          <div className="main-content">
+      <div className="main-content">
                
                 <h2>Creating a Server (Express)</h2>
                 <Grid container spacing={2}>
@@ -29,15 +26,11 @@ export default function CssDemo() {
                         <p>Developing and understanding NoSQL database techniques, setting up a server and connecting it 
                             to a MongoDB Atlas instance is the exercise.
                         </p>
-                        <p>
+                        <div style={{display: 'flex', alignItems: "baseline", justifyContent: 'space-between'}}>
                             <h3>Creating the server in Express is straightforward:</h3>
-                            <br />
-                            checkout the repository here:
-                            <div className="link-button">
-                                <a href="https://github.com/hillriegel/grise_express_backend" target="new">github: grise_express_backend</a>
-                            </div>
-                            <br />
-                        </p>
+                            <GithubButton link="https://github.com/hillriegel/grise_express_backend" label="grise_express_backend" />
+                        </div>
+                        <br />
                         <Image alt="server code" src="/images/express-server1.jpg" width="800" height="630" />
                     </Grid>
                 </Grid>

@@ -104,7 +104,7 @@ const DrawerList = (
         </Link>
       </ListItem>
 
-      <ListItem key={"pagination"} disablePadding>
+      <ListItem key={"customSelect"} disablePadding>
           <Link href="/CustomComponents/customSelect">
         <ListItemButton className="my-listitem-button">
           <ListItemIcon>
@@ -155,7 +155,7 @@ const DrawerList = (
       }>
       
       {/*  EXPRESS BACKEND */}
-      <ListItem key={"cssDemo"} disablePadding>
+      <ListItem key={"expressbackend"} disablePadding>
           <Link href="/NodeFun/expressBackend">
             <ListItemButton className="my-listitem-button">
               <ListItemIcon>
@@ -167,7 +167,7 @@ const DrawerList = (
       </ListItem>
       
             {/*  USING REDUX */}
-      <ListItem key={"cssDemo"} disablePadding>
+      <ListItem key={"redux"} disablePadding>
           <Link href="/NodeFun/redux">
             <ListItemButton className="my-listitem-button">
               <ListItemIcon>
@@ -179,7 +179,7 @@ const DrawerList = (
       </ListItem>
 
       {/*  USING CONTEXT API */}
-      <ListItem key={"cssDemo"} disablePadding>
+      <ListItem key={"usecontextapi"} disablePadding>
           <Link href="/NodeFun/useContextAPI">
             <ListItemButton className="my-listitem-button">
               <ListItemIcon>
