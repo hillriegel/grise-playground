@@ -41,7 +41,7 @@ export default function RootLayout({
               </Button> 
             </Grid>
             <Grid item sm={2}>
-              <div style={{marginTop: '5px'}}>:playground:</div>
+              <div style={{marginTop: '5px', fontSize: '1.5rem'}}>:playground:</div>
             </Grid>
           </Grid>
           </div>
