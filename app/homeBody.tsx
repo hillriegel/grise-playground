@@ -68,24 +68,21 @@ export default function Homebody() {
             <Grid container spacing={3}>
                 {/* COMPONENT CHALLENGE */}
                 <div style={{marginLeft: '40px', marginRight: '20px', marginTop: '20px', marginBottom: '40px'}}>
-                        <h2><ChairIcon /> &nbsp; Current Component Challenge :: May 29, 2024</h2>
-                        <div className="challenge-purple" style={{padding: '30px'}}>
-                            <h2 className="white">Pinochle Scorer</h2>
+                        <h2><ChairIcon /> &nbsp; Current Component Challenge :: June 2, 2024</h2>
+                        <div className="challenge-blue" style={{padding: '30px'}}>
+                            <h2 className="white">Music Streamer</h2>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={5}>
-                                    <Image src="/images/pinochle_screen.png" alt="Pinochle Scorer" height="100" width="700" className="image-border-thin"></Image>
+                                    <Image src="/images/grisecon_streamer.png" alt="Grisecon's Music" height="100" width="700" className="image-border-thin"></Image>
                                 </Grid>
                                 <Grid item xs={12} sm={7}>
                                     <div style={{marginLeft: '30px'}}>
-                                    It took me about 2.5 hours from start to finish to write this just for fun. I'm working to see how to test and find bugs
-                                    by looking at the behavior I would never think of... like hitting a reducer button and not thinking to not let the value
-                                    go negative... an obvious guardrail that I just didn't think of, because every time I tested I stopped decrementing when the value 
-                                    got to zero.
+                                    The main component of this project is a streaming component that sits in an iframe. The learning step was setting
+                                    up a serverless function within the Next app... configuring the environment variables, the email SMTP server, etc.
                                     
-                                    <GithubButton link="https://pinochle-scorer.vercel.app/" label="pinochle-scorer" />
+                                    <GithubButton link="https://grisecon-mobile-portfolio.vercel.app/" label="grisecon-music-streamer" />
                                     <br />
-                                    Often my dining room table looks like a pinochle parlor. My mother and sister play a few quick games almost every day. They use a big stack of scratch paper and keep score by hand. Watching them scribble on the paper and keep track of the scores for different melds and then counting up the points from the tricks made me think there could be an easier way to do it with an app.
-                                    </div>
+                                 </div>
                                 </Grid>
                             </Grid>
                         </div>
@@ -117,18 +114,22 @@ export default function Homebody() {
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={12}>
                         <h2><ChairIcon /> &nbsp; Component Challenge</h2>
-                        <div className="challenge" style={{paddingLeft: '30px'}}>
-                            <h2 className="white">Custom Pagination Component</h2>
+                        <div className="challenge-purple" style={{padding: '30px'}}>
+                            <h2 className="white">Pinochle Scorer</h2>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={5}>
-                                    <Image src="/images/pagination.jpg" alt="pagination bar" height="100" width="700" className="image-border-thin"></Image>
+                                    <Image src="/images/pinochle_screen.png" alt="Pinochle Scorer" height="100" width="700" className="image-border-thin"></Image>
                                 </Grid>
                                 <Grid item xs={12} sm={7}>
                                     <div style={{marginLeft: '30px'}}>
-                                    This challenge (1.5 hours) is surprisingly complex. Maintaining state requires passing a lot of
-                                    information around the component.
-                                    <LinkButton link="./CustomComponents/paginationForm" label="View the progress here" />
+                                    It took me about 2.5 hours from start to finish to write this just for fun. I'm working to see how to test and find bugs
+                                    by looking at the behavior I would never think of... like hitting a reducer button and not thinking to not let the value
+                                    go negative... an obvious guardrail that I just didn't think of, because every time I tested I stopped decrementing when the value 
+                                    got to zero.
                                     
+                                    <GithubButton link="https://pinochle-scorer.vercel.app/" label="pinochle-scorer" />
+                                    <br />
+                                    Often my dining room table looks like a pinochle parlor. My mother and sister play a few quick games almost every day. They use a big stack of scratch paper and keep score by hand. Watching them scribble on the paper and keep track of the scores for different melds and then counting up the points from the tricks made me think there could be an easier way to do it with an app.
                                     </div>
                                 </Grid>
                             </Grid>

@@ -66,7 +66,29 @@ interface DrawerListProps {
           </ListSubheader>
         }
       >
+
+      <ListItem key={"currencyEx"} disablePadding>
+            <Link href="/CustomComponents/currencyConverter">
+          <ListItemButton className="my-listitem-button">
+            <ListItemIcon>
+                 <DataObjectIcon style={{width: '20px'}} />
+            </ListItemIcon>
+            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Currency Exchange" />
+          </ListItemButton>
+          </Link>
+        </ListItem>
           <ListItem key={"currencyEx"} disablePadding>
+            <Link href="/CustomComponents/grisecon-streamer">
+          <ListItemButton className="my-listitem-button">
+            <ListItemIcon>
+                 <DataObjectIcon style={{width: '20px'}} />
+            </ListItemIcon>
+            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Music Streamer" />
+          </ListItemButton>
+          </Link>
+        </ListItem>
+
+        <ListItem key={"currencyEx"} disablePadding>
             <Link href="/CustomComponents/currencyConverter">
           <ListItemButton className="my-listitem-button">
             <ListItemIcon>
