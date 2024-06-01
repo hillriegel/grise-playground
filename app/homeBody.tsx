@@ -67,7 +67,7 @@ export default function Homebody() {
             <br />
             <Grid container spacing={3}>
                 {/* COMPONENT CHALLENGE */}
-                <div style={{marginLeft: '20px', marginRight: '20px', marginTop: '20px', marginBottom: '40px'}}>
+                <div style={{marginLeft: '40px', marginRight: '20px', marginTop: '20px', marginBottom: '40px'}}>
                         <h2><ChairIcon /> &nbsp; Current Component Challenge :: May 29, 2024</h2>
                         <div className="challenge-purple" style={{padding: '30px'}}>
                             <h2 className="white">Pinochle Scorer</h2>
@@ -113,7 +113,7 @@ export default function Homebody() {
 
 
             {/* COMPONENT CHALLENGE */}
-            <div style={{marginRight: '20px'}}>
+            <div style={{marginRight: '20px', marginLeft: '20px'}}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={12}>
                         <h2><ChairIcon /> &nbsp; Component Challenge</h2>
@@ -137,7 +137,7 @@ export default function Homebody() {
                 </Grid>
             </div>
 
-            <div style={{marginRight: '20px', marginTop: '30px'}}>
+            <div style={{marginLeft: '20px', marginRight: '20px', marginTop: '30px'}}>
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={12}>
                 <h2><HexagonIcon /> &nbsp; Current Node Fun</h2>
