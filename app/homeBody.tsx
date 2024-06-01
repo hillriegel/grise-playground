@@ -10,13 +10,23 @@ import ChairIcon from '@mui/icons-material/Chair';
 import HexagonIcon from '@mui/icons-material/Hexagon';
 import GithubButton from './DesignComponents/GithubButton';
 import LinkButton from './DesignComponents/LinkButton';
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function Homebody() {
 
 
     return (
-        <div className="body-container" style={{marginLeft: '25px'}}>
-        <Box>
+        
+           
+       
+       
+   
+      
+        <Box style={{marginTop: '-30px'}}>
+        <div className="page-title">
+            <h1><HomeIcon style={{marginBottom: '4px'}} /> &nbsp; Playground :: Home</h1>
+        </div>
+        <br /><br />
             <Grid container spacing={3}>
                 <Grid item  xs={12} sm={2}>
                     {/* empty colum */}
@@ -150,7 +160,7 @@ export default function Homebody() {
             </Grid>
             </div>
         </Box>
-        </div>
+       
     )
 }
 

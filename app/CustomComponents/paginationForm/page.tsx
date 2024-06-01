@@ -6,6 +6,7 @@ import PaginationBar from './PaginationBar';
 import SearchBar from './SearchBar';
 import Grid from '@mui/material/Grid';
 import UnstyledPaginationIntroduction from './SampleMuiPagination';
+import ChairIcon from '@mui/icons-material/Chair';
 //import FetchSpotify from './fetchSpotify';
 
 const Pagination = () => {
@@ -168,7 +169,7 @@ const Pagination = () => {
   return (
     <main className="flex min-h-screen flex-col" >
     <div className="page-title">
-        <h1>React Components :: Custom Pagination</h1>
+        <h1><ChairIcon style={{marginBottom: '4px'}} />  &nbsp; React Components :: Custom Pagination</h1>
     </div>
 
 

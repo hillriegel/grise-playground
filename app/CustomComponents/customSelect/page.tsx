@@ -3,13 +3,14 @@
 import React, { useState, useEffect, useCallback, ChangeEvent } from 'react';
 import Grid from '@mui/material/Grid';
 import SelectMenu from './SelectMenu';
+import ChairIcon from '@mui/icons-material/Chair';
 
 export default function CustomSelect() {
 
   return (
     <main className="flex min-h-screen flex-col" >
     <div className="page-title">
-        <h1>React Components :: Custom Select</h1>
+        <h1><ChairIcon style={{marginBottom: '4px'}} /> &nbsp; React Components :: Custom Select</h1>
     </div>
 
 

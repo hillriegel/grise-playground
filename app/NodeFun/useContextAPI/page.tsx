@@ -8,6 +8,7 @@ import { Grid } from '@mui/material';
 import CodeToHTMLDisplay from '../../utils/convertCodeToHtml';
 import { firstComponentCode } from './FirstComponent';
 import { myContextCode } from './Context';
+import HexagonIcon from '@mui/icons-material/Hexagon';
 
 const ContextDemo: React.FC = () => {
     return (
@@ -98,7 +99,7 @@ const InternalComponent: React.FC = () => {
     return (
         <main className="flex min-h-screen flex-col">
         <div className="page-title">
-        <h1>Node Fun :: Using the Context API for Shared State</h1>
+        <h1><HexagonIcon style={{marginBottom: '4px'}} />&nbsp; Node Fun :: Using the Context API for Shared State</h1>
       </div>
 
       <div className="main-content">

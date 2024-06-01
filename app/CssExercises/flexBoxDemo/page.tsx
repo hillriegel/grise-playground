@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
-
+import StyleIcon from '@mui/icons-material/Style';
 
 export default function CssDemo() {
     type FlexDirection = 'row' | 'column';
@@ -14,7 +14,7 @@ export default function CssDemo() {
     return (
         <main className="flex min-h-screen flex-col">
             <div className="page-title">
-            <h1>React Components :: FlexBox Playground</h1>
+            <h1><StyleIcon style={{marginBottom: '4px'}} /> &nbsp; CSS Exercises :: FlexBox Playground</h1>
         </div>
 
         <div className="main-content">

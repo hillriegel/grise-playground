@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import GithubButton from '../../DesignComponents/GithubButton';
+import HexagonIcon from '@mui/icons-material/Hexagon';
 
 export default function CssDemo() {
     type FlexDirection = 'row' | 'column';
@@ -15,7 +16,7 @@ export default function CssDemo() {
     return (
         <main className="flex min-h-screen flex-col">
         <div className="page-title">
-        <h1>Node Fun :: Express Background with MongoDB in the Cloud</h1>
+        <h1><HexagonIcon style={{marginBottom: '4px'}} /> &nbsp; Node Fun :: Express Background with MongoDB in the Cloud</h1>
       </div>
 
       <div className="main-content">

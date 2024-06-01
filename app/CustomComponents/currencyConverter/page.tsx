@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import {useCurrencyList, useExchangeRate} from './hooks';
+import ChairIcon from '@mui/icons-material/Chair';
 
 const now = new Date();
 
@@ -115,7 +116,7 @@ export default function CurrencyConverter() {
   return (
     <main className="flex min-h-screen flex-col">
         <div className="page-title">
-        <h1>React Components :: Currency Exchange</h1>
+        <h1><ChairIcon style={{marginBottom: '4px'}} /> &nbsp; React Components :: Currency Exchange</h1>
       </div>
 
       <div className="main-content">

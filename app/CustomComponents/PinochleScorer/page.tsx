@@ -9,6 +9,7 @@ import {
   TextField,
   Grid
 } from '@mui/material';
+import ChairIcon from '@mui/icons-material/Chair';
 
 const PinochleScorer = () => {
 
@@ -148,7 +149,7 @@ const PinochleScorer = () => {
     return (
       <main className="flex min-h-screen flex-col">
       <div className="page-title">
-        <h1>React Components :: Pinochle Scorer</h1>
+        <h1><ChairIcon style={{marginTop: '4px'}} /> &nbsp; React Components :: Pinochle Scorer</h1>
       </div>
       <br />
       <div className="main-content">
