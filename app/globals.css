@@ -56,12 +56,6 @@ body {
   background-size: 30px 30px;
   box-shadow: inset 0px 10px 8px -8px rgba(14, 101, 122, 0.4);
   }
-
-  .outer:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-  }
  
 
 .main-container {
