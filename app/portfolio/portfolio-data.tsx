@@ -42,4 +42,18 @@ export const PORTFOLIO_DATA: PortfolioData = {
             { link: '/images/portfolio/adam_wolpert3.png', text: 'blurb about the image' },
         ]
     },
+    'portraits': {
+        title: 'Digital (3D) Portraits',
+        mainImg: '/images/portfolio/octoplasm_1.png',
+        mainImg_alt: 'Portraits',
+        description: 'Here&apos; some text about the Sinch Customer Dashboard',
+        imageSet: [
+            { link: '/images/portfolio/octoplasm_1.png', text: 'The album art for Octoplasm featured a portrait of my friend, Raul. It was created using 3D software and then digitally pained in Photoshop to add the matches and smoke.' },
+            { link: '/images/portfolio/luismesa_metalsnake_thumb.png', text: 'blurb about the image' },
+            { link: '/images/portfolio/raul_alchemy_thumb.png', text: 'blurb about the image' },
+            { link: '/images/portfolio/ryuichi_deva_thumb.png', text: 'blurb about the image' },
+            { link: '/images/portfolio/wag_thumb.png', text: 'blurb about the image' },
+            { link: '/images/portfolio/wylu_thumb.png', text: 'blurb about the image' },
+        ]
+    }
 }

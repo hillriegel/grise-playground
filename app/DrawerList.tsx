@@ -70,11 +70,11 @@ interface DrawerListProps {
           <ListItem key={"grisecon-streamer"} disablePadding>
             <Link href="/CustomComponents/grisecon-streamer">
               <ListItemButton className="drawer-menu-button">
-              <ListItemIcon>
-                  <DataObjectIcon className="drawer-menu-icon neutral" />
-              </ListItemIcon>
-              <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Music Streamer" />
-            </ListItemButton>
+                <ListItemIcon>
+                    <DataObjectIcon className="drawer-menu-icon neutral" />
+                </ListItemIcon>
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Music Streamer" />
+              </ListItemButton>
           </Link>
         </ListItem>
 
