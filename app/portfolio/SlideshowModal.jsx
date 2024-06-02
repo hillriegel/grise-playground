@@ -35,7 +35,7 @@ const SlideshowModal = ({ isOpen, onClose, images }) => {
                     <>
             
                     <div className="slideshow-container" key={index} style={{display: 'flex'}}>
-                        <div className="slideshow-image" style={{border: 'solid 1px #aaaaaa'}}>
+                        <div className="slideshow-image" style={{border: 'solid 1px #aaaaaa', marginLeft: '20px'}}>
                         <Image
                                     src={img.link}
                                     alt="Slideshow image"
