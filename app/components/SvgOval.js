@@ -1,5 +1,6 @@
 import React from 'react';
 
+// million-ignore
 const SvgOval = (props) => {
   return (
     <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">

@@ -32,11 +32,11 @@ export default function RootLayout({
           <Grid container spacing-={2}>
             <Grid item style={{width: '95px'}}>
               <Button sx={{ '& svg':  { width: '80px' } }} className="my-menu-button" onClick={toggleDrawer(true)}>
-                <MenuIcon style={{height: '30px'}}/>
+                <MenuIcon style={{height: '30px'}} className="neutral" />
               </Button> 
             </Grid>
             <Grid item sm={2}>
-              <div style={{marginLeft: '10px', fontSize: '1.5rem'}}>:playground:</div>
+              <div style={{marginLeft: '10px', fontSize: '1.5rem'}} className="neutral">:playground:</div>
             </Grid>
             <Grid item sm={3} style={{textAlign: 'right'}} >
               <ThemeSwitcher />
