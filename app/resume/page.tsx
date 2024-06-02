@@ -7,10 +7,14 @@ import {
   TextField,
   List,
   ListItem,
+  ListItemText,
+  ListItemIcon,
   Card,
 } from '@mui/material'
 import Grid from '@mui/material/Grid';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'; // A small dot icon
+
 
 const Resume = () => {
 
@@ -60,29 +64,59 @@ const Resume = () => {
 
 
         <Paper style={{padding: '20px', marginTop: '20px'}}>
-            <div>
+            <div style={{width: '80%'}}>
               <h2>Work Experience</h2>
                 <div style={{margin: '20px'}}>
                   <b>Sinch</b><br />
                   Sr. Frontend Developer<br />
                   Sweden · Remote • 11/2020 - 04/2024 • Full-time
-                  <br />
-                  <br />
-                  <List>
-                    <ListItem>Using React.js, Next.js, Typescript, Material UI, and HTML5, I worked closely with designers 
+                  
+                  <List style={{marginTop: '20px'}}>
+                    <ListItem key="sinch-skill-1">
+                    <ListItemIcon style={{marginTop: '-40px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
+                    </ListItemIcon>
+                    <div style={{marginLeft: '-20px'}}>
+                   Using React.js, Next.js, Typescript, Material UI, and HTML5, I worked closely with designers 
                       doing customer-focused development to produce data visualization elements that made complex data actionable for our customers.
                       I&apos;m recognized for my ability to collaborate with cross-functional teams.
+                   </div>
                     </ListItem>
-                    <ListItem>
-                      Streamlined design and development of applications, enhancing speed and efficiency for managing large data sets, leading to a 50% improvement in performance in 9 months.
-                    </ListItem>
-                    <ListItem>
-                      Worked closely with backend teams to create and sync node-based GraphQL BFFs with databases.
-                    </ListItem>
-                    <ListItem>Improved user experience by designing data display charts and summaries for complex datasets, resulting in a 10% increase in user engagement.
 
+                    <ListItem>
+                    <ListItemIcon style={{marginTop: '-20px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
+                    </ListItemIcon>
+                    <div style={{marginLeft: '-20px'}}>
+                      Streamlined design and development of applications, enhancing speed and efficiency for managing large data sets, leading to a 50% improvement in performance in 9 months.
+                      </div>
                     </ListItem>
-                    <ListItem>Developed and executed JEST and Playwright testing to enhance testing efficiency, reducing bug resolution time by 25%.</ListItem>
+             
+                    <ListItem>
+                    <ListItemIcon style={{marginTop: '0px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
+                    </ListItemIcon>
+                    <div style={{marginLeft: '-20px'}}>
+                      Worked closely with backend teams to create and sync node-based GraphQL BFFs with databases.
+                      </div>
+                    </ListItem>
+                    <ListItem>
+                    <ListItemIcon style={{marginTop: '-20px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
+                    </ListItemIcon>
+                    <div style={{marginLeft: '-20px'}}>
+                      Improved user experience by designing data display charts and summaries for complex datasets, resulting in a 10% increase in user engagement.
+                      </div>
+                    </ListItem>
+
+                    <ListItem>
+                     <ListItemIcon style={{marginTop: '-20px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
+                    </ListItemIcon>
+                    <div style={{marginLeft: '-20px'}}>
+                      Developed and executed JEST and Playwright testing to enhance testing efficiency, reducing bug resolution time by 25%.
+                      </div>
+                      </ListItem>
                   </List>
                 </div>
 

@@ -31,12 +31,12 @@ export default function Portfolio() {
 
       <div className="main-content">
 
-        <main className="flex min-h-screen flex-col p-6" >
+        <main className="flex flex-col p-6" >
             <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-                <Grid container spacing={4}>
+                <Grid container spacing={2}>
                     {Object.keys(PORTFOLIO_DATA).map(key => (
-                        <Grid item xs={12} sm={6} key={key} onClick={() => handlePortfolioItemClick(PORTFOLIO_DATA[key].imageSet)}>
-                            <PortfolioItem id={key} />
+                        <Grid item sm={6} key={key} onClick={() => handlePortfolioItemClick(PORTFOLIO_DATA[key].imageSet)}>
+                            <PortfolioItem id={key}/>
                         </Grid>
                     ))}
                     <SlideshowModal

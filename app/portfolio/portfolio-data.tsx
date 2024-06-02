@@ -25,8 +25,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
         mainImg_alt: 'Sinch Customer Dashboard',
         description: 'Here&apos; some text about the Sinch Customer Dashboard',
         imageSet: [
-            { link: '/images/portfolio/sinch_dashboard2.png', text: 'blurb about the image' },
-            { link: '/images/portfolio/sinch_dashboard3.png', text: 'blurb about the image' },
+            { link: '/images/portfolio/sinch_dashboard2.png', text: 'I worked with some very talented and dedicated UI designers at Sinch. They provided Figma layouts and were committed to getting the designs as perfectly implemented as possible. I learned a lot about being detail-oriented from the design experts at Sinch. ' },
+            { link: '/images/portfolio/sinch_dashboard3.png', text: 'There&apos;s a stereotype that coders don&apos;t care about design, or don&apos;t have an eye for it. It is definitely true that as I got more and more into the lines of code and getting the page to perform and display the information it needed to, as a trained designer, I still took time to appreciate the aesthetics.' },
             { link: '/images/portfolio/sinch_dashboard4.png', text: 'blurb about the image' },
             { link: '/images/portfolio/sinch_dashboard5.png', text: 'blurb about the image' },
             { link: '/images/portfolio/sinch_dashboard6.png', text: 'blurb about the image' },

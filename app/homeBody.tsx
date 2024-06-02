@@ -12,6 +12,8 @@ import HexagonIcon from '@mui/icons-material/Hexagon';
 import GithubButton from './DesignComponents/GithubButton';
 import LinkButton from './DesignComponents/LinkButton';
 import HomeIcon from '@mui/icons-material/Home';
+import SvgBlob from './components/SvgBlob';
+import SvgOval from './components/SvgOval';
 
 export default function Homebody() {
 
@@ -35,6 +37,9 @@ export default function Homebody() {
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
                     </div>
+                    <svg>
+                        <SvgBlob className="pin-shadow" />
+                    </svg>
                 </Grid>
                 <Grid item xs={12} sm={7}>
                     <div style={{marginLeft: '15px'}}>

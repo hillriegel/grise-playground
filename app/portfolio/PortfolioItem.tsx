@@ -15,7 +15,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ id }) => {
     const item = PORTFOLIO_DATA[id as keyof typeof PORTFOLIO_DATA];
 
     return (
-        <div className="item-card">
+        <div className="item-card" style={{height: '550px'}}>
             <h2>{item.title}</h2>
                     <Image  
                         src={item.mainImg}

@@ -45,9 +45,9 @@ interface DrawerListProps {
             <Link href="/portfolio">
               <ListItemButton className="my-listitem-button">
                 <ListItemIcon>
-                  <CollectionsIcon style={{width: '20px', color: '#dd0000'}}/>
+                  <CollectionsIcon style={{width: '20px', color: '#ff9900'}}/>
                 </ListItemIcon>
-                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman', color: '#dd0000' } }} primary="Portfolio" />
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman', color: '#ff9900' } }} primary="Portfolio" />
               </ListItemButton>
             </Link>
           </ListItem>
@@ -123,6 +123,7 @@ interface DrawerListProps {
       <Divider />
       
       <List
+        className="background-deep-purple"
         sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
         component="nav"
         aria-labelledby="nested-list-subheader"
@@ -149,6 +150,7 @@ interface DrawerListProps {
   
   {/* NODE FUN */}
       <List
+        className="background-deep-purple"
         sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
         component="nav"
         aria-labelledby="nested-list-subheader"

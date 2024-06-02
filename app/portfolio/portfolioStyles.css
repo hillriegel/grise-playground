@@ -19,14 +19,6 @@
     align-items: center;
     z-index: 1000;
 }
-.modal-content {
-    background: rgb(116, 177, 170);
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 90%;
-    max-height: 90%;
-    overflow-y: auto;
-}
 
 .slideshow-container {
     display: flex;
