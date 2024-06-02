@@ -23,14 +23,10 @@
 
 .drawer-menu-button {
   margin-left: 20px;
-  color:#7ed0e7;
-  width: 100%
-}
-
-.drawer-menu-button {
   width: 300px;
   font-family: "Ubuntu Sans";
   background-color: #444444;
+  cursor: pointer;
 }
 
 .drawer-menu-button:hover {

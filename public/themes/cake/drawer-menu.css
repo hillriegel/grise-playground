@@ -16,6 +16,7 @@
     margin-left: 20px;
     width: 300px;
     font-family: "Ubuntu Sans";
+    cursor: pointer;
 }
   
   
@@ -27,6 +28,7 @@
 
 .drawer-menu-button:hover {
     background-color: #66225e;
+    cursor: pointer;
 }
   
 .drawer-menu-text {
