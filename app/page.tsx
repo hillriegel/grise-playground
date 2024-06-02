@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, ChangeEvent } from 'react';
-import HomeBody from '@/app/homeBody';
+import HomeBody from './homeBody';
 import "./globals.css";
 
 export default function Home() {

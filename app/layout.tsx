@@ -9,7 +9,7 @@ import Drawer from '@mui/material/Drawer';
 import Grid from '@mui/material/Grid';
 import DrawerList from './DrawerList';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import ThemeSwitcher from './components/ThemeSwitcher';
 
 export default function RootLayout({
   children,
@@ -19,11 +19,6 @@ export default function RootLayout({
 
 
   const [open, setOpen] = useState(false);
-
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
   
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -33,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="header" style={{width: '100%'}}>
+        <div className="header" style={{width: '100%', display: 'flex', alignItems: 'center'}}>
           <Grid container spacing-={2}>
             <Grid item style={{width: '95px'}}>
               <Button sx={{ '& svg':  { width: '80px' } }} className="my-menu-button" onClick={toggleDrawer(true)}>
@@ -41,7 +36,10 @@ export default function RootLayout({
               </Button> 
             </Grid>
             <Grid item sm={2}>
-              <div style={{marginTop: '5px', fontSize: '1.5rem'}}>:playground:</div>
+              <div style={{marginLeft: '10px', fontSize: '1.5rem'}}>:playground:</div>
+            </Grid>
+            <Grid item sm={8} style={{textAlign: 'right'}}>
+              <ThemeSwitcher />
             </Grid>
           </Grid>
           </div>

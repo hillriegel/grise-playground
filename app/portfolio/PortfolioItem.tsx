@@ -17,23 +17,13 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ id }) => {
     return (
         <div className="item-card">
             <h2>{item.title}</h2>
-
-                
                     <Image  
                         src={item.mainImg}
-                        width={1000}
+                        width={800}
                         height={760}
-                        className="hidden md:block"
                         alt={item.mainImg_alt}
-                    />
-                    <Image
-                        src="/images/portfolio/report_manager3_sm.png"
-                        width={560}
-                        height={620}
-                        className="block md:hidden"
-                        alt="Sinch Report Manager"
-                    />
-            
+                        style={{borderRadius: '4px'}}
+                    />            
         </div>
     );
 };

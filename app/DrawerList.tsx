@@ -1,3 +1,4 @@
+import React from 'react';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -22,11 +23,8 @@ interface DrawerListProps {
   }
 
   const DrawerList: React.FC<DrawerListProps> = ({ toggleDrawer }) => {
-
-
-
     return (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)} className="drawer-menu">
         
   
       <List>
@@ -47,41 +45,30 @@ interface DrawerListProps {
             <Link href="/portfolio">
               <ListItemButton className="my-listitem-button">
                 <ListItemIcon>
-                  <CollectionsIcon style={{width: '20px'}}/>
+                  <CollectionsIcon style={{width: '20px', color: '#dd0000'}}/>
                 </ListItemIcon>
-                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman', color: '#888888' } }} primary="Portfolio" />
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman', color: '#dd0000' } }} primary="Portfolio" />
               </ListItemButton>
             </Link>
           </ListItem>
       </List>
   
   
-      <List
-        sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      <List sx={{ width: '100%', maxWidth: 360 }}
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader" style={{fontSize: '1em', fontFamily: 'Freeman', color: '#888888'}} >
-             <ChairIcon  style={{width: '20px'}}/> &nbsp; React Components
+          <ListSubheader component="div" id="nested-list-subheader" className="list-subheader" >
+             <ChairIcon  className="menu-icon"/> &nbsp; React Components
           </ListSubheader>
         }
       >
 
-      <ListItem key={"currencyEx"} disablePadding>
-            <Link href="/CustomComponents/currencyConverter">
-          <ListItemButton className="my-listitem-button">
-            <ListItemIcon>
-                 <DataObjectIcon style={{width: '20px'}} />
-            </ListItemIcon>
-            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Currency Exchange" />
-          </ListItemButton>
-          </Link>
-        </ListItem>
-          <ListItem key={"currencyEx"} disablePadding>
+          <ListItem key={"grisecon-streamer"} disablePadding>
             <Link href="/CustomComponents/grisecon-streamer">
           <ListItemButton className="my-listitem-button">
             <ListItemIcon>
-                 <DataObjectIcon style={{width: '20px'}} />
+                 <DataObjectIcon className="menu-icon" />
             </ListItemIcon>
             <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Music Streamer" />
           </ListItemButton>
@@ -92,7 +79,7 @@ interface DrawerListProps {
             <Link href="/CustomComponents/currencyConverter">
           <ListItemButton className="my-listitem-button">
             <ListItemIcon>
-                 <DataObjectIcon style={{width: '20px'}} />
+                 <DataObjectIcon className="menu-icon" />
             </ListItemIcon>
             <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Currency Exchange" />
           </ListItemButton>
@@ -103,7 +90,7 @@ interface DrawerListProps {
             <Link href="/CustomComponents/PinochleScorer">
           <ListItemButton className="my-listitem-button">
             <ListItemIcon >
-            <DataObjectIcon style={{width: '20px'}} />
+            <DataObjectIcon className="menu-icon" />
             </ListItemIcon>
             <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Pinochle Scorer" />
           </ListItemButton>
@@ -114,7 +101,7 @@ interface DrawerListProps {
             <Link href="/CustomComponents/paginationForm">
           <ListItemButton className="my-listitem-button">
             <ListItemIcon>
-            <DataObjectIcon style={{width: '20px'}} />
+            <DataObjectIcon className="menu-icon" />
             </ListItemIcon>
             <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Pagination" />
           </ListItemButton>
@@ -125,7 +112,7 @@ interface DrawerListProps {
             <Link href="/CustomComponents/customSelect">
           <ListItemButton className="my-listitem-button">
             <ListItemIcon>
-            <DataObjectIcon style={{width: '20px'}} />
+            <DataObjectIcon className="menu-icon" />
             </ListItemIcon>
             <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Custom Select" />
           </ListItemButton>
@@ -140,7 +127,7 @@ interface DrawerListProps {
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader" style={{fontSize: '1em', fontFamily: 'Freeman', color: '#888888'}} >
+          <ListSubheader component="div" id="nested-list-subheader" className="list-subheader" >
             <StyleIcon /> &nbsp; CSS Exercises
           </ListSubheader>
         }
@@ -149,7 +136,7 @@ interface DrawerListProps {
             <Link href="/CssExercises/flexBoxDemo">
               <ListItemButton className="my-listitem-button">
                 <ListItemIcon>
-                  <CodeIcon  style={{width: '20px'}}/>
+                  <CodeIcon className="menu-icon"/>
                 </ListItemIcon>
                 <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Flex Box Playground" />
               </ListItemButton>
@@ -166,7 +153,7 @@ interface DrawerListProps {
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader" style={{fontSize: '1em', fontFamily: 'Freeman', color: '#888888'}} >
+          <ListSubheader component="div" id="nested-list-subheader" className="list-subheader" >
             <HexagonIcon /> &nbsp; Node Fun
           </ListSubheader>
         }>
@@ -176,7 +163,7 @@ interface DrawerListProps {
             <Link href="/NodeFun/expressBackend">
               <ListItemButton className="my-listitem-button">
                 <ListItemIcon>
-                  <CodeIcon  style={{width: '20px'}}/>
+                  <CodeIcon  className="menu-icon" />
                 </ListItemIcon>
                 <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Express Backend" />
               </ListItemButton>
@@ -188,7 +175,7 @@ interface DrawerListProps {
             <Link href="/NodeFun/redux">
               <ListItemButton className="my-listitem-button">
                 <ListItemIcon>
-                  <CodeIcon  style={{width: '20px'}}/>
+                  <CodeIcon  className="menu-icon" />
                 </ListItemIcon>
                 <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Using Redux" />
               </ListItemButton>
@@ -200,7 +187,7 @@ interface DrawerListProps {
             <Link href="/NodeFun/useContextAPI">
               <ListItemButton className="my-listitem-button">
                 <ListItemIcon>
-                  <CodeIcon  style={{width: '20px'}}/>
+                  <CodeIcon  className="menu-icon" />
                 </ListItemIcon>
                 <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Context API Demo" />
               </ListItemButton>
@@ -220,7 +207,7 @@ interface DrawerListProps {
                 <ListItemIcon sx={{ '& svg':  { width: '20px' } }} >
                 <SummarizeIcon  style={{width: '20px', color: '#4c6ddb'}}/>
                 </ListItemIcon>
-                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman', color: '#444444' } }}  primary={'Resume'} />
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman', color: '#4c6ddb' } }}  primary={'Resume'} />
               </ListItemButton>
               </Link>
           </ListItem>

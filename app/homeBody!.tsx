@@ -33,9 +33,7 @@ export default function Homebody() {
                     {/* empty colum */}
                 </Grid>
                 <Grid item xs={12} sm={3}>
-                    <div className="image-border">
-                    <Image src="/images/grise_profile_pic_sm.png" alt="photo of Grise" width="300" height="600" priority style={{borderRadius: '4px'}}/>
-                    </div>
+                    <Image src="/images/grise_profile_pic_sm.png" alt="photo of Grise" width="300" height="600" className="image-border" priority/>
                     <div className="left-quote" style={{paddingRight: '30px', marginTop: '100px'}}>
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
@@ -59,7 +57,7 @@ export default function Homebody() {
                             <br />
                             <iframe  src="https://open.spotify.com/embed/episode/3118rHFjnVHBi1a5VRjuq1?utm_source=generator" 
                                 width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                                loading="lazy" style={{borderRadius: '4px'}}>
+                                loading="lazy">
                             </iframe>
                         </Card>
                         </div>
@@ -105,7 +103,7 @@ export default function Homebody() {
                 <Grid item xs={12} sm={7}>
 
                         <Card className="blog-card" >
-                            <iframe  src="https://open.spotify.com/embed/playlist/0S11n0bev4lQ0LKbcvMYmC?utm_source=generator" width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <iframe  src="https://open.spotify.com/embed/playlist/0S11n0bev4lQ0LKbcvMYmC?utm_source=generator" width="570px" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </Card>
                 </Grid>
                  

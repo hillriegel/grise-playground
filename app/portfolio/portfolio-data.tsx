@@ -34,7 +34,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
     'adam_wolpert': {
         title: 'Adam Wolpert Gallery',
-        mainImg: '/images/portfolio/adam_wolper2.png',
+        mainImg: '/images/portfolio/adam_wolpert2.png',
         mainImg_alt: 'Adam Wolpert Website',
         description: 'Here&apos; some text about the Sinch Customer Dashboard',
         imageSet: [
