@@ -1,0 +1,62 @@
+.drawer-menu {
+    background-color: #32003c;
+    color: #dddddd;
+    height: 100%;
+  }
+
+.drawer-menu-subheader {
+    font-size: 1em;
+    font-family: 'Freeman';
+    background-color: #58005f;
+    color: #52abc3;
+}
+  
+.drawer-menu-button {
+    color:#155263;
+    margin-left: 20px;
+    width: 300px;
+    font-family: "Ubuntu Sans";
+}
+  
+  
+.drawer-menu-subheader-text {
+    font-size: 1em; 
+    font-family: 'Freeman';
+    margin-left: -26px;
+}
+
+.drawer-menu-button:hover {
+    background-color: #66225e;
+}
+  
+.drawer-menu-text {
+    font-size: .75em;
+    color: #1e425a;
+    font-family: "Ubuntu Sans";
+}
+
+  .emphasis {
+    color: #ff9900;
+  }
+  
+  .alt-emphasis {
+    color: #4189e1;
+  }
+  
+  .de-emphasis {
+    color: #6d6d6d;
+  }
+  
+  .drawer-menu-icon {
+    width: 20px; 
+  }
+
+  .neutral {
+    color: #52abc3;
+  }
+  
+  
+  .drawer-menu-item-text {
+    margin-left: -20px;
+    color: #888888;
+  }

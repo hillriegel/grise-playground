@@ -79,18 +79,6 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
 }
 
 
-.menu-icon {
-  width: 20px; 
-  color: #00c5fb;
-}
-
-
-.drawer-menu {
-  background-color: #32003c;
-  color: #dddddd;
-  height: 100%;
-}
-
 .background-deep-purple {
   background-color: #32003c;
 }
@@ -156,49 +144,9 @@ p {
   color: #ffffff;
 }
 
-.list-subheader {
-  font-size: 1em;
-  font-family: 'Freeman';
-  background-color: #58005f;
-  color: #52abc3;
-}
-
-
-.menu-font {
-  font-size: .8em;
-  font-family: "Ubuntu Sans";
-}
-
-.my-menu-button {
-  color:#155263;
-  margin-left: 20px;
-  width: 60px;
-}
-
-.my-menu-button:hover {
-  background-color: #ffffff;
-  color:#155263
-}
-
-.my-listitem-button {
-  width: 300px;
-  font-family: "Ubuntu Sans";
-}
-
 .main-content {
   padding: 20px;
 }
-
-.my-listitem-button:hover {
-  background-color: #66225e;
-}
-
-.my-listitem-text {
-  font-size: .75em;
-  color: #1e425a;
-  font-family: "Ubuntu Sans";
-}
-
 
 .softCard {
   padding: 20px;

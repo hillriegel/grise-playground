@@ -27,119 +27,123 @@ interface DrawerListProps {
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)} className="drawer-menu">
         
   
+
       <List>
-        <ListItem key={"home"} disablePadding>
+        <ListItem key={"home"} disablePadding style={{marginLeft: '-20px'}}>
             <Link href="/">
-              <ListItemButton className="my-listitem-button">
+              <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
-                  <HomeIcon style={{width: '20px'}}/>
+                  <HomeIcon className="drawer-menu-icon de-emphasis"/>
                 </ListItemIcon>
-                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman', color: '#888888' } }} primary="Home" />
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1.1em', fontFamily: 'Freeman' } }} className="drawer-menu-subheader-text de-emphasis" primary="Home" />
               </ListItemButton>
             </Link>
           </ListItem>
       </List>
   
       <List>
-        <ListItem key={"home"} disablePadding>
+        <ListItem key={"portfolio"} disablePadding style={{marginLeft: '-20px'}}>
             <Link href="/portfolio">
-              <ListItemButton className="my-listitem-button">
+              <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
-                  <CollectionsIcon style={{width: '20px', color: '#ff9900'}}/>
+                  <CollectionsIcon className="drawer-menu-icon emphasis"/>
                 </ListItemIcon>
-                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman', color: '#ff9900' } }} primary="Portfolio" />
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman' } }} className="drawer-menu-subheader-text emphasis" primary="Portfolio" />
               </ListItemButton>
             </Link>
           </ListItem>
       </List>
   
   
-      <List sx={{ width: '100%', maxWidth: 360 }}
+      <List 
+        sx={{ width: '100%', maxWidth: 360 }}
+        className="drawer-menu-list"
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader" className="list-subheader" >
-             <ChairIcon  className="menu-icon"/> &nbsp; React Components
+          <ListSubheader component="div" id="nested-list-subheader" className="drawer-menu-subheader" >
+             <ChairIcon  className="drawer-menu-icon"/> &nbsp; React Components
           </ListSubheader>
         }
       >
 
           <ListItem key={"grisecon-streamer"} disablePadding>
             <Link href="/CustomComponents/grisecon-streamer">
-          <ListItemButton className="my-listitem-button">
+            <ListItemButton className="drawer-menu-button">
             <ListItemIcon>
-                 <DataObjectIcon className="menu-icon" />
+                 <DataObjectIcon className="drawer-menu-icon neutral" />
             </ListItemIcon>
-            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Music Streamer" />
+            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Music Streamer" />
           </ListItemButton>
           </Link>
         </ListItem>
 
         <ListItem key={"currencyEx"} disablePadding>
             <Link href="/CustomComponents/currencyConverter">
-          <ListItemButton className="my-listitem-button">
-            <ListItemIcon>
-                 <DataObjectIcon className="menu-icon" />
-            </ListItemIcon>
-            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Currency Exchange" />
+            <ListItemButton className="drawer-menu-button">
+              <ListItemIcon>
+                  <DataObjectIcon className="drawer-menu-icon neutral" />
+              </ListItemIcon>
+              <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big' } }} className="drawer-menu-item-text" primary="Currency Exchange" />
           </ListItemButton>
           </Link>
         </ListItem>
   
         <ListItem key={"sampleForm"} disablePadding>
             <Link href="/CustomComponents/PinochleScorer">
-          <ListItemButton className="my-listitem-button">
-            <ListItemIcon >
-            <DataObjectIcon className="menu-icon" />
-            </ListItemIcon>
-            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Pinochle Scorer" />
+            <ListItemButton className="drawer-menu-button">
+              <ListItemIcon >
+              <DataObjectIcon className="drawer-menu-icon neutral" />
+              </ListItemIcon>
+              <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big' } }} className="drawer-menu-item-text" primary="Pinochle Scorer" />
           </ListItemButton>
           </Link>
         </ListItem>
         
         <ListItem key={"pagination"} disablePadding>
             <Link href="/CustomComponents/paginationForm">
-          <ListItemButton className="my-listitem-button">
+          <ListItemButton className="drawer-menu-button">
             <ListItemIcon>
-            <DataObjectIcon className="menu-icon" />
+            <DataObjectIcon className="drawer-menu-icon neutral" />
             </ListItemIcon>
-            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Pagination" />
+            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big' } }} className="drawer-menu-item-text" primary="Pagination" />
           </ListItemButton>
           </Link>
         </ListItem>
   
         <ListItem key={"customSelect"} disablePadding>
             <Link href="/CustomComponents/customSelect">
-          <ListItemButton className="my-listitem-button">
+            <ListItemButton className="drawer-menu-button">
             <ListItemIcon>
-            <DataObjectIcon className="menu-icon" />
+            <DataObjectIcon className="drawer-menu-icon neutral" />
             </ListItemIcon>
-            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Custom Select" />
+            <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big' } }} className="drawer-menu-item-text" primary="Custom Select" />
           </ListItemButton>
           </Link>
         </ListItem>
       </List>
   
       <Divider />
+
       
       <List
-        className="background-deep-purple"
-        sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+        className="drawer-menu-list"
+        sx={{ width: '100%', maxWidth: 360 }}
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader" className="list-subheader" >
+          <ListSubheader component="div" id="nested-list-subheader" className="drawer-menu-subheader" >
             <StyleIcon /> &nbsp; CSS Exercises
           </ListSubheader>
         }
       >
         <ListItem key={"cssDemo"} disablePadding>
             <Link href="/CssExercises/flexBoxDemo">
-              <ListItemButton className="my-listitem-button">
+              <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
-                  <CodeIcon className="menu-icon"/>
+                  <CodeIcon className="drawer-menu-icon neutral"/>
                 </ListItemIcon>
-                <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Flex Box Playground" />
+                <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Flex Box Playground" />
               </ListItemButton>
           </Link>
         </ListItem>
@@ -150,12 +154,12 @@ interface DrawerListProps {
   
   {/* NODE FUN */}
       <List
-        className="background-deep-purple"
-        sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+        className="drawer-menu-list"
+        sx={{ width: '100%', maxWidth: 360 }}
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader" className="list-subheader" >
+          <ListSubheader component="div" id="nested-list-subheader" className="drawer-menu-subheader" >
             <HexagonIcon /> &nbsp; Node Fun
           </ListSubheader>
         }>
@@ -163,11 +167,11 @@ interface DrawerListProps {
         {/*  EXPRESS BACKEND */}
         <ListItem key={"expressbackend"} disablePadding>
             <Link href="/NodeFun/expressBackend">
-              <ListItemButton className="my-listitem-button">
+              <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
-                  <CodeIcon  className="menu-icon" />
+                  <CodeIcon  className="drawer-menu-icon neutral" />
                 </ListItemIcon>
-                <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Express Backend" />
+                <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big' } }} className="drawer-menu-item-text" primary="Express Backend" />
               </ListItemButton>
           </Link>
         </ListItem>
@@ -175,11 +179,11 @@ interface DrawerListProps {
               {/*  USING REDUX */}
         <ListItem key={"redux"} disablePadding>
             <Link href="/NodeFun/redux">
-              <ListItemButton className="my-listitem-button">
+              <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
-                  <CodeIcon  className="menu-icon" />
+                  <CodeIcon  className="drawer-menu-icon neutral" />
                 </ListItemIcon>
-                <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Using Redux" />
+                <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Using Redux" />
               </ListItemButton>
           </Link>
         </ListItem>
@@ -187,11 +191,11 @@ interface DrawerListProps {
         {/*  USING CONTEXT API */}
         <ListItem key={"usecontextapi"} disablePadding>
             <Link href="/NodeFun/useContextAPI">
-              <ListItemButton className="my-listitem-button">
+              <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
-                  <CodeIcon  className="menu-icon" />
+                  <CodeIcon  className="drawer-menu-icon neutral" />
                 </ListItemIcon>
-                <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big', color: '#888888' } }} primary="Context API Demo" />
+                <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big' } }} className="drawer-menu-item-text" primary="Context API Demo" />
               </ListItemButton>
           </Link>
         </ListItem>
@@ -203,13 +207,13 @@ interface DrawerListProps {
       <Divider />
       <List>
        
-          <ListItem key={'Resume'} disablePadding>
+          <ListItem key={'Resume'} disablePadding style={{marginLeft: '-20px'}}>
           <Link href="/resume">
-            <ListItemButton className="my-listitem-button">
+            <ListItemButton className="drawer-menu-button">
                 <ListItemIcon sx={{ '& svg':  { width: '20px' } }} >
-                <SummarizeIcon  style={{width: '20px', color: '#4c6ddb'}}/>
+                  <SummarizeIcon  className="drawer-menu-icon alt-emphasis"/>
                 </ListItemIcon>
-                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman', color: '#4c6ddb' } }}  primary={'Resume'} />
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman' } }} className="drawer-menu-subheader-text alt-emphasis" primary={'Resume'} />
               </ListItemButton>
               </Link>
           </ListItem>

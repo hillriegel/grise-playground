@@ -74,24 +74,6 @@ body {
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.6); /* Soft, spread blueish teal shadow */
 }
 
-.menu-icon {
-  width: 20px; 
-  color: #52abc3;
-}
-
-.drawer-menu {
-  background-color: #444444;
-  color: #dddddd;
-  height: 100%
-}
-
-.list-subheader {
-  font-size: 1em;
-  font-family: 'Freeman';
-  background-color: #666666;
-  color: #52abc3;
-}
-
 .page-title {
     padding: 20px; 
     margin-left: -40px;
@@ -146,40 +128,8 @@ p {
   color: #484848;
 }
 
-
-.menu-font {
-  font-size: .8em;
-  font-family: "Ubuntu Sans";
-}
-
-.my-menu-button {
-  margin-left: 20px;
-  color:#7ed0e7;
-  width: 60px;
-}
-
-.my-menu-button:hover {
-  background-color: #929292;
-  color:#155263
-}
-
-.my-listitem-button {
-  width: 300px;
-  font-family: "Ubuntu Sans";
-}
-
 .main-content {
   padding: 20px;
-}
-
-.my-listitem-button:hover {
-  background-color: #c1e7e8;
-}
-
-.my-listitem-text {
-  font-size: .75em;
-  color: #1e425a;
-  font-family: "Ubuntu Sans";
 }
 
 

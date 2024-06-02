@@ -3,9 +3,17 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
+import { 
+    Grid,
+    Box,
+    Card,
+    Typography,
+
+ } from '@mui/material'
+
+ import Tooltip, { tooltipClasses, TooltipProps } from '@mui/material/Tooltip';
+ import { styled } from '@mui/material/styles';
+
 import Link from 'next/link';
 import ChairIcon from '@mui/icons-material/Chair';
 import HexagonIcon from '@mui/icons-material/Hexagon';
@@ -15,12 +23,25 @@ import HomeIcon from '@mui/icons-material/Home';
 import SvgBlob from './components/SvgBlob';
 import SvgOval from './components/SvgOval';
 
+interface CustomTooltipProps extends TooltipProps {
+    className?: string;
+}
+
+const CustomTooltip = styled(({ className, ...props }: CustomTooltipProps) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+))({
+    [`& .${tooltipClasses.tooltip}`]: {
+        backgroundColor: 'transparent', // Example: setting transparent background
+        border: '0px',                  // Example: removing border
+        padding: '0px',                 // Example: removing padding
+    }
+});
 export default function Homebody() {
 
 
     return (
 
-        <Box style={{marginTop: '-30px'}}>
+        <Box style={{marginTop: '-50px'}}>
         <div className="page-title">
             <h1><HomeIcon style={{marginBottom: '4px'}} /> &nbsp; Playground :: Home</h1>
         </div>
@@ -37,9 +58,19 @@ export default function Homebody() {
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
                     </div>
-                    <svg>
+                    <CustomTooltip
+                        title={
+                            <Typography className="tooltip-title">
+                                I spent a few years <a href="https://www.amazon.com/Making-Breaking-Second-Updated-Expanded/dp/163159284X" 
+                                    target="_blank" rel="noopener noreferrer">making and breaking the grid</a>. 
+                                    We learned that the eye is drawn to circle shapes.
+                            </Typography>
+                        } 
+                        placement="left">
+                        <svg>
                         <SvgBlob className="pin-shadow" />
-                    </svg>
+                        </svg>
+                    </CustomTooltip> 
                 </Grid>
                 <Grid item xs={12} sm={7}>
                     <div style={{marginLeft: '15px'}}>
