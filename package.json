@@ -24,6 +24,7 @@
     "bcrypt": "^5.1.1",
     "clsx": "^2.0.0",
     "grisecon-mui": "^1.0.2",
+    "iconify-icon": "^2.1.0",
     "lodash": "^4.17.21",
     "material-react-table": "^2.13.0",
     "next": "^14.0.2",

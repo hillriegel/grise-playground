@@ -76,11 +76,8 @@ export default function Homebody() {
                     <div style={{marginLeft: '15px'}}>
                     <h1>A Collection of Exercises and Ideas </h1>
                     <p>
-                        This is a React/Next.js app set up to demonstrate creating app functionality. Redux, MongoDB/Atlas, Material-UI, custom components, 
-                        coding challenges.
-                    </p>
-                    <p>
-                        The repository of this project and all its examples can be retrieved from GitHub here:
+                        This Next.js app is my playground for exploring ideas, having fun with UI, demonsrating Redux, MongoDB/Atlas, Material-UI, 
+                        and building custom components.
                     </p>
                         <GithubButton link="https://github.com/hillriegel/grise-playground" label="grise-playground" />
            

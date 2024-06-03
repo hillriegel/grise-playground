@@ -87,7 +87,7 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
     padding: 20px; 
     margin-left: -40px;
     width: 810px;
-    background-color: #161563;
+    background-color: #0e004a;
     border-radius: 4px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -208,7 +208,7 @@ h1 {
   font-size: 1.5em;
   font-family: "Freeman";
   font-weight: 400;
-  color: #161563;
+  color: #0e004a;
 }
 
 h2 {
