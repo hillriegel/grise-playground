@@ -75,7 +75,7 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
   background: repeating-linear-gradient(
     45deg,
     #9dcaf7 0px,
-    #38c7da 4px
+    #9dedf7 4px
   );
   justify-content: center; /* Centers horizontally */
   align-items: flex-start; /* Aligns items to the top */
