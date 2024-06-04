@@ -11,6 +11,7 @@ import {
   ListItemIcon,
   Card,
 } from '@mui/material'
+import Link from 'next/link';
 import Grid from '@mui/material/Grid';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'; // A small dot icon
@@ -20,13 +21,17 @@ const Resume = () => {
 
     return (
       <main className="flex  flex-col">
-        <div className="min-h-screen flex-1" style={{padding: '20px', width: '100%'}}>
+        <div className="min-h-screen flex-1" style={{padding: '20px', width: '97%'}}>
           <div style={{display: 'flex', alignContent: 'center'}}>
             <div style={{flexGrow: '3'}}>
             <h1><b>Resume</b></h1>
             </div>
             <div>
-            <PictureAsPdfIcon />
+              <Link
+                href="/Hillriegel-Resume.pdf"
+                target="new">
+              <PictureAsPdfIcon />
+            </Link>
             </div>
          </div>
          <br />
@@ -36,7 +41,8 @@ const Resume = () => {
          hillriegel@gmail.com<br />
          <Grid container spacing={2}>
           <Grid item xs={12} sm={7}>
-          <Paper style={{padding: '20px', marginTop: '20px'}}>
+          <Paper style={{padding: '20px', marginTop: '20px', height: '238px'}}>
+
             <div>
               <h2>About Me</h2>
               <p>
@@ -64,18 +70,18 @@ const Resume = () => {
 
 
         <Paper style={{padding: '20px', marginTop: '20px'}}>
-            <div style={{width: '80%'}}>
+            <div style={{width: '90%'}}>
               <h2>Work Experience</h2>
                 <div style={{margin: '20px'}}>
                   <b>Sinch</b><br />
-                  Sr. Frontend Developer<br />
-                  Sweden · Remote • 11/2020 - 04/2024 • Full-time
+                  <div style={{fontSize: '.85em'}}>Sr. Frontend Developer<br />
+                  Sweden · Remote • 11/2020 - 04/2024 • Full-time</div>
                   
-                  <List style={{marginTop: '20px'}}>
+                  <List>
                     <ListItem key="sinch-skill-1">
                     <ListItemIcon style={{marginTop: '-40px'}}>
-                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
-                    </ListItemIcon>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
+                       </ListItemIcon>
                     <div style={{marginLeft: '-20px'}}>
                    Using React.js, Next.js, Typescript, Material UI, and HTML5, I worked closely with designers 
                       doing customer-focused development to produce data visualization elements that made complex data actionable for our customers.
@@ -85,7 +91,7 @@ const Resume = () => {
 
                     <ListItem>
                     <ListItemIcon style={{marginTop: '-20px'}}>
-                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
                     </ListItemIcon>
                     <div style={{marginLeft: '-20px'}}>
                       Streamlined design and development of applications, enhancing speed and efficiency for managing large data sets, leading to a 50% improvement in performance in 9 months.
@@ -94,7 +100,7 @@ const Resume = () => {
              
                     <ListItem>
                     <ListItemIcon style={{marginTop: '0px'}}>
-                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> 
                     </ListItemIcon>
                     <div style={{marginLeft: '-20px'}}>
                       Worked closely with backend teams to create and sync node-based GraphQL BFFs with databases.
@@ -102,7 +108,7 @@ const Resume = () => {
                     </ListItem>
                     <ListItem>
                     <ListItemIcon style={{marginTop: '-20px'}}>
-                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> 
                     </ListItemIcon>
                     <div style={{marginLeft: '-20px'}}>
                       Improved user experience by designing data display charts and summaries for complex datasets, resulting in a 10% increase in user engagement.
@@ -111,7 +117,7 @@ const Resume = () => {
 
                     <ListItem>
                      <ListItemIcon style={{marginTop: '-20px'}}>
-                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} /> {/* Customize size and color */}
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
                     </ListItemIcon>
                     <div style={{marginLeft: '-20px'}}>
                       Developed and executed JEST and Playwright testing to enhance testing efficiency, reducing bug resolution time by 25%.
@@ -122,38 +128,77 @@ const Resume = () => {
 
                 <div style={{margin: '20px'}}>
                   <b>SAP</b><br />
-                  Sr. Software Engineer<br />
-                  San Ramon, CA · Hybrid • 05/2010 - 11/2020 • Full-time
-                  <br />
-                  <br />
+                  <div style={{fontSize: '.85em'}}>Sr. Software Engineer<br />
+                  San Ramon, CA · Hybrid • 05/2010 - 11/2020 • Full-time</div>
                   <List>
-                    <ListItem>Led the full rebranding and UI/UX overhaul of a customer-facing enterprise web application, serving over 10K users, to modernize the user experience and align with new brand guidelines in 6 months.
+                    <ListItem>
+                    <ListItemIcon style={{marginTop: '-20px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
+                    </ListItemIcon>
+                      <div style={{marginLeft: '-20px'}}>
+                        Led the full rebranding and UI/UX overhaul of a customer-facing enterprise 
+                      web application, serving over 10K users, to modernize the user experience and align with new brand guidelines in 6 months.
+                      </div>
                     </ListItem>
                     <ListItem>
-                    Led the front-end development of a data-heavy web application using JavaScript, ensuring the application was optimized for speed and scalability and met customer's needs.
+                      <ListItemIcon style={{marginTop: '-20px'}}>
+                        <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
+                      </ListItemIcon>
+                        <div style={{marginLeft: '-20px'}}>
+                          Led the front-end development of a data-heavy web application using JavaScript, 
+                          ensuring the application was optimized for speed and scalability and met customer's needs.
+                        </div>
                     </ListItem>
                     <ListItem>
-                    Implemented and maintained robust GraphQL services to optimize data retrieval and management, ensuring efficient communication between the client and servers. Facilitated daily stand-ups, sprint plannings, retrospectives, and demos. 
+                    <ListItemIcon style={{marginTop: '-20px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
+                    </ListItemIcon>
+                    <div style={{marginLeft: '-20px'}}>
+                    Implemented and maintained robust GraphQL services to optimize data retrieval and
+                    management, ensuring efficient communication between the client and servers. 
+                    Facilitated daily stand-ups, sprint plannings, retrospectives, and demos. 
+                    </div>
                     </ListItem>
-                    <ListItem>Worked closely with cross-departmental project managers, UX/UI designers, and backend teams to ensure frontend designs were feasible and aligned with backend capabilities. Utilized Jira to track tasks and manage project progress effectively.
+                    <ListItem>
+                    <ListItemIcon style={{marginTop: '-20px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
+                    </ListItemIcon>
+                    <div style={{marginLeft: '-20px'}}>Worked closely with cross-departmental project managers, 
+                      UX/UI designers, and backend teams to ensure frontend designs were feasible and aligned 
+                      with backend capabilities. Utilized Jira to track tasks and manage project progress effectively.
+                      </div>
                     </ListItem>
                   </List>
                 </div>
 
                 <div style={{margin: '20px'}}>
                   <b>Sybase</b><br />
-                  Project Lead Developer<br />
-                  Dublin, CA · On-site • 07/2003 - 12/2010 • Full-time
-                  <br />
-                  <br />
+                  <div style={{fontSize: '.85em'}}>Project Lead Developer<br />
+                  Dublin, CA · On-site • 07/2003 - 12/2010 • Full-time</div>
                   <List>
-                    <ListItem>Combined multiple web applications and backends into one application, improving code maintenance efficiency by 45% and unifying the user authorization schema.
+                    <ListItem>
+                    <ListItemIcon style={{marginTop: '-20px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
+                    </ListItemIcon>
+                      <div style={{marginLeft: '-20px'}}>Combined multiple web applications and backends into one 
+                      application, improving code maintenance efficiency by 45% and unifying the user authorization schema.
+                      </div>
                     </ListItem>
                     <ListItem>
+                    <ListItemIcon style={{marginTop: '-20px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
+                    </ListItemIcon>
+                    <div style={{marginLeft: '-20px'}}>
                     Converted legacy web applications to modern frameworks and responsive design resulting in 50% compatibility improvements, approximately 30% improvements in site efficiency.
+                      </div>
                     </ListItem>
                     <ListItem>
+                    <ListItemIcon style={{marginTop: '-20px'}}>
+                       <FiberManualRecordIcon style={{ fontSize: '10px', color: 'gray' }} />
+                    </ListItemIcon>
+                    <div style={{marginLeft: '-20px'}}>
                     Developed and integrated a JEST testing system and implemented testing for code coverage of 80%.
+                    </div>
                     </ListItem>
                   </List>
                 </div>

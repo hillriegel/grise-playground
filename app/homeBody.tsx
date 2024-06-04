@@ -14,7 +14,6 @@ import {
  import Tooltip, { tooltipClasses, TooltipProps } from '@mui/material/Tooltip';
  import { styled } from '@mui/material/styles';
 
-import Link from 'next/link';
 import ChairIcon from '@mui/icons-material/Chair';
 import HexagonIcon from '@mui/icons-material/Hexagon';
 import GithubButton from './DesignComponents/GithubButton';
