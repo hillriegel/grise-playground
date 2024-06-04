@@ -505,7 +505,7 @@ button:hover {
 .node-challenge {
   padding: 20px;
   border-radius: 4px;
-  background-color: rgb(222, 154, 6);
+  background-color: rgb(249, 170, 0);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   color: #ffffff;
 }
