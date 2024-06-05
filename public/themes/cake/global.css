@@ -28,7 +28,6 @@
 
 body {
   color: #31525B;
-
   background: #98a0a0;
   height: 100%;
   font-size: .87em;
@@ -57,10 +56,9 @@ body {
   background-size: 30px 30px;
   box-shadow: inset 0px 10px 8px -8px rgba(14, 101, 122, 0.4);
   background: #ad5389;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  }
+  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
  
 
 .main-container {
@@ -70,7 +68,8 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
   padding-right: 20px;
   padding-bottom: 80px;
   height: 100%;
-  width: 1200px;
+  width: 90%;
+  max-width: 1400px;
   display: flex;
   background: repeating-linear-gradient(
     45deg,
@@ -177,8 +176,10 @@ p {
 
 .blog-card {
   padding: 20px;
-  border-radius: 5px; 
+  border-radius: 5px;
   margin: 20px;
+  background-color: #ffffff;
+  border: solid 1px #2a9de5;
 }
 
 .contrast {

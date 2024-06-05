@@ -28,12 +28,11 @@ export default function UnstyledPaginationIntroduction() {
   };
 
   return (
-    <Root sx={{ width: 500, backgroundColor: "#222222" }}>
-      <table aria-label="custom pagination table" style={{backgroundColor: '#222222'}}>
+    <Root sx={{ width: '100%'}} className="blog-card">
+      <table aria-label="custom pagination table">
         <tfoot>
           <tr>
             <CustomTablePagination
-              
               rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
               colSpan={3}
               count={13}
@@ -120,7 +119,6 @@ const CustomTablePagination = styled(TablePagination)(
     align-items: flex-start;
     gap: 8px;
     color: #aaaaaa;
-    background-color: '#444444';
 
     @media (min-width: 768px) {
       flex-direction: row;

@@ -22,15 +22,17 @@ export default function CssDemo() {
       <div className="main-content">
                
                 <h2>Creating a Server (Express)</h2>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} sm={9}>
+                <Grid container spacing={2} style={{marginTop: '-80px'}}>
+                    <Grid item xs={12} sm={7}>
+                    <div style={{display: 'flex', alignItems: "baseline", justifyContent: 'space-between'}}>
+                            
+                            <GithubButton link="https://github.com/hillriegel/grise_express_backend" label="grise_express_backend" />
+                        </div>
+                        <h3>Creating the server in Express is straightforward:</h3>
                         <p>Developing and understanding NoSQL database techniques, setting up a server and connecting it 
                             to a MongoDB Atlas instance is the exercise.
                         </p>
-                        <div style={{display: 'flex', alignItems: "baseline", justifyContent: 'space-between'}}>
-                            <h3>Creating the server in Express is straightforward:</h3>
-                            <GithubButton link="https://github.com/hillriegel/grise_express_backend" label="grise_express_backend" />
-                        </div>
+
                         <br />
                         <Image alt="server code" src="/images/express-server1.jpg" width="800" height="630" />
                     </Grid>
@@ -39,7 +41,7 @@ export default function CssDemo() {
                 <br />
 
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={9}>
+                    <Grid item xs={12} sm={9} md={7}>
                         <h3>Schema (Model)</h3>
                         <p>Each route needs a schema. This example is creating a user account database that will
                             keep track of users. Because each account includes a password, passwords are encrypted
@@ -53,7 +55,7 @@ export default function CssDemo() {
                 <br />
 
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={9}>
+                    <Grid item xs={12} sm={9} md={7}>
                         <h3>Route</h3>
                         <p>With Express.js, a route is a section of Express code that associates an HTTP method (GET, POST, PUT, DELETE, etc.), 
                             a URL path, and a function that will be executed when that path and method are matched to an incoming HTTP request.

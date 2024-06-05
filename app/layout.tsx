@@ -27,22 +27,26 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <div className="header" style={{width: '100%', display: 'flex', alignItems: 'center'}} >
-          <Grid container spacing-={2}>
+          <Grid container spacing={2} justifyContent="space-between">
             <Grid item style={{width: '95px'}}>
               <Button sx={{ '& svg':  { width: '80px' } }} className="my-menu-button" onClick={toggleDrawer(true)}>
                 <MenuIcon style={{height: '30px'}} className="neutral" />
               </Button> 
             </Grid>
-            <Grid item sm={2}>
-              <div style={{marginLeft: '10px', fontSize: '1.5rem'}} className="neutral">:playground:</div>
+            <Grid item xs style={{ marginLeft: '10px', fontSize: '1.5rem' }} className="neutral">
+              <div style={{marginLeft: '10px', fontSize: '1.5rem'}} className="neutral">:: playground ::</div>
             </Grid>
-            <Grid item sm={3} style={{textAlign: 'right'}} >
+            <Grid item sm={3} style={{textAlign: 'right', marginRight: '40px'}} >
               <ThemeSwitcher />
             </Grid>
           </Grid>
           </div>
+
+
+
+    
         <div>
         
         <Drawer open={open} onClose={toggleDrawer(false)} >

@@ -17,7 +17,6 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-  
 }
 
 .radio-canada-big-button {
@@ -54,7 +53,7 @@ body {
   position: relative;
   background-size: 30px 30px;
   box-shadow: inset 0px 10px 8px -8px rgba(14, 101, 122, 0.4);
-  }
+}
  
 
 .main-container {
@@ -70,7 +69,8 @@ body {
   padding-right: 20px;
   padding-bottom: 80px;
   height: 100%;
-  width: 1200px;
+  width: 90%;
+  max-width: 1400px;
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: flex-start; /* Aligns items to the top */
@@ -81,7 +81,7 @@ body {
 .page-title {
     padding: 20px; 
     margin-left: -40px;
-    width: 810px;
+    width: 75%;
     background-color: #155263;
     border-radius: 4px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -125,8 +125,6 @@ p {
   color: #3a8aa1;
 }
 
-
-
 .titleBar {
   background-color: #155263;
   color: #484848;
@@ -144,7 +142,7 @@ p {
 }
 
 .image-border {
-  padding: 20px;
+  padding: 1rem;
   border: solid 1px #555555;
   background-color: #333333;
   border-radius: 5px;

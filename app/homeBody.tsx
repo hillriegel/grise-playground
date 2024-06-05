@@ -45,15 +45,21 @@ export default function Homebody() {
             <h1><HomeIcon style={{marginBottom: '4px'}} /> &nbsp; Playground :: Home</h1>
         </div>
         <br /><br />
-            <Grid container spacing={3}>
+            <Grid container spacing={2}>
                 <Grid item  xs={12} sm={2}>
                     {/* empty colum */}
                 </Grid>
-                <Grid item xs={12} sm={3}>
-                    <div className="image-border">
-                    <Image src="/images/grise_profile_pic_sm.png" alt="photo of Grise" width="300" height="600" priority style={{borderRadius: '4px'}}/>
-                    </div>
-                    <div className="left-quote" style={{paddingRight: '30px', marginTop: '100px'}}>
+                <Grid item xs={10} sm={7} md={3}>
+                    <Card className="blog-card">
+                        <Image 
+                        src="/images/grise_profile_pic_sm.png" 
+                        alt="photo of Grise" 
+                        width="300" 
+                        height="600" 
+                        priority 
+                        style={{borderRadius: '4px'}}/>
+                    </Card>
+                    <div className="left-quote" style={{paddingRight: '0px', marginTop: '100px'}}>
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
                     </div>
@@ -66,12 +72,12 @@ export default function Homebody() {
                             </Typography>
                         } 
                         placement="left">
-                        <svg>
-                        <SvgBlob className="pin-shadow" />
+                        <svg style={{marginLeft: '100px'}}>
+                            <SvgBlob  />
                         </svg>
                     </CustomTooltip> 
                 </Grid>
-                <Grid item xs={12} sm={7}>
+                <Grid item xs={12} sm={8} md={7}>
                     <div style={{marginLeft: '15px'}}>
                     <h1>A Collection of Exercises and Ideas </h1>
                     <p>
@@ -102,10 +108,10 @@ export default function Homebody() {
                         <div className="challenge-blue" style={{padding: '30px'}}>
                             <h2 className="white">Music Streamer</h2>
                             <Grid container spacing={2}>
-                                <Grid item xs={12} sm={5}>
-                                    <Image src="/images/grisecon_streamer.png" alt="Grisecon's Music" height="100" width="700" className="image-border-thin"></Image>
+                                <Grid item xs={12} sm={6} md={5}>
+                                    <Image src="/images/grisecon_streamer.png" alt="Grisecon's Music" height="100" width="500" className="image-border-thin"></Image>
                                 </Grid>
-                                <Grid item xs={12} sm={7}>
+                                <Grid item xs={12} sm={6} md={7}>
                                     <div style={{marginLeft: '30px'}}>
                                     The main component of this project is a streaming component that sits in an iframe. The learning step was setting
                                     up a serverless function within the Next app... configuring the environment variables, the email SMTP server, etc.
@@ -119,24 +125,26 @@ export default function Homebody() {
                  </div>
             </Grid>
 
-            <Grid container spacing={3} >
-
-                <Grid item xs={12} sm={5} style={{textAlign: 'right'}}>
-                <div className="left-quote" style={{marginLeft: '200px', paddingRight: '35px', marginTop: '100px'}}>
-                    <h2>Chillout!</h2>
-                    I find ambient music helps me focus while I'm coding. It's good for destressing, too. Also, I write and produce electronic music.
-                    You can hear some of my tracks in this playlist.
-                    If you need some music to relax and focus...
+            <Grid container spacing={3}>
+                <Grid item xs={12} sm={5} md={5} style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <div className="left-quote" style={{marginTop: '100px'}}>
+                        <h2>Chillout!</h2>
+                        I find ambient music helps me focus while I'm coding. It's good for destressing, too. Also, I write and produce electronic music.
+                        You can hear some of my tracks in this playlist.
+                        If you need some music to relax and focus...
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={7}>
-
-                        <Card className="blog-card" >
-                            <iframe  src="https://open.spotify.com/embed/playlist/0S11n0bev4lQ0LKbcvMYmC?utm_source=generator" width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <Grid item xs={12} sm={7} md={7}>
+                    <Card className="blog-card" >
+                        <iframe  src="https://open.spotify.com/embed/playlist/0S11n0bev4lQ0LKbcvMYmC?utm_source=generator" 
+                            width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
                         </Card>
                 </Grid>
-                 
             </Grid>
+
+
 
 
             {/* COMPONENT CHALLENGE */}
