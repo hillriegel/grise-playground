@@ -15,7 +15,7 @@ const SecondComponent: React.FC = () => {
 
     return (
         <div style={{margin: '20px'}}>
-                <Button variant={'contained'} onClick={() => updateState({ key: 'Second Value' })}>
+                <Button className="link-button" style={{width: '100%'}}variant={'contained'} onClick={() => updateState({ key: 'Second Value' })}>
                     Update Key from Second Component
                 </Button>
             </div>

@@ -28,11 +28,12 @@ export default function UnstyledPaginationIntroduction() {
   };
 
   return (
-    <Root sx={{ width: 500, maxWidth: '100%' }}>
-      <table aria-label="custom pagination table">
+    <Root sx={{ width: 500, backgroundColor: "#222222" }}>
+      <table aria-label="custom pagination table" style={{backgroundColor: '#222222'}}>
         <tfoot>
           <tr>
             <CustomTablePagination
+              
               rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
               colSpan={3}
               count={13}
@@ -87,9 +88,9 @@ const Root = styled('div')(
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.875rem;
     width: 100%;
-    background-color: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
+    background-color: ${theme.palette.mode === 'dark' ? '#444444' : '#444444'};
     box-shadow: 0px 4px 16px ${
-      theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.3)' : grey[200]
+      theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.3)' : '#444444'
     };
     border-radius: 12px;
     border: 1px solid ${theme.palette.mode === 'dark' ? grey[800] : grey[200]};
@@ -102,7 +103,7 @@ const Root = styled('div')(
   }
 
   th {
-    background-color: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
+    background-color: '#444444';
   }
   `,
 );
@@ -118,7 +119,8 @@ const CustomTablePagination = styled(TablePagination)(
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    background-color: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
+    color: #aaaaaa;
+    background-color: '#444444';
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -136,7 +138,7 @@ const CustomTablePagination = styled(TablePagination)(
     border: 1px solid ${theme.palette.mode === 'dark' ? grey[800] : grey[200]};
     border-radius: 6px; 
     background-color: transparent;
-    color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
+    color: #aaaaaa;
     transition: all 100ms ease;
 
     &:hover {
@@ -173,7 +175,7 @@ const CustomTablePagination = styled(TablePagination)(
     border-radius: 50%; 
     background-color: transparent;
     border: 1px solid ${theme.palette.mode === 'dark' ? grey[800] : grey[200]};
-    color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
+    color: #aaaaaa;
     transition: all 100ms ease;
 
     > svg {

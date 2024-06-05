@@ -531,5 +531,13 @@ button:hover {
 .resume-card {
   padding: 20px;
   margin-top: 20px;
-  background-color: #ffffff;
+  background-color: #332d46;
+}
+
+.component-card {
+  border: solid 1px #4769b9;
+  padding: 20px; 
+  border-radius: 10px; 
+  margin-top: 20px;
+  background-color: #c6e4f5;
 }

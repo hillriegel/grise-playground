@@ -169,14 +169,14 @@ const PinochleScorer = () => {
         </Grid>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Paper style={{padding: '20px', borderRadius: '10px', marginTop: '20px'}}>
+            <Paper className="component-card">
           
               <div>
                 <iframe src="https://pinochle-scorer.vercel.app/"
                   title="Embedded React App"
                   width="100%"
                   height="850px"
-                  style={{ border: 'solid 1px #ddaa00' }}>
+                  style={{ borderRadius: '7px' }}>
                 </iframe>
               </div>
            </Paper>

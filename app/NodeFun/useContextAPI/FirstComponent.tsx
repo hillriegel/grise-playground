@@ -18,7 +18,7 @@ const FirstComponent: React.FC = () => {
 
     return (
         <div style={{margin: "20px"}}>
-                <Button variant="contained" onClick={() => updateState({ key: 'First Value' })}>
+                <Button className="link-button" style={{width: '100%'}} variant="contained" onClick={() => updateState({ key: 'First Value' })}>
                     Update Key from First Component
                 </Button>
             </div>

@@ -41,7 +41,7 @@ const Resume = () => {
          hillriegel@gmail.com<br />
          <Grid container spacing={2}>
           <Grid item xs={12} sm={7}>
-          <Paper style={{padding: '20px', marginTop: '20px', height: '238px'}}>
+          <Paper className="component-card resume-card" style={{height: '238px'}}>
 
             <div>
               <h2>About Me</h2>
@@ -55,7 +55,7 @@ const Resume = () => {
         </Paper>
           </Grid>
           <Grid item xs={12} sm={5}>
-          <Paper style={{padding: '20px', marginTop: '20px', height: '237px'}}>
+          <Paper  className="component-card resume-card" style={{ height: '237px'}}>
             <div>
               <h2>Education</h2>
               <h3>Masters - New Media Design</h3>
@@ -69,7 +69,7 @@ const Resume = () => {
          </Grid>
 
 
-        <Paper style={{padding: '20px', marginTop: '20px'}}>
+        <Paper className="component-card resume-card">
             <div style={{width: '90%'}}>
               <h2>Work Experience</h2>
                 <div style={{margin: '20px'}}>

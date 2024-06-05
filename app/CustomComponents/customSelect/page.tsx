@@ -20,7 +20,7 @@ export default function CustomSelect() {
         <Grid item xs={12} sm={5}>
           <div style={{height: '800px', padding: '20px'}}>
             <h2> Custom Select Dropdown</h2>
-            <div className="component" style={{height: '400px'}}>
+            <div className="component" style={{height: '400px', display: 'flex', alignContent: 'center'}}>
                 <SelectMenu />
             </div>
         </div>

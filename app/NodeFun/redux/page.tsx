@@ -125,7 +125,7 @@ export default function CssDemo() {
                             <div style={{marginTop: '20px'}}>
                                 <h1>Simple Redux Demo</h1>
                                 <br />
-                                <div style={{backgroundColor: '#ffffff', padding: '6px', width: '95%', borderRadius: '8px'}}>
+                              
                                
                                     <iframe 
                                         src="https://grisecon-redux-demo.netlify.app/"
@@ -133,7 +133,7 @@ export default function CssDemo() {
                                         width="100%"
                                         height="200px"
                                     />
-                                </div>
+                              
                             </div>
                                            
                             </Grid>
