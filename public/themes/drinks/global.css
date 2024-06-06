@@ -233,7 +233,8 @@ h3 {
 
 .item-card {
   border-radius: 4px;
-  background-color: #aaaaaa;
+  border: solid 1px #918f8f;
+  background-color: #636363;
 }
 
 .left-quote {
