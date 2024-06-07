@@ -107,23 +107,6 @@ p {
   color: #394E5A;
 }
 
-.link-button {
-  cursor: pointer;
-  border: solid 1px #75adbf;
-  background-color: #000000;
-  padding: 10px; 
-  border-radius: 4px;
-  text-align: center;
-  width: 240px;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-family: "Ubuntu Sans";
-  font-weight: 600;
-  font-size: .8em;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-  color: #3a8aa1;
-}
 
 .titleBar {
   background-color: #155263;
@@ -133,7 +116,6 @@ p {
 .main-content {
   padding: 20px;
 }
-
 
 .softCard {
   padding: 20px;
@@ -240,7 +222,7 @@ h3 {
 .left-quote {
   text-align: right;
   margin-top: 150px;
-  width: 300px;
+  margin-right: 15px;
 }
 
 
@@ -338,14 +320,42 @@ h3 {
   background-color: #2980b9; /* Darker shade of button color */
 }
 
+.link-button {
+  cursor: pointer;
+  border: solid 1px #75adbf;
+  background-color: #000000;
+  padding: 10px; 
+  border-radius: 4px;
+  text-align: center;
+  width: 240px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Ubuntu Sans";
+  font-weight: 600;
+  font-size: .8em;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  color: #75adbf;
+  font-size: .8rem;
+}
+
+.link-button a {
+  color: #75adbf;
+}
+
+
 .link-button.glow-effect {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Stronger white light glow */
+}
+
+
+.link-button.glow-effect:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Stronger white light glow */
 }
 
 .button-glow:focus {
   outline: none; /* Removes the outline seen on some browsers on focus */
 }
-
 
 .button-link:hover{
     background-color: #d8b0ef;

@@ -19,8 +19,8 @@ import HexagonIcon from '@mui/icons-material/Hexagon';
 import GithubButton from './DesignComponents/GithubButton';
 import LinkButton from './DesignComponents/LinkButton';
 import HomeIcon from '@mui/icons-material/Home';
-import SvgBlob from './components/SvgBlob';
-import SvgOval from './components/SvgOval';
+import SvgBlob from './svg/SvgBlob';
+import SvgOval from './svg/SvgOval';
 
 interface CustomTooltipProps extends TooltipProps {
     className?: string;
@@ -59,7 +59,7 @@ export default function Homebody() {
                         priority 
                         style={{borderRadius: '4px'}}/>
                     </Card>
-                    <div className="left-quote" style={{paddingRight: '0px', marginTop: '100px'}}>
+                    <div className="left-quote" style={{marginTop: '100px'}}>
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
                     </div>
@@ -72,7 +72,7 @@ export default function Homebody() {
                             </Typography>
                         } 
                         placement="left">
-                        <svg style={{marginLeft: '100px'}}>
+                        <svg >
                             <SvgBlob  />
                         </svg>
                     </CustomTooltip> 

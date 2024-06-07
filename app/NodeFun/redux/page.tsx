@@ -83,16 +83,49 @@ export default function CssDemo() {
     return (
         <main className="flex min-h-screen flex-col">
         <div className="page-title">
-        <h1><HexagonIcon style={{marginBottom: '4px'}} /> &nbsp; Node Fun :: Simple React App Using Redux</h1>
+        <h1><HexagonIcon style={{marginBottom: '4px'}} /> &nbsp; Node Fun :: React App Using Redux</h1>
       </div>
 
       <div className="main-content">
             
-                <Grid container spacing={2}>
-                    <Grid item xs={12} sm={9}>
-                    <h2>Redux</h2>
-                        <p>In my years of using React, I've always managed state locally within my modules and components.
-                            Alternatively I've used the useContext hook for sharing state.
+                <Grid container spacing={4}>
+                    <Grid item xs={12} sm={7}>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} sm={12}>
+                                <div>
+                                <h1>Redux Demo</h1>
+                                <div className="component" style={{marginTop: '20px'}}>
+                              
+                               
+                                    <iframe 
+                                        src="https://grisecon-redux-cart.vercel.app/"
+                                        title="Embedded React App"
+                                        width="100%"
+                                        height="900px"
+                                        style={{
+                                            backgroundColor: '#ffffff', 
+                                            borderRadius: '8px',
+                                            boxShadow: '1px 2px 3px 3px rgba(0, 0, 0, 0.3)'}
+                                        }
+                                    />
+                                </div>
+    
+                            </div>
+                                           
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={12}>
+                                <div style={{marginTop: '60px'}}>
+                                    <GithubButton link="https://github.com/hillriegel/grisecon-redux-cart" label="griscon-redux-cart" />
+                                  
+                                </div>
+                            <br />
+                            </Grid>
+                    </Grid>
+                    <Grid item xs={12} sm={5}>
+                    <h2>Creating a Shopping Cart that uses Redux</h2>
+                        <p>This demo shows how managing state with redux (and redux-toolkit) allows state to be used within multiple components
+                            without prop drilling. Separate slices are usedin the store for organization purposes.
                         </p>
                         <br />
                         <h3>Benefits of Redux</h3>
@@ -120,68 +153,8 @@ export default function CssDemo() {
                             needs before deciding to use Redux.
                         </p>
 
-                        <Grid container spacing={1}>
-                            <Grid item xs={12} sm={9}>
-                            <div style={{marginTop: '20px'}}>
-                                <h1>Simple Redux Demo</h1>
-                                <br />
-                              
-                               
-                                    <iframe 
-                                        src="https://grisecon-redux-demo.netlify.app/"
-                                        title="Embedded React App"
-                                        width="100%"
-                                        height="200px"
-                                    />
-                              
-                            </div>
-                                           
-                            </Grid>
-                            <Grid item xs={12} sm={3}>
-                                <div style={{marginTop: '60px'}}>
-                                    <GithubButton link="https://github.com/hillriegel/grise_express_backend" label="my-redux-app" />
-                                  
-                                </div>
-                            <br />
-                            </Grid>
-                        </Grid>
-                            
-                        <br />
-                        <h2>Creating a simple React app that uses Redux</h2>
-                        <br />
-                       <div className="terminal-content">
-                            npx create-react-app my-redux-app<br />
-                            npm start<br />
-                            npm install redux react-redux<br />
-                        </div>
-
-                        <br />
-                        <h3>Create a Redux Store</h3>
-                        <p>
-                          Create a file named store.js in the src folder. This will be our Redux store configuration.
-                        </p>
-                        
+                       
                       
-                        <div className="code-content">
-                            <CodeToHTMLDisplay code={createStoreCode} />
-                        </div>
-
-                        <h3>Provide the Redux Store to React</h3>
-                        <p>
-                            Modify index.js to include the Redux store in your React app using the Provider from react-redux.
-                        </p>
-                        <div  className="code-content" style={{paddingBottom: '20px', paddingTop: '10px'}}>
-                            <CodeToHTMLDisplay code={includeReduxCode} />
-                        </div>   
-
-                        <h3>Modify the App.js</h3>  
-                        <p>
-                            Update App.js to connect to the Redux store and dispatch actions.
-                        </p> 
-                        <div className="code-content" style={{padding: '20px'}}>
-                            <CodeToHTMLDisplay code={appJsCode} />
-                        </div>   
-
                     </Grid>
                 </Grid>
 

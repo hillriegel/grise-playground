@@ -9,7 +9,7 @@ import Drawer from '@mui/material/Drawer';
 import Grid from '@mui/material/Grid';
 import DrawerList from './DrawerList';
 import MenuIcon from '@mui/icons-material/Menu';
-import ThemeSwitcher from './components/ThemeSwitcher';
+import ThemeSwitcher from './svg/ThemeSwitcher';
 
 export default function RootLayout({
   children,
