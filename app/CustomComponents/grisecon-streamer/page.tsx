@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, ChangeEvent } from 'react';
-
+import Image from 'next/image';
 import Grid from '@mui/material/Grid';
 
 import ChairIcon from '@mui/icons-material/Chair';
@@ -44,8 +44,15 @@ const Pagination = () => {
             <h2>I spend a lot of time making music</h2>
             <p>
               And I also spend a lot of time making visual art. For my album covers, I often colloborate or commission original art, such as the cover for 
-              my latest album, "Griseconia," which was painted by @michaelkoehler. 
+              my latest album, "Griseconica," which was painted by @michaelkoehler. 
             </p>
+            <br />
+            <Image
+              src='/Bliss-in-Static2.jpg'
+              width={400}
+              height={400}
+              alt="Griseconica Cover art"
+              />
             <p>The art is an integral part of capturing the essence of the music. It visually helps me locate the end goal as I'm creating the music, especially for the longer,
               more complicated pieces where I can get lost.
             </p>

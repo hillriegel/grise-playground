@@ -85,6 +85,7 @@ body {
     background-color: #155263;
     border-radius: 4px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    background-image: repeating-linear-gradient(130deg, rgba(0,0,0,0.08),transparent,rgba(0,0,0,0.02),rgba(0,0,0,0.05),rgba(0,0,0,0.01),rgba(0,0,0,0.07),rgba(0,0,0,0.05),rgba(0,0,0,0.02),rgba(0,0,0,0.04),rgba(0,0,0,0.04),rgba(0,0,0,0.02),rgba(0,0,0,0.1),rgba(0,0,0,0.07),rgba(0,0,0,0.02),rgba(0,0,0,0.07) 3px),linear-gradient(220deg, rgb(70,193,211),rgb(21,82,99));
 }
 
 .page-title h1 {
