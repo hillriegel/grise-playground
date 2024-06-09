@@ -22,8 +22,12 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ id }) => {
                         width={800}
                         height={760}
                         alt={item.mainImg_alt}
-                        style={{borderRadius: '4px'}}
-                    />            
+                        style={{borderRadius: '4px', border: 'solid 1px #444444'}}
+                    />
+                <div className="tag-container">
+                    {item.tags.map((tag) => 
+                        <div className="tag" key={tag}>{tag}</div>)}
+                </div>           
         </div>
     );
 };

@@ -8,6 +8,7 @@ export interface PortfolioEntry {
     mainImg: string;
     mainImg_alt: string;
     description: string;
+    tags: string[];
     imageSet: ImageItem[];
 }
 

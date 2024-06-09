@@ -601,3 +601,24 @@ button:hover {
   margin-top: 20px;
   background-color: #aaaaaa;
 }
+
+/* Portfolio */
+
+.tag-container {
+  width: 400px;
+  padding: 20px;
+  margin-top: -10px;
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #222222;
+  color: #4db1d0;
+  padding: 8px;
+  border-radius: 20px;
+  border: solid 1px #4db1d0;
+  margin: 5px;
+  font-size: .6em;
+}
