@@ -604,9 +604,10 @@ button:hover {
 
 /* Portfolio */
 
+
+
 .tag-container {
-  width: 400px;
-  padding: 20px;
+  padding: 1.2rem;
   margin-top: -10px;
   display: flex;
   align-items: start;
@@ -620,5 +621,5 @@ button:hover {
   border-radius: 20px;
   border: solid 1px #4db1d0;
   margin: 5px;
-  font-size: .6em;
+  font-size: .5em;
 }

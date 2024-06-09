@@ -19,8 +19,9 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ id }) => {
             <h2>{item.title}</h2>
                     <Image  
                         src={item.mainImg}
-                        width={800}
-                        height={760}
+                        layout="responsive"
+                        width={item.mainImgx}
+                        height={item.mainImgy}
                         alt={item.mainImg_alt}
                         style={{borderRadius: '4px', border: 'solid 1px #444444'}}
                     />

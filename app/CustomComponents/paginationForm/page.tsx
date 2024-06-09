@@ -176,7 +176,7 @@ const Pagination = () => {
   <div className="main-content">
       <h1>Example of a Pagination Display</h1>
       <Grid container spacing={2}>
-          <Grid item xs={12} sm={5}>
+          <Grid item xs={12} sm={7}>
             <p>This is another interview task where I was given 1 1/2 hours to complete it. I'm enjoying learning to code under pressure with the clock ticking and someone looking over my shoulder. I may
               not be great at it now, but I'm excited to get better.
             </p>

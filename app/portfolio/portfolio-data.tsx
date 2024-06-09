@@ -4,6 +4,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
     'sinch_rm': {
         title: 'Sinch Report Manager',
         mainImg: '/images/portfolio/report_manager3.png',
+        mainImgx: 580,
+        mainImgy: 428,
         mainImg_alt: 'Sinch Report Manager',
         description: 'Here&apos; some text about the Sinch Report Manager ',
         tags: ['JavaScript', 'jQUERY', 'Bootstrap', 'Authorization', 'Restful APIs', 'Data Visualization', 'Project Manager', 'CI/CD', 'Jira', 'Figma', 'Photoshop', 'Illustrator', 'Agile','Enterprise','0-1/Greenfield', 'Complete Redesign', 'Authorization'],
@@ -24,6 +26,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
     'sinch_dashboard': {
         title: 'Sinch Customer Dashboard',
         mainImg: '/images/portfolio/sinch_dashboard2.png',
+        mainImgx: 580,
+        mainImgy: 503,
         mainImg_alt: 'Sinch Customer Dashboard',
         description: 'Here&apos; some text about the Sinch Customer Dashboard',
         tags: ['React', 'React Router', 'Node', 'Material-UI', 'Webpack', 'gRPC', 'GraphQL', 'CSS', 'HTML5', 'UI/UX', 'User Testing', 'Data Intensive', 'BFF', 'Jest'],
@@ -38,6 +42,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
     'adam_wolpert': {
         title: 'Adam Wolpert Gallery',
         mainImg: '/images/portfolio/adam_wolpert2.png',
+        mainImgx: 580,
+        mainImgy: 541,
         mainImg_alt: 'Adam Wolpert Website',
         description: 'Here&apos; some text about the Sinch Customer Dashboard',
         tags: ['HTML5', 'Design', 'CSS'],
@@ -49,6 +55,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
     'portraits': {
         title: 'Digital (3D) Portraits',
         mainImg: '/images/portfolio/octoplasm_1.png',
+        mainImgx: 580,
+        mainImgy: 521,
         mainImg_alt: 'Portraits',
         description: 'Here&apos; some text about the Sinch Customer Dashboard',
         tags: ['3D','Photoshop', 'Digital Painting','Graphic Design'],
