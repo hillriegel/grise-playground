@@ -81,7 +81,7 @@ interface DrawerListProps {
       >
 
           <ListItem key={"grisecon-streamer"} disablePadding>
-            <Link href="/CustomComponents/grisecon-streamer">
+            <Link href="/CustomComponents/GriseconStreamer">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
                     <DataObjectIcon className="drawer-menu-icon neutral" />
@@ -92,7 +92,7 @@ interface DrawerListProps {
         </ListItem>
 
         <ListItem key={"currencyEx"} disablePadding>
-            <Link href="/CustomComponents/currencyConverter">
+            <Link href="/CustomComponents/CurrencyConverter">
             <ListItemButton className="drawer-menu-button">
               <ListItemIcon>
                   <DataObjectIcon className="drawer-menu-icon neutral" />
@@ -114,7 +114,7 @@ interface DrawerListProps {
         </ListItem>
         
         <ListItem key={"pagination"} disablePadding>
-            <Link href="/CustomComponents/paginationForm">
+            <Link href="/CustomComponents/PaginationForm">
           <ListItemButton className="drawer-menu-button">
             <ListItemIcon>
             <DataObjectIcon className="drawer-menu-icon neutral" />
@@ -125,7 +125,7 @@ interface DrawerListProps {
         </ListItem>
   
         <ListItem key={"customSelect"} disablePadding>
-            <Link href="/CustomComponents/customSelect">
+            <Link href="/CustomComponents/CustomSelect">
             <ListItemButton className="drawer-menu-button">
             <ListItemIcon>
             <DataObjectIcon className="drawer-menu-icon neutral" />
@@ -151,7 +151,7 @@ interface DrawerListProps {
         }
       >
         <ListItem key={"cssDemo"} disablePadding>
-            <Link href="/CssExercises/flexBoxDemo">
+            <Link href="/CssExercises/FlexBoxDemo">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
                   <CodeIcon className="drawer-menu-icon neutral"/>
@@ -179,7 +179,7 @@ interface DrawerListProps {
         
         {/*  EXPRESS BACKEND */}
         <ListItem key={"expressbackend"} disablePadding>
-            <Link href="/NodeFun/expressBackend">
+            <Link href="/NodeFun/ExpressBackend">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
                   <CodeIcon  className="drawer-menu-icon neutral" />
@@ -191,7 +191,7 @@ interface DrawerListProps {
         
               {/*  USING REDUX */}
         <ListItem key={"redux"} disablePadding>
-            <Link href="/NodeFun/redux">
+            <Link href="/NodeFun/Redux">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
                   <CodeIcon  className="drawer-menu-icon neutral" />
@@ -203,7 +203,7 @@ interface DrawerListProps {
   
         {/*  USING CONTEXT API */}
         <ListItem key={"usecontextapi"} disablePadding>
-            <Link href="/NodeFun/useContextAPI">
+            <Link href="/NodeFun/UseContextApi">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
                   <CodeIcon  className="drawer-menu-icon neutral" />
