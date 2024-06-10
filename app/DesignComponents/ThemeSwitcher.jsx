@@ -54,6 +54,8 @@ const ThemeSwitcher = () => {
       labelPlacement="start"
       style={{ marginLeft: isDrinksMode ? '0' : 'auto', marginRight: isDrinksMode ? 'auto' : '0' }}
       className="neutral"
+      tabIndex={3}
+      alt="theme switcher"
     />
   );
 };

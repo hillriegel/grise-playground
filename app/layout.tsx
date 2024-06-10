@@ -9,7 +9,7 @@ import Drawer from '@mui/material/Drawer';
 import Grid from '@mui/material/Grid';
 import DrawerList from './DrawerList';
 import MenuIcon from '@mui/icons-material/Menu';
-import ThemeSwitcher from './svg/ThemeSwitcher';
+import ThemeSwitcher from './DesignComponents/ThemeSwitcher';
 
 export default function RootLayout({
   children,
@@ -28,11 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="header" style={{width: '100%', display: 'flex', alignItems: 'center'}} >
+        <div tabIndex={0} className="header" style={{width: '100%', display: 'flex', alignItems: 'center'}} >
           <Grid container spacing={2} justifyContent="space-between">
             <Grid item style={{width: '95px'}}>
               <Button sx={{ '& svg':  { width: '80px' } }} className="my-menu-button" onClick={toggleDrawer(true)}>
-                <MenuIcon style={{height: '30px'}} className="neutral" />
+                <MenuIcon tabIndex={1} style={{height: '30px'}} className="neutral" />
               </Button> 
             </Grid>
             <Grid item xs style={{ marginLeft: '10px', fontSize: '1.5rem' }} className="neutral">

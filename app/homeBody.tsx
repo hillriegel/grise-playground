@@ -62,7 +62,7 @@ export default function Homebody() {
                     <div className="left-quote" style={{marginTop: '100px'}}>
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
-                    </div>
+                  
                     <CustomTooltip
                         title={
                             <Typography className="tooltip-title">
@@ -71,11 +71,12 @@ export default function Homebody() {
                                     We learned that the eye is drawn to circle shapes.
                             </Typography>
                         } 
-                        placement="left">
-                        <svg >
+                        placement="top">
+                        <svg width="150" height="150" viewBox="0 0 50 50" style={{float: 'right', marginRight: '-30px'}}>
                             <SvgBlob  />
                         </svg>
                     </CustomTooltip> 
+                    </div>
                 </Grid>
                 <Grid item xs={12} sm={8} md={7}>
                     <div style={{marginLeft: '15px'}}>

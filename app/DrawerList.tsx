@@ -16,7 +16,7 @@ import DataObjectIcon from '@mui/icons-material/DataObject';
 import ChairIcon from '@mui/icons-material/Chair';
 import HexagonIcon from '@mui/icons-material/Hexagon';
 import CollectionsIcon from '@mui/icons-material/Collections';
-
+import PatternIcon from '@mui/icons-material/Pattern';
 
 interface DrawerListProps {
     toggleDrawer: (newOpen: boolean) => () => void;
@@ -49,6 +49,19 @@ interface DrawerListProps {
                   <CollectionsIcon className="drawer-menu-icon emphasis"/>
                 </ListItemIcon>
                 <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman' } }} className="drawer-menu-subheader-text emphasis" primary="Portfolio" />
+              </ListItemButton>
+            </Link>
+          </ListItem>
+      </List>
+  
+      <List>
+        <ListItem key={"portfolio"} disablePadding style={{marginLeft: '-20px'}}>
+            <Link href="/Registry">
+              <ListItemButton className="drawer-menu-button">
+                <ListItemIcon>
+                  <PatternIcon className="drawer-menu-icon emphasis"/>
+                </ListItemIcon>
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1em', fontFamily: 'Freeman' } }} className="drawer-menu-subheader-text emphasis" primary="Design Patterns" />
               </ListItemButton>
             </Link>
           </ListItem>
