@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/utils/convertCodeToHtml.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/utils/convertCodeToHtml.js", "app/CustomComponents/PaginationForm/GriseconRelatedArtists.js"],
   "exclude": ["node_modules"]
 }

@@ -1,170 +1,45 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, ChangeEvent } from 'react';
-import ItemsDisplay from './ItemsDisplay';
-import PaginationBar from './PaginationBar';
-import SearchBar from './SearchBar';
+import DisplayItems from './components/DisplayItems';
+import Pagination from './components/Pagination';
+import SearchBar from './components/SearchBar';
 import Grid from '@mui/material/Grid';
 import UnstyledPaginationIntroduction from './SampleMuiPagination';
 import ChairIcon from '@mui/icons-material/Chair';
+import { GriseconRelatedArtists } from './GriseconRelatedArtists';
+import './pagination.css';
+
 //import FetchSpotify from './fetchSpotify';
 
-const Pagination = () => {
+const CustomPagination = () => {
   const [loading, setLoading] = useState(false);
+
+  const initialState = {
+    pageNumber: 1,
+    rangeStart: 0,
+    rangeEnd: 5,
+    itemsToDisplay: GriseconRelatedArtists.artists,
+    rowsPerPage: 5,
+    totalItems: GriseconRelatedArtists.artists.length,
+  }
+
+
 
   /*initialize the items to display with the first 5 items
   this would be set when the component first loads and the initial items are retrieved
   from the API. In this case, they are hardcoded. For this to work as designed, the API
   would need to accept a page number and a number of items to return */
-  const [itemsDisplayed, setItemsDisplayed] = useState (
-      {
-        pageNumber: 1,
-        rangeStart: 1,
-        rangeEnd: 5,
-        itemsToDisplay: [      {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/7Eu1txygG6nJttLHbZdQOh"
-          },
-          "followers" : {
-            "href" : null,
-            "total" : 724298
-          },
-          "genres" : [ "electronica", "folktronica", "indietronica", "intelligent dance music", "trip hop" ],
-          "href" : "https://api.spotify.com/v1/artists/7Eu1txygG6nJttLHbZdQOh",
-          "id" : "7Eu1txygG6nJttLHbZdQOh",
-          "images" : [ {
-            "height" : 640,
-            "url" : "https://i.scdn.co/image/ab6761610000e5eb21c0ea7fc21ab3038d111ec2",
-            "width" : 640
-          }, {
-            "height" : 320,
-            "url" : "https://i.scdn.co/image/ab6761610000517421c0ea7fc21ab3038d111ec2",
-            "width" : 320
-          }, {
-            "height" : 160,
-            "url" : "https://i.scdn.co/image/ab6761610000f17821c0ea7fc21ab3038d111ec2",
-            "width" : 160
-          } ],
-          "name" : "Four Tet",
-          "popularity" : 60,
-          "type" : "artist",
-          "uri" : "spotify:artist:7Eu1txygG6nJttLHbZdQOh"
-        }, {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/4aEnNH9PuU1HF3TsZTru54"
-          },
-          "followers" : {
-            "href" : null,
-            "total" : 661469
-          },
-          "genres" : [ "alternative dance", "art pop", "electronica", "folktronica", "indietronica", "intelligent dance music", "trip hop" ],
-          "href" : "https://api.spotify.com/v1/artists/4aEnNH9PuU1HF3TsZTru54",
-          "id" : "4aEnNH9PuU1HF3TsZTru54",
-          "images" : [ {
-            "height" : 640,
-            "url" : "https://i.scdn.co/image/ab6761610000e5ebf9da16d673af005d53bab9cc",
-            "width" : 640
-          }, {
-            "height" : 320,
-            "url" : "https://i.scdn.co/image/ab67616100005174f9da16d673af005d53bab9cc",
-            "width" : 320
-          }, {
-            "height" : 160,
-            "url" : "https://i.scdn.co/image/ab6761610000f178f9da16d673af005d53bab9cc",
-            "width" : 160
-          } ],
-          "name" : "Caribou",
-          "popularity" : 52,
-          "type" : "artist",
-          "uri" : "spotify:artist:4aEnNH9PuU1HF3TsZTru54"
-        }, {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/5oOhM2DFWab8XhSdQiITry"
-          },
-          "followers" : {
-            "href" : null,
-            "total" : 681949
-          },
-          "genres" : [ "chillwave", "downtempo", "electronica", "indietronica", "intelligent dance music" ],
-          "href" : "https://api.spotify.com/v1/artists/5oOhM2DFWab8XhSdQiITry",
-          "id" : "5oOhM2DFWab8XhSdQiITry",
-          "images" : [ {
-            "height" : 640,
-            "url" : "https://i.scdn.co/image/ab6761610000e5eb4dc28dcee5516d2e89690525",
-            "width" : 640
-          }, {
-            "height" : 320,
-            "url" : "https://i.scdn.co/image/ab676161000051744dc28dcee5516d2e89690525",
-            "width" : 320
-          }, {
-            "height" : 160,
-            "url" : "https://i.scdn.co/image/ab6761610000f1784dc28dcee5516d2e89690525",
-            "width" : 160
-          } ],
-          "name" : "Tycho",
-          "popularity" : 53,
-          "type" : "artist",
-          "uri" : "spotify:artist:5oOhM2DFWab8XhSdQiITry"
-        }, {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
-          },
-          "followers" : {
-            "href" : null,
-            "total" : 715317
-          },
-          "genres" : [ "electronica", "indietronica" ],
-          "href" : "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
-          "id" : "2exkZbmNqMKnT8LRWuxWgy",
-          "images" : [ {
-            "height" : 640,
-            "url" : "https://i.scdn.co/image/ab6761610000e5eb55a94b7fa21c9dbb2b986229",
-            "width" : 640
-          }, {
-            "height" : 320,
-            "url" : "https://i.scdn.co/image/ab6761610000517455a94b7fa21c9dbb2b986229",
-            "width" : 320
-          }, {
-            "height" : 160,
-            "url" : "https://i.scdn.co/image/ab6761610000f17855a94b7fa21c9dbb2b986229",
-            "width" : 160
-          } ],
-          "name" : "Moderat",
-          "popularity" : 54,
-          "type" : "artist",
-          "uri" : "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
-        },
-        {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/7zrkALJ9ayRjzysp4QYoEg"
-          },
-          "followers" : {
-            "href" : null,
-            "total" : 379306
-          },
-          "genres" : [ "electronica", "future garage", "indie soul" ],
-          "href" : "https://api.spotify.com/v1/artists/7zrkALJ9ayRjzysp4QYoEg",
-          "id" : "7zrkALJ9ayRjzysp4QYoEg",
-          "images" : [ {
-            "height" : 640,
-            "url" : "https://i.scdn.co/image/ab6761610000e5ebbeaea33eaf23808b73167155",
-            "width" : 640
-          }, {
-            "height" : 320,
-            "url" : "https://i.scdn.co/image/ab67616100005174beaea33eaf23808b73167155",
-            "width" : 320
-          }, {
-            "height" : 160,
-            "url" : "https://i.scdn.co/image/ab6761610000f178beaea33eaf23808b73167155",
-            "width" : 160
-          } ],
-          "name" : "Maribou State",
-          "popularity" : 61,
-          "type" : "artist",
-          "uri" : "spotify:artist:7zrkALJ9ayRjzysp4QYoEg"
-        } ]
-      }
-  )
+  const [itemsDisplayed, setItemsDisplayed] = useState (initialState)
+
+
+  useEffect(() => {
+    const itemsToDisplay = GriseconRelatedArtists.artists.slice(itemsDisplayed.rangeStart, itemsDisplayed.rangeEnd)
+    setItemsDisplayed((prev) => ({
+      ...prev,
+      itemsToDisplay
+    }));
+  },[itemsDisplayed.rangeStart, itemsDisplayed.rangeEnd]);
 
   return (
     <main className="flex min-h-screen flex-col" >
@@ -185,7 +60,9 @@ const Pagination = () => {
             </p>
             <div style={{marginTop: '20px'}}>
               <h2>Material-UI Pagination</h2>
-              <UnstyledPaginationIntroduction />
+              <div style={{width: '80%', marginLeft: '-20px'}}>
+                <UnstyledPaginationIntroduction />
+              </div>
               </div>
     
               <p>
@@ -202,9 +79,15 @@ const Pagination = () => {
                       <SearchBar />
                     </Grid>
                 </Grid>
-                  <br />
-                  <ItemsDisplay items={itemsDisplayed.itemsToDisplay} loading={loading}/>
-                  <PaginationBar itemsDisplayed={itemsDisplayed} setItemsDisplayed={setItemsDisplayed} setLoading={setLoading} />
+                  <div id="pagination">
+                    <DisplayItems 
+                      items={itemsDisplayed.itemsToDisplay} 
+                      loading={loading}/>
+                    <Pagination 
+                      itemsDisplayed={itemsDisplayed} 
+                      setItemsDisplayed={setItemsDisplayed} 
+                    />
+                   </div>
               </div>
           </Grid>
 
@@ -268,4 +151,4 @@ const Pagination = () => {
   );
 }
 
-export default Pagination; 
+export default CustomPagination; 

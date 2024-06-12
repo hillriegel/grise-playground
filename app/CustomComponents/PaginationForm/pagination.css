@@ -1,57 +1,73 @@
 /* Grid layout for features */
 
 
-h3 {
-    font-size: 1.5em;
-    font-family: "Freeman";
-    font-weight: 400;
-    font-size: 1em;
-  }
-
 .button-bar {
     border: 'solid 1px';
     flex-direction: row;
     display: flex;
     padding: 20px;
-    margin: 20px;
     font-size: 1em;
     color: #dddddd;
     align-items: center;
-    width: 100%
 }
 
-.rows-per-page {
-    font-size: .9em;
-    width: 250px;
-}
-
-.pagination-text {
-    flex-basis: 1;
-    width: 100px;
-    flex-grow: .5;
-    font-size: .9em;
-}
-
-.button-item {
-    color: #aaaaaa;
-    flex-grow: 0;
-    flex-basis: 0;
-    margin: 5px;
+button {
+    background-color: transparent;
     border-radius: 50px;
-    padding: 2px;
-    border: solid 1px #888888;
-    background-color: #E0F4F7;
-    font-size: .8em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
-.row-select {
-    border-radius: 5px;
-    padding: 3px;
+.button {
+    border-radius: 50px;
+    padding: 0px;
+    width: 25px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: .9em;
+}
+
+
+
+tr {
+    border-bottom: solid 1px #000000;
+}
+
+td {
+    border-bottom: solid 1px #7485ac;
+    padding: 10px;
     color: #444444;
 }
 
-.similar-artists {
-    height: 660px;
-    width: 100%;
-    overflow: auto;
+#pagination h1 {
+    color: #444444;
+}
+
+#pagination h2 {
+    color: #003c96;
+
+}
+
+#pagination h3 {
+    color: #444444;
+    
+}
+
+.search-input {
+    height: 35px; 
+    width: 200px; 
+    border-radius: 7px;
+    margin-bottom: 20px;
+    margin-left: -28px;
+    background-color: #c1cefc
 }

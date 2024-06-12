@@ -1,5 +1,5 @@
 
-import {Item, APIResponse} from './types';
+import {Item, APIResponse} from './components/types';
 import {GriseconRelatedArtists} from './GriseconRelatedArtists';
 
 export default function FetchData(currentPage: number, itemsPerPage: number): Promise<APIResponse> {
