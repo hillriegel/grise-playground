@@ -52,24 +52,24 @@ export default function Homebody() {
                 <Grid item xs={10} sm={7} md={3}>
                     <Card className="blog-card">
                         <Image 
-                        src="/images/grise_profile_pic_sm.png" 
-                        alt="photo of Grise" 
-                        width="300" 
-                        height="600" 
-                        priority 
-                        style={{borderRadius: '4px'}}/>
+                            src="/images/grise_profile_pic_sm.png" 
+                            alt="photo of Grise" 
+                            width="300" 
+                            height="600" 
+                            priority 
+                            style={{borderRadius: '4px'}}/>
                     </Card>
                     <div className="left-quote" style={{marginTop: '100px'}}>
                         <h1>I'm a lifelong learner</h1>
                         This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
                   
-                    <CustomTooltip
-                        title={
-                            <Typography className="tooltip-title">
-                                I spent a few years <a href="https://www.amazon.com/Making-Breaking-Second-Updated-Expanded/dp/163159284X" 
-                                    target="_blank" rel="noopener noreferrer">making and breaking the grid</a>. 
-                                    We learned that the eye is drawn to circle shapes.
-                            </Typography>
+                        <CustomTooltip
+                            title={
+                                <Typography className="tooltip-title">
+                                    I spent a few years <a href="https://www.amazon.com/Making-Breaking-Second-Updated-Expanded/dp/163159284X" 
+                                        target="_blank" rel="noopener noreferrer">making and breaking the grid</a>. 
+                                        We learned that the eye is drawn to circle shapes.
+                                </Typography>
                         } 
                         placement="top">
                         <svg width="150" height="150" viewBox="0 0 50 50" style={{float: 'right', marginRight: '-30px'}}>

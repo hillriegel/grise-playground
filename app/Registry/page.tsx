@@ -1,25 +1,52 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
+import Link from 'next/link';
 import Image from 'next/image';
 import GithubButton from '../DesignComponents/GithubButton';
 import PatternIcon from '@mui/icons-material/Pattern';
+import { REPOSITORIES } from './repositories';
+import './repositories.css';
 
-export default function CssDemo() {
-    type FlexDirection = 'row' | 'column';
-    type AlignItems = 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
 
-    const [alignment, setAlignment] = useState<AlignItems>('flex-start');
-    const [direction, setDirection] = useState<FlexDirection>('row');
+export default function Registry() {
 
+    const [searchTags, setSearchTags] = useState('');
+    const [filteredRepositories, setFilteredRepositories] = useState(REPOSITORIES);
+
+    useEffect(() => {
+        const tags = searchTags.split(',').map(tag => tag.trim().toLowerCase());
+        const filtered = REPOSITORIES.filter(repo =>
+            repo.tags.some(tag => tags.includes(tag))
+        );
+        setFilteredRepositories(filtered);
+    }, [searchTags])
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTags(event.target.value);
+        
+    };
+
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        const tags = searchTags.split(',').map(tag => tag.trim().toLowerCase());
+        const filtered = REPOSITORIES.filter(repo =>
+            repo.tags.some(tag => tags.includes(tag))
+        );
+        setFilteredRepositories(filtered);
+    };
+
+    function handleClear() {
+        setSearchTags('');
+    }
     return (
         <main className="flex min-h-screen flex-col">
         <div className="page-title">
             <h1><PatternIcon style={{marginBottom: '4px'}} /> &nbsp; Design Patterns :: Registry</h1>
         </div>
 
-      <div className="main-content">
+        <div className="main-content">
                
                 <h2>Design Patterns</h2>
                 <Grid container spacing={2}>
@@ -37,15 +64,60 @@ export default function CssDemo() {
                             that could then be pulled up.
                         </p>
 
+                        <form>
+                            <div className="search-container">
+                                <Grid container spacing={2}>
+                                    <Grid item xs={6}>
+                                        <div className="search-input" >
+                                            <input 
+                                                type="text" 
+                                                className="input-field" 
+                                                value={searchTags} 
+                                                onChange={handleInputChange} 
+                                            />
+                                            {searchTags !== '' &&
+                                                <button
+                                                    className="clear-button"
+                                                    onClick={handleClear} >
+                                                        X
+                                                </button>
+                                            }
+                                        </div>
+                                    </Grid>
+                                    <Grid item xs={6}>
+                                        <button style={{marginTop: '0px'}} onClick={handleClick}>Search</button>
+                                    </Grid>
+                                </Grid>
+                            
+                                
+                                </div>
+                        </form>
+
+
                         <br />
-                        <p>React / Tanstack:<br />
-                        "Tanstack Query" (formerly React Query)... 
-                        Tanstack handles http requests and allows caching. Tanstack fundamentally handles state logic and pending/errors.
-                        </p>
-                        <p>
-                            Tags: react, tanstack, QueryClientProvider, 
-                            http requests, fetch, caching, react-router-dom, react-router, staleTime, gcTime
-                        </p>
+
+                        <h1>Matching Projects</h1>
+
+                        <ul className="repo-list">
+                        {filteredRepositories && filteredRepositories.map((repo) => {
+                            return (
+                                <li key={repo.id} className="repo-item">
+                                    <Grid container spacing={2}>
+                                        <Grid item xs={4}>
+                                            <Image src={repo.image} width="200" height="147" alt={repo.name} />
+                                        </Grid>
+                                        <Grid item xs={8}>
+                                        <Link href={repo.url}><h3>{repo.name}</h3></Link>
+                                        
+                                            {repo.tags.join(', ')}
+                                        </Grid>
+                                    </Grid>
+
+                                </li>
+                            )
+                        })}
+                        </ul>
+
                     </Grid>
                 </Grid>
 

@@ -31,8 +31,8 @@ export default function RootLayout({
         <div tabIndex={0} className="header" style={{width: '100%', display: 'flex', alignItems: 'center'}} >
           <Grid container spacing={2} justifyContent="space-between">
             <Grid item style={{width: '95px'}}>
-              <Button sx={{ '& svg':  { width: '80px' } }} className="my-menu-button" onClick={toggleDrawer(true)}>
-                <MenuIcon tabIndex={1} style={{height: '30px'}} className="neutral" />
+              <Button tabIndex={1} sx={{ '& svg':  { width: '80px' } }} className="my-menu-button" onClick={toggleDrawer(true)}>
+                <MenuIcon  style={{height: '30px'}} className="neutral" />
               </Button> 
             </Grid>
             <Grid item xs style={{ marginLeft: '10px', fontSize: '1.5rem' }} className="neutral">

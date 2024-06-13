@@ -14,6 +14,31 @@
   width: 20px; 
 }
 
+.noFocus:focus {
+  border: none;
+  outline: none;
+}
+
+.noFocus:active {
+  border: none;
+  outline: none;
+}
+
+.my-menu-button {
+  border: none;
+  outline: none;
+}
+
+.my-menu-button:focus {
+  border: none;
+  outline: none;
+}
+
+.my-menu-button:active {
+  border: none;
+  outline: none;
+}
+
 .list-subheader {
   font-size: 1em;
   font-family: 'Freeman';
@@ -29,9 +54,21 @@
   cursor: pointer;
 }
 
+.drawer-menu-button:focus {
+  border: none;
+  outline: none;
+}
+
+.drawer-menu-button:click {
+  border: none;
+  outline: none;
+}
+
+
 .drawer-menu-button:hover {
   background-color: #555555;
 }
+
 
 .drawer-menu-text {
   font-size: .75em;
