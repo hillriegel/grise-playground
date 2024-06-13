@@ -177,7 +177,6 @@ interface DrawerListProps {
           </ListSubheader>
         }>
         
-
         {/*  EXPRESS BACKEND */}
         <ListItem key={"expressbackend2"} disablePadding>
             <Link href="/NodeFun/ExpressBackend2">
@@ -192,7 +191,7 @@ interface DrawerListProps {
         
         {/*  USING REDUX */}
         <ListItem key={"redux"} disablePadding>
-            <Link href="/NodeFun/Redux">
+            <Link href="/NodeFun/Redux2">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
                   <CodeIcon  className="drawer-menu-icon neutral" />
@@ -204,7 +203,7 @@ interface DrawerListProps {
   
         {/*  USING CONTEXT API */}
         <ListItem key={"usecontextapi"} disablePadding>
-            <Link href="/NodeFun/UseContextApi">
+            <Link href="/NodeFun/UseContextApi2">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
                   <CodeIcon  className="drawer-menu-icon neutral" />
