@@ -177,20 +177,9 @@ interface DrawerListProps {
           </ListSubheader>
         }>
         
-        {/*  EXPRESS BACKEND */}
-        <ListItem key={"expressbackend"} disablePadding>
-            <Link href="/NodeFun/ExpressBackend">
-              <ListItemButton className="drawer-menu-button">
-                <ListItemIcon>
-                  <CodeIcon  className="drawer-menu-icon neutral" />
-                </ListItemIcon>
-                <ListItemText  sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big' } }} className="drawer-menu-item-text" primary="Express Backend" />
-              </ListItemButton>
-          </Link>
-        </ListItem>
 
-                {/*  EXPRESS BACKEND */}
-                <ListItem key={"expressbackend2"} disablePadding>
+        {/*  EXPRESS BACKEND */}
+        <ListItem key={"expressbackend2"} disablePadding>
             <Link href="/NodeFun/ExpressBackend2">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
