@@ -38,7 +38,14 @@ export default function CssDemo() {
                         </p>
 
                         <br />
-                     
+                        <p>React / Tanstack:<br />
+                        "Tanstack Query" (formerly React Query)... 
+                        Tanstack handles http requests and allows caching. Tanstack fundamentally handles state logic and pending/errors.
+                        </p>
+                        <p>
+                            Tags: react, tanstack, QueryClientProvider, 
+                            http requests, fetch, caching, react-router-dom, react-router, staleTime, gcTime
+                        </p>
                     </Grid>
                 </Grid>
 
