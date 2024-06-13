@@ -8,7 +8,7 @@ import GithubButton from '../DesignComponents/GithubButton';
 import PatternIcon from '@mui/icons-material/Pattern';
 import { REPOSITORIES } from './repositories';
 import './repositories.css';
-
+import LinkIcon from '@mui/icons-material/Link';
 
 export default function Registry() {
 
@@ -107,8 +107,11 @@ export default function Registry() {
                                             <Image src={repo.image} width="200" height="147" alt={repo.name} />
                                         </Grid>
                                         <Grid item xs={8}>
-                                        <Link href={repo.url}><h3>{repo.name}</h3></Link>
-                                        
+                                        <Link href={repo.url}>
+                                          <div className="git-link">
+                                                <LinkIcon /> {repo.name}
+                                                </div>     
+                                        </Link>
                                             {repo.tags.join(', ')}
                                         </Grid>
                                     </Grid>

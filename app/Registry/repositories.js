@@ -12,5 +12,12 @@ export const  REPOSITORIES = [
         name: 'react-tanstack',
         url:'https://github.com/hillriegel/react-tanstack/tree/main/src',
         tags: ['react', 'configureStore', 'reducer', 'useDispatch', 'useSelector', 'tanstack', 'react-query', 'modal']
+    },
+    {
+        id: 'p3',
+        name: 'progress-bar',
+        image: '/images/design-patterns/progress-bar.png',
+        url: 'https://github.com/hillriegel/progress-bar/tree/main/src',
+        tags: ['progress bar', 'progress', 'setInterval', 'clearInterval']
     }
 ]
