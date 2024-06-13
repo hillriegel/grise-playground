@@ -19,5 +19,12 @@ export const  REPOSITORIES = [
         image: '/images/design-patterns/progress-bar.png',
         url: 'https://github.com/hillriegel/progress-bar/tree/main/src',
         tags: ['progress bar', 'progress', 'setInterval', 'clearInterval']
+    },
+    {
+        id: 'p4',
+        name: 'spa-routing',
+        image: '/images/design-patterns/spa-routing.png',
+        url: 'https://github.com/hillriegel/spa-routing/tree/main/src',
+        tags: ['single page', 'spa', 'routing']
     }
 ]
