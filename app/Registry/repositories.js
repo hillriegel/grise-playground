@@ -39,6 +39,13 @@ export const  REPOSITORIES = [
         name: 'authentication',
         image: '/images/design-patterns/authentication.png',
         url: 'https://github.com/hillriegel/authentication',
-        tags: ['authentication', 'routerProvider', 'createBrowserRouter', 'checkAuthLoader', 'tokenLoader', 'loader', 'action', 'ReactDOM', 'react-router-dom', 'Form', 'json']
+        tags: ['authentication', 'forms', 'routerProvider', 'createBrowserRouter', 'checkAuthLoader', 'tokenLoader', 'loader', 'action', 'ReactDOM', 'react-router-dom', 'Form', 'json']
+    },
+    {
+        id: 'p7',
+        name: 'authentication',
+        image: '/images/design-patterns/react-forms.png',
+        url: 'https://github.com/hillriegel/forms',
+        tags: ['forms', 'login', 'state']
     },
 ]
