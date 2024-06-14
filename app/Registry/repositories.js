@@ -26,5 +26,19 @@ export const  REPOSITORIES = [
         image: '/images/design-patterns/spa-routing.png',
         url: 'https://github.com/hillriegel/spa-routing/tree/main/src',
         tags: ['single page', 'spa', 'routing']
-    }
+    },
+    {
+        id: 'p5',
+        name: 'portal-refs',
+        image: '/images/design-patterns/portal-refs.png',
+        url: 'https://github.com/hillriegel/portal-refs/tree/main/src',
+        tags: ['forwardRef', 'useImperativeHandle', 'useRef', 'portal', 'createPortal', 'modal']
+    },
+    {
+        id: 'p6',
+        name: 'authentication',
+        image: '/images/design-patterns/authentication.png',
+        url: 'https://github.com/hillriegel/authentication',
+        tags: ['authentication', 'routerProvider', 'createBrowserRouter', 'checkAuthLoader', 'tokenLoader', 'loader', 'action', 'ReactDOM', 'react-router-dom', 'Form', 'json']
+    },
 ]

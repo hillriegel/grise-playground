@@ -16,12 +16,14 @@ export default function Registry() {
     const [filteredRepositories, setFilteredRepositories] = useState(REPOSITORIES);
 
     useEffect(() => {
-        const tags = searchTags.split(',').map(tag => tag.trim().toLowerCase());
+        const inputTags = searchTags.split(',').map(tag => tag.trim().toLowerCase());
         const filtered = REPOSITORIES.filter(repo =>
-            repo.tags.some(tag => tags.includes(tag))
+            repo.tags.some(repoTag => 
+                inputTags.includes(repoTag.toLowerCase()) // Convert repo tags to lowercase before comparison
+            )
         );
         setFilteredRepositories(filtered);
-    }, [searchTags])
+    }, [searchTags]);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTags(event.target.value);
@@ -50,18 +52,17 @@ export default function Registry() {
                
                 <h2>Design Patterns</h2>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={7}>
+                    <Grid item xs={10}>
                       
-                        <p>The idea here is to use all the different projects and apps as references
-                            for design patterns. There are so many useful patterns in these projects
-                            but it could be difficult to remember which projects have certain patterns. By
-                            labeling the projects and apps with tags that identify the subjects of their
-                            design patterns, you can search for a tag, identify the projects that
-                            make use of those patterns, and then locate the pattern.
+                        <p>
+                            Design patterns are the heart of coding. Remembering how to handle actions on routes, or
+                            the most efficient pattern for using refs, or what the custom hooks provided by tanstack are 
+                            is a big task. 
                         </p>
-                        <p>This should also have the ability to add new projects, add and edit tags.</p>
-                        <p>The challenge here would be to find a way to attach tags to specific blocks of code 
-                            that could then be pulled up.
+                        <p>
+                            But setting up projects and identifying them with tags such as "single page" or "redux", I can
+                            quickly enter a tag or series of tags and call up the projects that make use of those design
+                            patterns. From there I can follow the link to the github repository and quickly pull up the code.
                         </p>
 
                         <form>
