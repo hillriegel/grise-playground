@@ -9,6 +9,7 @@ import PatternIcon from '@mui/icons-material/Pattern';
 import { REPOSITORIES } from './repositories';
 import './repositories.css';
 import LinkIcon from '@mui/icons-material/Link';
+import { debounce } from 'lodash'; // You might need to install lodash if not already installed
 
 export default function Registry() {
 
@@ -16,32 +17,33 @@ export default function Registry() {
     const [filteredRepositories, setFilteredRepositories] = useState(REPOSITORIES);
 
     useEffect(() => {
-        const inputTags = searchTags.split(',').map(tag => tag.trim().toLowerCase());
-        const filtered = REPOSITORIES.filter(repo =>
-            repo.tags.some(repoTag => 
-                inputTags.includes(repoTag.toLowerCase()) // Convert repo tags to lowercase before comparison
-            )
-        );
-        setFilteredRepositories(filtered);
+        filterRepositories(searchTags);
     }, [searchTags]);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTags(event.target.value);
-        
     };
 
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        event.preventDefault();
-        const tags = searchTags.split(',').map(tag => tag.trim().toLowerCase());
-        const filtered = REPOSITORIES.filter(repo =>
-            repo.tags.some(tag => tags.includes(tag))
-        );
-        setFilteredRepositories(filtered);
-    };
+    const filterRepositories = debounce((tags: string) => {
+        if (!tags.trim()) {
+            setFilteredRepositories(REPOSITORIES);
+        } else {
+            const inputTags = tags.split(',').map(tag => tag.trim().toLowerCase());
+            const filtered = REPOSITORIES.filter(repo =>
+                repo.tags.some(repoTag =>
+                    inputTags.includes(repoTag.toLowerCase())
+                )
+            );
+            setFilteredRepositories(filtered);
+        }
+    }, 300); // Adjust debounce time as needed
 
     function handleClear() {
         setSearchTags('');
+        setFilteredRepositories(REPOSITORIES);
     }
+
+
     return (
         <main className="flex min-h-screen flex-col">
         <div className="page-title">
@@ -75,6 +77,7 @@ export default function Registry() {
                                                 className="input-field" 
                                                 value={searchTags} 
                                                 onChange={handleInputChange} 
+                                                placeholder="enter tags to search"
                                             />
                                             {searchTags !== '' &&
                                                 <button
@@ -85,10 +88,8 @@ export default function Registry() {
                                             }
                                         </div>
                                     </Grid>
-                                    <Grid item xs={6}>
-                                        <button style={{marginTop: '0px'}} onClick={handleClick}>Search</button>
-                                    </Grid>
-                                </Grid>
+                
+                               </Grid>
                             
                                 
                                 </div>
@@ -108,7 +109,7 @@ export default function Registry() {
                                             <Image src={repo.image} width="200" height="147" alt={repo.name} />
                                         </Grid>
                                         <Grid item xs={8}>
-                                        <Link href={repo.url}>
+                                        <Link href={repo.url} target="new">
                                           <div className="git-link">
                                                 <LinkIcon /> {repo.name}
                                                 </div>     
