@@ -11,7 +11,11 @@ export const  REPOSITORIES = [
         image: '/images/design-patterns/react-tanstack.png',
         name: 'react-tanstack',
         url:'https://github.com/hillriegel/react-tanstack/tree/main/src',
-        tags: ['react', 'configureStore', 'reducer', 'useDispatch', 'useSelector', 'tanstack', 'react-query', 'modal']
+        tags: ['react', 'configureStore', 'reducer', 'useDispatch', 'useSelector', 
+            'tanstack', 'react-query', 'modal', 'query caching', 'caching', 'queryKey', 'key',
+            'loading', 'useNavigate', 'useParams', 'fetch', 'formData', 'useQuery', 'useMutation',
+            'onError', 'onSettled', 'fetchQuery', 'loader', 'useNavigation', 'useNavigate', 'redirect'
+        ]
     },
     {
         id: 'p3',
