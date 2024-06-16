@@ -20,7 +20,6 @@ import GithubButton from './DesignComponents/GithubButton';
 import LinkButton from './DesignComponents/LinkButton';
 import HomeIcon from '@mui/icons-material/Home';
 import SvgBlob from './svg/SvgBlob';
-import SvgOval from './svg/SvgOval';
 
 interface CustomTooltipProps extends TooltipProps {
     className?: string;

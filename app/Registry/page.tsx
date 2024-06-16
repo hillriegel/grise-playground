@@ -101,28 +101,28 @@ export default function Registry() {
                         <h1>Matching Projects</h1>
 
                         <ul className="repo-list">
-                        {filteredRepositories && filteredRepositories.map((repo) => {
-                            return (
+                            {filteredRepositories && filteredRepositories.map((repo) => (
                                 <li key={repo.id} className="repo-item">
                                     <Grid container spacing={2}>
                                         <Grid item xs={4}>
-                                            <Image src={repo.image} width="200" height="147" alt={repo.name} />
+                                            <Image 
+                                                className="simage"
+                                                src={repo.image}
+                                                width="200" 
+                                                height="147" alt={repo.name} />
                                         </Grid>
                                         <Grid item xs={8}>
-                                        <Link href={repo.url} target="new">
-                                          <div className="git-link">
-                                                <LinkIcon /> {repo.name}
-                                                </div>     
-                                        </Link>
+                                            <Link href={repo.url} target="_blank" rel="noopener noreferrer"> {/* Improved link attributes for security and accessibility */}
+                                                <div className="git-link">
+                                                    <LinkIcon /> {repo.name}
+                                                </div>
+                                            </Link>
                                             {repo.tags.join(', ')}
                                         </Grid>
                                     </Grid>
-
                                 </li>
-                            )
-                        })}
+                            ))}
                         </ul>
-
                     </Grid>
                 </Grid>
 

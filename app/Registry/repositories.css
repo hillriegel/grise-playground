@@ -1,9 +1,21 @@
 .repo-list {
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two columns of equal width */
+    grid-gap: 20px; /* Adds space between the grid items */
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    margin: 20px 0; /* Adds vertical spacing around the list */
 }
 
+.repo-item {
+    border-radius: 4px;
+    background-color: #222222;
+    border: solid 1px #00525d;
+}
 .simage {
     border-radius: 4px;
+    border: solid 1px #00525d;
+    box-shadow: 0px 10% 15px rgba(0, 0, 0, 0.8);
 }
 
 .repo-item {

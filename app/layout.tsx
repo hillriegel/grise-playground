@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+
 import Button from '@mui/material/Button';
 import * as React from 'react';
 import Drawer from '@mui/material/Drawer';
@@ -11,12 +11,12 @@ import DrawerList from './DrawerList';
 import MenuIcon from '@mui/icons-material/Menu';
 import ThemeSwitcher from './DesignComponents/ThemeSwitcher';
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
 
   const [open, setOpen] = useState(false);
   

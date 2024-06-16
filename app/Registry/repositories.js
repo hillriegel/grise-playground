@@ -52,4 +52,12 @@ export const  REPOSITORIES = [
         url: 'https://github.com/hillriegel/forms',
         tags: ['forms', 'login', 'state']
     },
+
+    {
+        id: 'p8',
+        name: 'classes-oop',
+        image: '/images/design-patterns/classes-oop.png',
+        url: 'https://github.com/hillriegel/classes-oop',
+        tags: ['static', 'classes', 'factory pattern', 'getter', 'setter']
+    },
 ]
