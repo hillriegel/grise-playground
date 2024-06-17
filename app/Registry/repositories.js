@@ -68,4 +68,11 @@ export const  REPOSITORIES = [
         url: 'https://github.com/hillriegel/fashion-store',
         tags: ['useContext', 'useReducer', 'store', 'forwardRef', 'useImperativeHandle', 'useRef', 'createPortal', 'createContext']
     },
+    {
+        id: 'p10',
+        name: 'next-foodies',
+        image: '/images/design-patterns/next-foodies.png',
+        url: 'https://github.com/hillriegel/next-foodies',
+        tags: ['loading', 'layout', 'slideshow','Suspense','errors']
+    },
 ]

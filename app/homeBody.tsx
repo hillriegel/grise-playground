@@ -36,9 +36,7 @@ const CustomTooltip = styled(({ className, ...props }: CustomTooltipProps) => (
 });
 export default function Homebody() {
 
-
     return (
-
         <Box style={{marginTop: '-50px'}}>
         <div className="page-title">
             <h1><HomeIcon style={{marginBottom: '4px'}} /> &nbsp; Playground :: Home</h1>
