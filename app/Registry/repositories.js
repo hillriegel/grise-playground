@@ -63,7 +63,7 @@ export const  REPOSITORIES = [
 
     {
         id: 'p9',
-        name: 'use-context',
+        name: 'fashion-store',
         image: '/images/design-patterns/use-context.png',
         url: 'https://github.com/hillriegel/fashion-store',
         tags: ['useContext', 'useReducer', 'store', 'forwardRef', 'useImperativeHandle', 'useRef', 'createPortal', 'createContext']
