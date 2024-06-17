@@ -60,4 +60,12 @@ export const  REPOSITORIES = [
         url: 'https://github.com/hillriegel/classes-oop',
         tags: ['static', 'classes', 'factory pattern', 'getter', 'setter']
     },
+
+    {
+        id: 'p9',
+        name: 'use-context',
+        image: '/images/design-patterns/use-context.png',
+        url: 'https://github.com/hillriegel/fashion-store',
+        tags: ['useContext', 'useReducer', 'store', 'forwardRef', 'useImperativeHandle', 'useRef', 'createPortal', 'createContext']
+    },
 ]
