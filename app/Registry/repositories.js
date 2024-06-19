@@ -73,6 +73,9 @@ export const  REPOSITORIES = [
         name: 'next-foodies',
         image: '/images/design-patterns/next-foodies.png',
         url: 'https://github.com/hillriegel/next-foodies',
-        tags: ['loading', 'layout', 'slideshow','Suspense','errors']
+        tags: ['loading', 'layout', 'slideshow','Suspense','error','404','not found','dangerouslySet', 'dangerously',
+            'image input', 'useRef', 'refs', 'image preview', 'event.target.files', 'fileReader', 'dataUrl', 'use server', 'server function', 'formData', 'server action', 'slugify', 'xsx', 'fs', 'node:fs', 'arrayBuffer', 'better-sqlite3', 'redirect', 'next/navigation', 'useFormStatus', 'useFormState', 'validation', 'error',
+            'revalidatePath', 'dynamic metadata'
+        ]
     },
 ]
