@@ -1,8 +1,8 @@
-
 'use client'
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { 
     Grid,
     Box,
@@ -69,9 +69,15 @@ export default function Homebody() {
                                 </Typography>
                         } 
                         placement="top">
-                        <svg width="150" height="150" viewBox="0 0 50 50" style={{float: 'right', marginRight: '-30px'}}>
+                        <motion.svg 
+                            whileHover={{ scale: 1.1 }}
+                            transition={{type: 'spring', stiffness: 500}}
+                            width="150" 
+                            height="150" 
+                            viewBox="0 0 50 50" 
+                            style={{float: 'right', marginRight: '-30px'}}>
                             <SvgBlob  />
-                        </svg>
+                        </motion.svg>
                     </CustomTooltip> 
                     </div>
                 </Grid>
