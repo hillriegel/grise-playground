@@ -78,4 +78,11 @@ export const  REPOSITORIES = [
             'revalidatePath', 'dynamic metadata'
         ]
     },
+    {
+        id: 'p11',
+        name: 'react-animations',
+        image: '/images/design-patterns/react-animations.png',
+        url: 'https://github.com/hillriegel/react-animations',
+        tags: ['framer-motion', 'animate', 'motion','useScroll','useStransform','layout', 'AnimatePresence', 'key', 'stagger']
+    },
 ]
