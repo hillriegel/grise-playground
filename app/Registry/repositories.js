@@ -85,4 +85,25 @@ export const  REPOSITORIES = [
         url: 'https://github.com/hillriegel/react-animations',
         tags: ['framer-motion', 'animate', 'motion','useScroll','useStransform','layout', 'AnimatePresence', 'key', 'stagger']
     },
+    {
+        id: 'p12',
+        name: 'react-patterns',
+        image: '/images/design-patterns/react-patterns.png',
+        url: 'https://github.com/hillriegel/react-patterns',
+        tags: ['createContext', 'animate', 'motion','useScroll','useStransform','layout', 'AnimatePresence', 'key', 'stagger']
+    },
+    {
+        id: 'p13',
+        name: 'uber-eats',
+        image: '/images/design-patterns/uber-eats.png',
+        url: 'https://github.com/hillriegel/uber-eats',
+        tags: ['createContext', 'contextProvider', 'shopping cart','store','custom hooks','useCallback', 'sendHttpRequest', 'fetch']
+    },
+    {
+        id: 'p14',
+        name: 'currency-exchange',
+        image: '/images/design-patterns/currency-exchange.png',
+        url: 'https://github.com/hillriegel/currency-exchange',
+        tags: ['axios', 'fetch', 'api','private key','custom hooks']
+    },
 ]
