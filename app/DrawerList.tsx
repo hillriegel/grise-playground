@@ -80,13 +80,25 @@ interface DrawerListProps {
         }
       >
 
-          <ListItem key={"grisecon-streamer"} disablePadding>
+      <ListItem key={"map-my-life"} disablePadding>
             <Link href="/CustomComponents/GriseconStreamer">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
                     <DataObjectIcon className="drawer-menu-icon neutral" />
                 </ListItemIcon>
                 <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Music Streamer" />
+              </ListItemButton>
+          </Link>
+        </ListItem>
+
+        
+        <ListItem key={"map-my-life"} disablePadding>
+            <Link href="/CustomComponents/MapMyLife">
+              <ListItemButton className="drawer-menu-button">
+                <ListItemIcon>
+                    <DataObjectIcon className="drawer-menu-icon neutral" />
+                </ListItemIcon>
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Map My Life" />
               </ListItemButton>
           </Link>
         </ListItem>
