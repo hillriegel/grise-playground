@@ -1,0 +1,14 @@
+.board {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    border: solid 1px;
+    width: 70vw;
+    flex-wrap: wrap;
+    flex-flow: column-wrap;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+

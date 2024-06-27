@@ -1,11 +1,11 @@
 import ConstructionIcon from '@mui/icons-material/Construction';
-
+import Link from 'next/link';
 export default function LinkButton({ label, link }) {
 
     return (
         <div style={{marginTop: '30px'}}>
             <div className="link-button">
-                <a href={link} target="new"><ConstructionIcon style={{marginRight: '10px'}}/>{label}</a>
+                <Link href={link}><ConstructionIcon style={{marginRight: '10px'}}/>{label}</Link>
             </div>
         </div>
     )

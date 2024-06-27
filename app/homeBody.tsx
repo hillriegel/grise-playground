@@ -1,5 +1,4 @@
 'use client'
-
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -108,7 +107,32 @@ export default function Homebody() {
             <Grid container spacing={3}>
                 {/* COMPONENT CHALLENGE */}
                 <div style={{marginLeft: '40px', marginRight: '20px', marginTop: '20px', marginBottom: '40px'}}>
-                        <h2><ChairIcon /> &nbsp; Current Component Challenge :: June 2, 2024</h2>
+                        <h2><ChairIcon /> &nbsp; Current Component Challenge :: Jun 27, 2024</h2>
+                        <div className="challenge-blue" style={{padding: '30px'}}>
+                            <h2 className="white">Map My Life</h2>
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm={6} md={5}>
+                                    <Image src="/images/map_life.png" alt="Map My Life" height="100" width="500" className="image-border-thin"></Image>
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={7}>
+                                    <div style={{marginLeft: '30px'}}>
+                                    <p>Example of using a mapping library (Leaflet) to display points on a map.</p>
+                                    <LinkButton link="./CustomComponents/MapMyLife" label="View the progress here" />
+                                    
+        
+                                    <br />
+                                 </div>
+                                </Grid>
+                            </Grid>
+                        </div>
+                 </div>
+            </Grid>
+
+            <br />
+            <Grid container spacing={3}>
+                {/* COMPONENT CHALLENGE */}
+                <div style={{marginLeft: '40px', marginRight: '20px', marginTop: '20px', marginBottom: '40px'}}>
+                        <h2><ChairIcon /> &nbsp; Component Challenge</h2>
                         <div className="challenge-blue" style={{padding: '30px'}}>
                             <h2 className="white">Music Streamer</h2>
                             <Grid container spacing={2}>
@@ -169,7 +193,7 @@ export default function Homebody() {
                                     go negative... an obvious guardrail that I just didn't think of, because every time I tested I stopped decrementing when the value 
                                     got to zero.
                                     
-                                    <GithubButton link="https://pinochle-scorer.vercel.app/" label="pinochle-scorer" />
+                                    <GithubButton link="https://github.com/hillriegel/pinochle-scorer/" label="pinochle-scorer" />
                                     <br />
                                     Often my dining room table looks like a pinochle parlor. My mother and sister play a few quick games almost every day. They use a big stack of scratch paper and keep score by hand. Watching them scribble on the paper and keep track of the scores for different melds and then counting up the points from the tricks made me think there could be an easier way to do it with an app.
                                     </div>
@@ -194,7 +218,7 @@ export default function Homebody() {
                                 <div style={{marginLeft: '30px'}}>
                                     Create a MongoDB on Atlas, create an Express server and API that interacts with a simple
                                     user account management form in a client app.
-                                    <LinkButton link="./NodeFun/expressBackend" label="View the progress here" />
+                                    <LinkButton link="./NodeFun/ExpressBackend2" label="View the progress here" />
                                 </div>
                             </Grid>
                         </Grid>

@@ -16,14 +16,6 @@ export default function Registry() {
     const [searchTags, setSearchTags] = useState('');
     const [filteredRepositories, setFilteredRepositories] = useState(REPOSITORIES);
 
-    useEffect(() => {
-        filterRepositories(searchTags);
-    }, [searchTags]);
-
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchTags(event.target.value);
-    };
-
     const filterRepositories = debounce((tags: string) => {
         if (!tags.trim()) {
             setFilteredRepositories(REPOSITORIES);
@@ -37,6 +29,14 @@ export default function Registry() {
             setFilteredRepositories(filtered);
         }
     }, 300); // Adjust debounce time as needed
+
+    useEffect(() => {
+        filterRepositories(searchTags);
+    }, [searchTags, filterRepositories]);
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTags(event.target.value);
+    };
 
     function handleClear() {
         setSearchTags('');

@@ -103,6 +103,17 @@ interface DrawerListProps {
           </Link>
         </ListItem>
 
+        <ListItem key={"memory-cards"} disablePadding>
+            <Link href="/CustomComponents/MemoryCards">
+              <ListItemButton className="drawer-menu-button">
+                <ListItemIcon>
+                    <DataObjectIcon className="drawer-menu-icon neutral" />
+                </ListItemIcon>
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Memory Card Game" />
+              </ListItemButton>
+          </Link>
+        </ListItem>
+
         <ListItem key={"currencyEx"} disablePadding>
             <Link href="/CustomComponents/CurrencyConverter">
             <ListItemButton className="drawer-menu-button">
