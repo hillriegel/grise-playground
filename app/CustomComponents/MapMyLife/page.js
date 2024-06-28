@@ -67,6 +67,7 @@ export default function Home() {
         <br />
         <MapComponent />
         <br /><br />
+        <h1>Using Cesium 3D Mapping Library</h1>
         <CesiumViewer />
       </div>
     </main>
