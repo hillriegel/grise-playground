@@ -106,4 +106,25 @@ export const  REPOSITORIES = [
         url: 'https://github.com/hillriegel/currency-exchange',
         tags: ['axios', 'fetch', 'api','private key','custom hooks']
     },
+    {
+        id: 'p15',
+        name: 'tic-tac-toe',
+        image: '/images/design-patterns/tictactoe.png',
+        url: 'https:/https://github.com/hillriegel/tic-tac-toe',
+        tags: ['useState', 'useEffect', 'traverse nested', 'game']
+    },
+    {
+        id: 'p16',
+        name: 'memory-card-game',
+        image: '/images/design-patterns/memory-card-game.png',
+        url: 'https://github.com/hillriegel/memory-game',
+        tags: ['axios', 'fetch', 'api','private key','custom hooks']
+    },
+    {
+        id: 'p16',
+        name: 'whack-a-mole',
+        image: '/images/design-patterns/whack-a-mole.png',
+        url: 'https://github.com/hillriegel/whack-a-mole',
+        tags: ['nested timers', 'timer', 'setInterval','useRef','useState', 'useEffect']
+    },
 ]
