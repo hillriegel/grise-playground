@@ -1,8 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { Inter } from "next/font/google";
-
+import Script from 'next/script';
 import Button from '@mui/material/Button';
 import * as React from 'react';
 import Drawer from '@mui/material/Drawer';
@@ -27,6 +26,21 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="cesium-base-url"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.CESIUM_BASE_URL = '/cesium/';
+            `,
+          }}
+        />
+        <link
+          href="https://cesium.com/downloads/cesiumjs/releases/1.89/Build/Cesium/Widgets/widgets.css"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         <div tabIndex={0} className="header" style={{width: '100%', display: 'flex', alignItems: 'center'}} >
           <Grid container spacing={2} justifyContent="space-between">

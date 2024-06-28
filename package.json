@@ -1,11 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "build": "set CESIUM_BASE_URL=./cesium && next build",
+    "dev": "set CESIUM_BASE_URL=./cesium && next dev",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "start": "next start"
+    "start": "set CESIUM_BASE_URL=./cesium && next start"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -22,6 +22,7 @@
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
+    "cesium": "^1.118.2",
     "clsx": "^2.0.0",
     "framer-motion": "^11.2.10",
     "grisecon-mui": "^1.0.2",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.1",
+    "@types/cesium": "^1.70.0",
     "@types/lodash": "^4.17.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",

@@ -1,12 +1,29 @@
+"use client";
+
 import Image from "next/image";
 import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
 import Grid from '@mui/material/Grid';
 import ChairIcon from '@mui/icons-material/Chair';
+import { useEffect, useRef} from 'react';
+import { 
+  Viewer, 
+  Terrain, 
+  Ion, 
+  Cartesian3, 
+  Color,
+  HeightReference,
+  Math as CesiumMath, 
+  createOsmBuildingsAsync } from 'cesium';
+import "cesium/Build/Cesium/Widgets/widgets.css";
 
 
 const MapComponent = dynamic(() => import('./MapComponent.jsx'), {
   ssr: false,
+});
+
+const CesiumViewer = dynamic(() => import('./CesiumViewer.jsx'), { 
+  ssr: false 
 });
 
 export default function Home() {
@@ -49,6 +66,8 @@ export default function Home() {
         </Grid>
         <br />
         <MapComponent />
+        <br /><br />
+        <CesiumViewer />
       </div>
     </main>
   );
