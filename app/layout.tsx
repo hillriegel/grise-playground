@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid';
 import DrawerList from './DrawerList';
 import MenuIcon from '@mui/icons-material/Menu';
 import ThemeSwitcher from './DesignComponents/ThemeSwitcher';
+import "./globals.css";
 
 
 export default function RootLayout({
@@ -36,10 +37,23 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          id="load-css"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = '/themes/drinks/global.css';
+              document.head.appendChild(link);
+            `,
+          }}
+        />
         <link
           href="https://cesium.com/downloads/cesiumjs/releases/1.89/Build/Cesium/Widgets/widgets.css"
           rel="stylesheet"
         />
+       
       </head>
       <body>
         <div tabIndex={0} className="header" style={{width: '100%', display: 'flex', alignItems: 'center'}} >
