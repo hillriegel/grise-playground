@@ -3,30 +3,13 @@
 import { useState, useEffect } from 'react';
 import './Board.css';
 import Card from './Card';
-import { CardSymbols } from './CARD_SYMBOLS';
 
 
 
-export default function Board({setMatchesLeft}) {
 
-    const numCards = 20;
+export default function Board({setMatchesLeft, setAllMatched, cards, setCards}) {
 
-    const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
-
-    const selectedSymbols = shuffleArray([...CardSymbols]).slice(0, numCards/2);
-    
-
-    let allCards = [];
-
-    for (let i=0; i<numCards/2; i++) {
-        allCards.push(selectedSymbols[i])
-    }
-
-
-    const allSymbols = [...allCards, ...allCards];
-    const thisGameSymbols = shuffleArray(allSymbols);
-
-
+   
 
     const handleClickCard = (id) => {
         const clickedCard = cards.find((card) => card.id === id);
@@ -47,18 +30,14 @@ export default function Board({setMatchesLeft}) {
         }
     };
 
-    const initialCards = thisGameSymbols.map((item, index) => ({
-        id: index,
-        symbol:item,
-        isFlipped: false,
-        isMatched: false,
-      }));
 
-      const [cards, setCards] = useState(initialCards);
+     
       const [firstCard, setFirstCard] = useState(null);
       const [secondCard, setSecondCard] = useState(null);
 
-
+      useEffect(() => {
+       setAllMatched(cards.every(card => card.isMatched));
+      }, [cards, setAllMatched])
 
       useEffect(() => {
         if (firstCard && secondCard) {
@@ -68,6 +47,8 @@ export default function Board({setMatchesLeft}) {
                 card.symbol === firstCard.symbol ? { ...card, isMatched: true } : card
               )
             );
+
+
           } else {
             setTimeout(() => {
               setCards((prevCards) =>
@@ -86,16 +67,16 @@ export default function Board({setMatchesLeft}) {
 
 
         return (
-        <div className="board">
+          <div className="board">
 
-            {cards.map((card) => (
-                <Card
-                    key={card.id}
-                    flipped={card.isFlipped}
-                    onClick={() => handleClickCard(card.id)}
-                    value={card.symbol}
-                    />
-            ))}
-        </div>
+              {cards.map((card) => (
+                  <Card
+                      key={card.id}
+                      flipped={card.isFlipped}
+                      onClick={() => handleClickCard(card.id)}
+                      value={card.symbol}
+                      />
+              ))}
+          </div>
         )
     };

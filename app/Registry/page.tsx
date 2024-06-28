@@ -30,7 +30,7 @@ export default function Registry() {
         }
     }, 300); // Adjust debounce time as needed
 
-    useEffect(() => {
+        useEffect(() => {
         filterRepositories(searchTags);
     }, [searchTags, filterRepositories]);
 
