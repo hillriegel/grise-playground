@@ -121,10 +121,17 @@ export const  REPOSITORIES = [
         tags: ['axios', 'fetch', 'api','private key','custom hooks']
     },
     {
-        id: 'p16',
+        id: 'p17',
         name: 'whack-a-mole',
         image: '/images/design-patterns/whack-a-mole.png',
         url: 'https://github.com/hillriegel/whack-a-mole',
+        tags: ['nested timers', 'timer', 'setInterval','useRef','useState', 'useEffect']
+    },
+    {
+        id: 'p18',
+        name: 'snake-game',
+        image: '/images/design-patterns/snake-game.png',
+        url: 'https://github.com/hillriegel/snake-game',
         tags: ['nested timers', 'timer', 'setInterval','useRef','useState', 'useEffect']
     },
 ]

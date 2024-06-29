@@ -1,0 +1,49 @@
+.board {
+    width: 820px;
+    height: 820px;
+    border: solid 5px #32516e;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 820px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+  }
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+}
+
+.snakecell {
+    background-color: #459900;
+}
+
+.foodcell {
+    background-color: #e33307;
+}
+
+.pauseButton {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}

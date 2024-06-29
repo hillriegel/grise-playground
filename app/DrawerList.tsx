@@ -17,6 +17,8 @@ import ChairIcon from '@mui/icons-material/Chair';
 import HexagonIcon from '@mui/icons-material/Hexagon';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import PatternIcon from '@mui/icons-material/Pattern';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import GamepadOutlinedIcon from '@mui/icons-material/GamepadOutlined';
 
 interface DrawerListProps {
     toggleDrawer: (newOpen: boolean) => () => void;
@@ -68,6 +70,43 @@ interface DrawerListProps {
       </List>
   
   
+  
+
+    
+      <List 
+        sx={{ width: '100%', maxWidth: 360 }}
+        className="drawer-menu-list"
+        component="nav"
+        aria-labelledby="nested-list-subheader"
+        subheader={
+          <ListSubheader component="div" id="nested-list-subheader" className="drawer-menu-subheader" >
+             <SportsEsportsIcon  className="drawer-menu-icon"/> &nbsp; Games
+          </ListSubheader>
+        }
+      >
+        <ListItem key={"map-my-life"} disablePadding>
+            <Link href="/Games/MemoryCards">
+              <ListItemButton className="drawer-menu-button">
+                <ListItemIcon>
+                    <GamepadOutlinedIcon className="drawer-menu-icon neutral" />
+                </ListItemIcon>
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }}      className="drawer-menu-item-text" primary="Memory Card Game" />
+              </ListItemButton>
+          </Link>
+        </ListItem>
+
+        <ListItem key={"map-my-life"} disablePadding>
+            <Link href="/Games/Snake">
+              <ListItemButton className="drawer-menu-button">
+                <ListItemIcon>
+                    <GamepadOutlinedIcon className="drawer-menu-icon neutral" />
+                </ListItemIcon>
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }}      className="drawer-menu-item-text" primary="Snake" />
+              </ListItemButton>
+          </Link>
+        </ListItem>
+      </List>
+
       <List 
         sx={{ width: '100%', maxWidth: 360 }}
         className="drawer-menu-list"
@@ -99,17 +138,6 @@ interface DrawerListProps {
                     <DataObjectIcon className="drawer-menu-icon neutral" />
                 </ListItemIcon>
                 <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Map My Life" />
-              </ListItemButton>
-          </Link>
-        </ListItem>
-
-        <ListItem key={"memory-cards"} disablePadding>
-            <Link href="/CustomComponents/MemoryCards">
-              <ListItemButton className="drawer-menu-button">
-                <ListItemIcon>
-                    <DataObjectIcon className="drawer-menu-icon neutral" />
-                </ListItemIcon>
-                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Memory Card Game" />
               </ListItemButton>
           </Link>
         </ListItem>

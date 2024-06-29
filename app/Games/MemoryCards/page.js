@@ -3,8 +3,8 @@
 import Board from './components/Board.jsx';
 import Score from './components/Score.jsx';
 import { useState, useEffect } from 'react';
-import ChairIcon from '@mui/icons-material/Chair';
-import { CardSymbols } from './components/CARD_SYMBOLS';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import { CardSymbols } from './components/CARD_SYMBOLS.jsx';
 
 function App() {
 
@@ -48,13 +48,12 @@ function App() {
  
 
   return (
-    <main className="flex min-h-screen flex-col">
-    <div className="page-title">
-      <h1><ChairIcon style={{marginTop: '4px'}} /> &nbsp; React Components :: Memory Card Game</h1>
-    </div>
-    <br />
+      <main className="flex min-h-screen flex-col">
+      <div className="page-title">
+        <h1><SportsEsportsIcon style={{marginTop: '4px'}} /> &nbsp; Games :: Memory Cards</h1>
+      </div>
+      <br />
     <div className="main-content">
-        <h2>Memory Card Game</h2>
         <Score matchesLeft={matchesLeft} allMatched={allMatched} initializeGame={initializeGame} />
         <Board setMatchesLeft={setMatchesLeft} setAllMatched={setAllMatched} cards={cards} setCards={setCards} />
     </div>
