@@ -1,8 +1,8 @@
 .board {
-    width: 820px;
-    height: 820px;
+    width: 810px;
+    height: 810px;
     border: solid 5px #32516e;
-    background-color: #ffffff;
+    background-color: #a3ce8b;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -29,7 +29,7 @@
 .cell {
     width: 40px;
     height: 40px;
-    background-color: #ffffff;
+    background-color: #c9f1c9;
 }
 
 .snakecell {

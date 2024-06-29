@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 function ArrowKeyHandler({direction, setDirection}) {
     useEffect(() => {
         const handleKeyDown = (event) => {
+            event.preventDefault()
             setDirection((prevDirection) => {
                 switch (event.key) {
                     case 'ArrowUp':
