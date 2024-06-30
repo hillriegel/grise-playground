@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
         <div className="page-title">
-          <h1><SportsEsportsIcon style={{marginTop: '-14px'}} /> &nbsp; Games :: Smale</h1>
+          <h1><SportsEsportsIcon style={{marginTop: '-14px'}} /> &nbsp; Games :: Snake</h1>
         </div>
 
         <br />
