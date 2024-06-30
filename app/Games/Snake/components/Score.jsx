@@ -1,5 +1,7 @@
 export default function Score({ score }) {
     return (
-        <h2>Score: {score}</h2>
+        <div style={{fontSize: '2em'}}>
+            <h1>Score: {score}</h1>
+        </div>
     )
 }
