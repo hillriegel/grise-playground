@@ -88,15 +88,34 @@ export default function Homebody() {
                         and building custom components.
                     </p>
                         <GithubButton link="https://github.com/hillriegel/grise-playground" label="grise-playground" />
+
+         
+                            <Card className="blog-card" style={{marginLeft: '0px'}}>
+                            <div style={{display: 'flex', justifyContent: 'Space-between', alignContent: 'center', alignItems: 'center'}}>
+                                <div>  <h2>Weather App</h2>
+                                <span className="card-date">July 2, 2024</span><br />
+                                </div>
+                                
+                                 <LinkButton link="./CustomComponents/Weather" label="View the progress here" />
+                                </div>
+                                <br />
+                                <br />
+                                <Image 
+                                    src='/images/weather2.png' 
+                                    style={{borderRadius: '4px'}}
+                                    alt="weather app image" width="500" height="600" />
+                            </Card>
+                   
            
                         <Card className="blog-card" style={{marginLeft: '0px'}}>
                             <span className="card-date">May 18, 2024</span><br />
-                            <span className="card-title">I've been thinking a lot about this podcast I listened to today:</span><br />
-                            <br />
-                            <iframe  src="https://open.spotify.com/embed/episode/3118rHFjnVHBi1a5VRjuq1?utm_source=generator" 
-                                width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                                loading="lazy" style={{borderRadius: '4px'}}>
-                            </iframe>
+                            <span className="card-title">I've been thinking a lot about this podcast I listened to today:</span>
+                                <br />
+                                <br />
+                                <iframe  src="https://open.spotify.com/embed/episode/3118rHFjnVHBi1a5VRjuq1?utm_source=generator" 
+                                    width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                    loading="lazy" style={{borderRadius: '4px'}}>
+                                </iframe>
                         </Card>
                         </div>
                 </Grid>
@@ -108,7 +127,7 @@ export default function Homebody() {
                 {/* COMPONENT CHALLENGE */}
                 <div style={{marginLeft: '40px', marginRight: '20px', marginTop: '20px', marginBottom: '40px'}}>
                         <h2><ChairIcon /> &nbsp; Current Component Challenge :: Jun 27, 2024</h2>
-                        <div className="challenge-blue" style={{padding: '30px'}}>
+                        <div className="challenge-blue" style={{padding: '30px', width: '100%', border: 'solid 1px'}}>
                             <h2 className="white">Map My Life</h2>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={6} md={5}>
@@ -176,7 +195,7 @@ export default function Homebody() {
 
 
             {/* COMPONENT CHALLENGE */}
-            <div style={{marginRight: '20px', marginLeft: '20px'}}>
+            {/* <div style={{marginRight: '20px', marginLeft: '20px'}}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={12}>
                         <h2><ChairIcon /> &nbsp; Component Challenge</h2>
@@ -202,7 +221,7 @@ export default function Homebody() {
                         </div>
                     </Grid>
                 </Grid>
-            </div>
+            </div> */}
 
             <div style={{marginLeft: '20px', marginRight: '20px', marginTop: '30px'}}>
             <Grid container spacing={2}>

@@ -84,6 +84,18 @@ interface DrawerListProps {
           </ListSubheader>
         }
       >
+
+      <ListItem key={"map-my-life"} disablePadding>
+            <Link href="/Games/ConnectFour">
+              <ListItemButton className="drawer-menu-button">
+                <ListItemIcon>
+                    <GamepadOutlinedIcon className="drawer-menu-icon neutral" />
+                </ListItemIcon>
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }}      className="drawer-menu-item-text" primary="Connect Four" />
+              </ListItemButton>
+          </Link>
+        </ListItem>
+
         <ListItem key={"map-my-life"} disablePadding>
             <Link href="/Games/MemoryCards">
               <ListItemButton className="drawer-menu-button">
@@ -118,6 +130,18 @@ interface DrawerListProps {
           </ListSubheader>
         }
       >
+
+
+      <ListItem key={"map-my-life"} disablePadding>
+            <Link href="/CustomComponents/Weather">
+              <ListItemButton className="drawer-menu-button">
+                <ListItemIcon>
+                    <DataObjectIcon className="drawer-menu-icon neutral" />
+                </ListItemIcon>
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '0.9em', fontFamily: 'Radio Canada Big'} }} className="drawer-menu-item-text" primary="Weather" />
+              </ListItemButton>
+          </Link>
+        </ListItem>
 
       <ListItem key={"map-my-life"} disablePadding>
             <Link href="/CustomComponents/GriseconStreamer">

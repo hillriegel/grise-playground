@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+
+
+body {
+  background-color: #b2e6dd;
+  font-family: "Signika Negative", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.App {
+  padding: 40px;
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.clouds {
+  background-image: url('/images/weather/heaven-8173189_1280.jpg');
+}
+
+.rain {
+    background-image: url('/images/weather/clouds-4040132_1280.jpg');
+}
+
+.clear {
+  background-image: url('/images/weather/sun-3588618_1280.jpg');
+}
+
+.signika-negative-<uniquifier> {
+  font-family: "Signika Negative", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
