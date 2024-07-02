@@ -118,7 +118,7 @@ export const  REPOSITORIES = [
         name: 'memory-card-game',
         image: '/images/design-patterns/memory-card-game.png',
         url: 'https://github.com/hillriegel/memory-game',
-        tags: ['axios', 'fetch', 'api','private key','custom hooks']
+        tags: ['shuffleArray', 'shuffle', 'map','prev']
     },
     {
         id: 'p17',
