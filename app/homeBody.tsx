@@ -89,7 +89,20 @@ export default function Homebody() {
                     </p>
                         <GithubButton link="https://github.com/hillriegel/grise-playground" label="grise-playground" />
 
-         
+                        <Card className="blog-card" style={{marginLeft: '0px'}}>
+                          
+                            <h2>Astranis Demo</h2>
+                                <iframe
+                                src="https://astranis-satellites-demo-x.vercel.app/" 
+                                width="100%"
+                                height="500px"
+                                style={{
+                                    backgroundColor: '#ffffff', 
+                                    borderRadius: '8px',
+                                    boxShadow: '1px 2px 3px 3px rgba(0, 0, 0, 0.3)'}}
+                                />
+                         
+                        </Card>
                             <Card className="blog-card" style={{marginLeft: '0px'}}>
                             <div style={{display: 'flex', justifyContent: 'Space-between', alignContent: 'center', alignItems: 'center'}}>
                                 <div>  <h2>Weather App</h2>
