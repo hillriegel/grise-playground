@@ -52,16 +52,16 @@ body {
   align-items: flex-start; /* Aligns items to the top */
   position: relative;
   background-size: 30px 30px;
-  box-shadow: inset 0px 10px 8px -8px rgba(14, 101, 122, 0.4);
+  box-shadow: inset 0px 10px 8px -8px rgba(0, 0, 0, 0.4);
 }
  
 
 .main-container {
-  background-color: #404040;
+  background-color: #131415;
   height: 100vh;
   background: repeating-linear-gradient(
     45deg,
-    #2a2b2b 0px,
+    #000000 0px,
     #1c1c1c 4px
   );
   padding-top: 80px;
@@ -82,11 +82,12 @@ body {
     padding: 20px; 
     margin-left: -40px;
     width: 75%;
-    background-color: #155263;
+    /* background-color: #155263; */
+    border: solid 1px #00a5bb;
     border-radius: 4px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    background-image: repeating-linear-gradient(130deg, rgba(0,0,0,0.08),transparent,rgba(0,0,0,0.02),rgba(0,0,0,0.05),rgba(0,0,0,0.01),rgba(0,0,0,0.07),rgba(0,0,0,0.05),rgba(0,0,0,0.02),rgba(0,0,0,0.04),rgba(0,0,0,0.04),rgba(0,0,0,0.02),rgba(0,0,0,0.1),rgba(0,0,0,0.07),rgba(0,0,0,0.02),rgba(0,0,0,0.07) 3px),linear-gradient(220deg, rgb(70,193,211),rgb(21,82,99));
-}
+    /* background-image: repeating-linear-gradient(130deg, rgba(0,0,0,0.08),transparent,rgba(0,0,0,0.02),rgba(0,0,0,0.05),rgba(0,0,0,0.01),rgba(0,0,0,0.07),rgba(0,0,0,0.05),rgba(0,0,0,0.02),rgba(0,0,0,0.04),rgba(0,0,0,0.04),rgba(0,0,0,0.02),rgba(0,0,0,0.1),rgba(0,0,0,0.07),rgba(0,0,0,0.02),rgba(0,0,0,0.07) 3px),linear-gradient(220deg, rgb(70,193,211),rgb(21,82,99));*/
+} 
 
 .page-title h1 {
   color: #6fccde;

@@ -2,17 +2,17 @@ import { PortfolioData } from './types';
 
 export const PORTFOLIO_DATA: PortfolioData = {
     'sinch_rm': {
-        title: 'Sinch Report Manager',
+        title: 'SAP Report Manager',
         mainImg: '/images/portfolio/report_manager3.png',
         mainImgx: 580,
         mainImgy: 428,
-        mainImg_alt: 'Sinch Report Manager',
+        mainImg_alt: 'SAP Report Manager',
         description: 'Here&apos; some text about the Sinch Report Manager ',
         tags: ['JavaScript', 'jQUERY', 'Bootstrap', 'Authorization', 'Restful APIs', 'Data Visualization', 'Project Manager', 'CI/CD', 'Jira', 'Figma', 'Photoshop', 'Illustrator', 'Agile','Enterprise','0-1/Greenfield', 'Complete Redesign', 'Authorization'],
         imageSet: [
             { 
                 link: '/images/portfolio/report_manager1.png', 
-                text: `<h2>The Sinch Report Manager</h2> The Report Manager has been rebranded three times in 
+                text: `<h2>The SAP Report Manager</h2> The Report Manager has been rebranded three times in 
                     the 10+ years that I worked on it. It was initially the Sybase Unified Platform and then became the SAP Report Manager. It went through many stages and iterations
                     with added functionality each time. 
                     <p>I worked on one mammoth project for 10 years.</p> 
