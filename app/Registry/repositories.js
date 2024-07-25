@@ -134,4 +134,11 @@ export const  REPOSITORIES = [
         url: 'https://github.com/hillriegel/snake-game',
         tags: ['nested timers', 'timer', 'setInterval','useRef','useState', 'useEffect']
     },
+    {
+        id: 'p19',
+        name: 'mpas-react-router',
+        image: '/images/design-patterns/mpas-react-router.png',
+        url: './Registry/code/reactRouter',
+        tags: ['react-router', 'RouterProvider', 'createBrowserRouter','page-parms','useParams', 'RootLayout', 'children']
+    },
 ]

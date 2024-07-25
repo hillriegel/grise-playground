@@ -112,7 +112,8 @@ export default function Registry() {
                                                 height="147" alt={repo.name} />
                                         </Grid>
                                         <Grid item xs={8}>
-                                            <Link href={repo.url} target="_blank" rel="noopener noreferrer"> {/* Improved link attributes for security and accessibility */}
+                                            {/* Improved link attributes for security and accessibility */}
+                                            <Link href={repo.url} target="_blank" rel="noopener noreferrer"> 
                                                 <div className="git-link">
                                                     <LinkIcon /> {repo.name}
                                                 </div>
