@@ -35,9 +35,9 @@ interface DrawerListProps {
             <Link href="/">
               <ListItemButton className="drawer-menu-button">
                 <ListItemIcon>
-                  <HomeIcon className="drawer-menu-icon de-emphasis"/>
+                  <HomeIcon className="drawer-menu-icon alt-emphasis"/>
                 </ListItemIcon>
-                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1.1em', fontFamily: 'Freeman' } }} className="drawer-menu-subheader-text de-emphasis" primary="Home" />
+                <ListItemText sx={{ '& .MuiTypography-root': { fontSize: '1.1em', fontFamily: 'Freeman' } }} className="drawer-menu-subheader-text alt-emphasis" primary="Home" />
               </ListItemButton>
             </Link>
           </ListItem>

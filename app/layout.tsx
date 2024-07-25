@@ -10,7 +10,7 @@ import DrawerList from './DrawerList';
 import MenuIcon from '@mui/icons-material/Menu';
 import ThemeSwitcher from './DesignComponents/ThemeSwitcher';
 import "./globals.css";
-
+import Link from 'next/link';
 
 export default function RootLayout({
   children,
@@ -64,17 +64,13 @@ export default function RootLayout({
               </Button> 
             </Grid>
             <Grid item xs style={{ marginLeft: '10px', fontSize: '1.5rem' }} className="neutral">
-              <div style={{marginLeft: '10px', fontSize: '1.5rem'}} className="neutral">:: playground ::</div>
+             <Link href="./"><div style={{marginLeft: '10px', fontSize: '1.5rem'}} className="neutral">:: playground ::</div></Link>
             </Grid>
             <Grid item sm={3} style={{textAlign: 'right', marginRight: '40px'}} >
               <ThemeSwitcher />
             </Grid>
           </Grid>
           </div>
-
-
-
-    
         <div>
         
         <Drawer open={open} onClose={toggleDrawer(false)} >
