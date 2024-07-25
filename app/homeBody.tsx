@@ -57,7 +57,7 @@ export default function Homebody() {
                     </Card>
                     <div className="left-quote" style={{marginTop: '100px'}}>
                         <h1>I'm a lifelong learner</h1>
-                        This project is my playground for expirementing, solving puzzles and challenges, and trying out new techniques.
+                        This project is my playground for experimenting, solving puzzles and challenges, and trying out new techniques.
                   
                         <CustomTooltip
                             title={
