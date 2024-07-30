@@ -1,11 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "build": "set CESIUM_BASE_URL=./cesium && next build",
-    "dev": "set CESIUM_BASE_URL=./cesium && next dev",
+    "build": "next build",
+    "dev": "next dev",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "start": "set CESIUM_BASE_URL=./cesium && next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -46,6 +47,9 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
     "@types/bcrypt": "^5.0.1",
     "@types/cesium": "^1.70.0",
     "@types/lodash": "^4.17.1",
@@ -53,10 +57,16 @@
     "@types/react-dom": "18.2.14",
     "@types/react-slick": "^0.23.13",
     "@vercel/style-guide": "^5.0.1",
+    "babel-jest": "^29.7.0",
+    "cross-fetch": "^4.0.0",
     "eslint": "^8.52.0",
     "eslint-config-next": "^14.0.0",
     "eslint-config-prettier": "9.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "million": "^3.1.7",
+    "node-fetch": "^3.3.2",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "0.5.4"
   },

@@ -141,4 +141,11 @@ export const  REPOSITORIES = [
         url: './Registry/code/reactRouter',
         tags: ['react-router', 'RouterProvider', 'createBrowserRouter','page-parms','useParams', 'RootLayout', 'children']
     },
+    {
+        id: 'p20',
+        name: 'intersection-observer',
+        image: '/images/design-patterns/mpas-react-router.png',
+        url: './Registry/code/intersectionObserver',
+        tags: ['intersection', 'observer', 'transform', 'entries', 'children', 'useRef', 'useState', 'useEffect']
+    },
 ]

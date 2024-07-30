@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-const clientId = '50c77600e4654f609b16f21933b7e5c3'; // Replace with your client ID
+const clientId = '50c77600e4654f609b16f21933b7e5c3';
 
 const clientSecret = process.env.NEXT_PUBLIC_SPOTIFY_API_SECRET;
 
