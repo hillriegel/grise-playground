@@ -89,7 +89,7 @@ export const  REPOSITORIES = [
         id: 'p12',
         name: 'react-patterns',
         image: '/images/design-patterns/react-patterns.png',
-        url: 'https://github.com/hillriegel/react-patterns',
+        url: 'https://github.com/hillriegel/rtgl-react-patterns',
         tags: ['design patterns', 'accordion', 'searchable','createContext','useContext','useRef']
     },
     {
