@@ -28,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Grisecon's Playground</title>
         <Script
           id="cesium-base-url"
           strategy="beforeInteractive"

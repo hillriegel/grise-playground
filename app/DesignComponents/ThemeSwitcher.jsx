@@ -50,7 +50,7 @@ const ThemeSwitcher = () => {
   return (
     <FormControlLabel
       control={<Switch checked={isDrinksMode} onChange={toggleTheme} style={{ color: '#338b9c' }} />}
-      label={isDrinksMode ? <LiquorIcon /> : <CakeIcon />}
+      label={isDrinksMode ? <LiquorIcon role="button" aria-label="drinks mode"/> : <CakeIcon role="button" aria-label="cake mode" />}
       labelPlacement="start"
       style={{ marginLeft: isDrinksMode ? '0' : 'auto', marginRight: isDrinksMode ? 'auto' : '0' }}
       className="neutral"

@@ -87,20 +87,21 @@ export default function Homebody() {
                         This Next.js app is my playground for exploring ideas, having fun with UI, demonsrating Redux, MongoDB/Atlas, Material-UI, 
                         and building custom components.
                     </p>
-                        <GithubButton link="https://github.com/hillriegel/grise-playground" label="grise-playground" />
+                        <GithubButton link="https://github.com/hillriegel/grise-playground" label="grise-playground" aria-label="view source code button" />
 
                         <Card className="blog-card" style={{marginLeft: '0px'}}>
                           
                             <h2>Astranis Demo</h2>
                                 <iframe
-                                src="https://astranis-satellites-demo-x.vercel.app/" 
-                                width="100%"
-                                height="500px"
-                                style={{
-                                    backgroundColor: '#ffffff', 
-                                    borderRadius: '8px',
-                                    boxShadow: '1px 2px 3px 3px rgba(0, 0, 0, 0.3)'}}
-                                />
+                                    aria-label="Astranis Demo"
+                                    src="https://astranis-satellites-demo-x.vercel.app/" 
+                                    width="100%"
+                                    height="500px"
+                                    style={{
+                                        backgroundColor: '#ffffff', 
+                                        borderRadius: '8px',
+                                        boxShadow: '1px 2px 3px 3px rgba(0, 0, 0, 0.3)'}}
+                                    />
                          
                         </Card>
                             <Card className="blog-card" style={{marginLeft: '0px'}}>
@@ -109,7 +110,7 @@ export default function Homebody() {
                                 <span className="card-date">July 2, 2024</span><br />
                                 </div>
                                 
-                                 <LinkButton link="./CustomComponents/Weather" label="View the progress here" />
+                                 <LinkButton link="./CustomComponents/Weather" label="View the progress here" aria-label="view source code button" />
                                 </div>
                                 <br />
                                 <br />
@@ -125,7 +126,9 @@ export default function Homebody() {
                             <span className="card-title">I've been thinking a lot about this podcast I listened to today:</span>
                                 <br />
                                 <br />
-                                <iframe  src="https://open.spotify.com/embed/episode/3118rHFjnVHBi1a5VRjuq1?utm_source=generator" 
+                                <iframe  
+                                    aria-label='podcast'
+                                    src="https://open.spotify.com/embed/episode/3118rHFjnVHBi1a5VRjuq1?utm_source=generator" 
                                     width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                                     loading="lazy" style={{borderRadius: '4px'}}>
                                 </iframe>
@@ -149,7 +152,7 @@ export default function Homebody() {
                                 <Grid item xs={12} sm={6} md={7}>
                                     <div style={{marginLeft: '30px'}}>
                                     <p>Example of using a mapping library (Leaflet) to display points on a map.</p>
-                                    <LinkButton link="./CustomComponents/MapMyLife" label="View the progress here" />
+                                    <LinkButton link="./CustomComponents/MapMyLife" label="View the progress here" aria-label="view source code button" />
                                     
         
                                     <br />
@@ -176,7 +179,7 @@ export default function Homebody() {
                                     The main component of this project is a streaming component that sits in an iframe. The learning step was setting
                                     up a serverless function within the Next app... configuring the environment variables, the email SMTP server, etc.
                                     
-                                    <GithubButton link="https://grisecon-mobile-portfolio.vercel.app/" label="grisecon-music-streamer" />
+                                    <GithubButton link="https://grisecon-mobile-portfolio.vercel.app/" label="grisecon-music-streamer"  aria-label="view source code button"/>
                                     <br />
                                  </div>
                                 </Grid>
@@ -196,7 +199,9 @@ export default function Homebody() {
                 </Grid>
                 <Grid item xs={12} sm={7} md={7}>
                     <Card className="blog-card" >
-                        <iframe  src="https://open.spotify.com/embed/playlist/0S11n0bev4lQ0LKbcvMYmC?utm_source=generator" 
+                        <iframe  
+                            aria-label='chillout playlist'
+                            src="https://open.spotify.com/embed/playlist/0S11n0bev4lQ0LKbcvMYmC?utm_source=generator" 
                             width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                             loading="lazy">
                         </iframe>
@@ -250,7 +255,7 @@ export default function Homebody() {
                                 <div style={{marginLeft: '30px'}}>
                                     Create a MongoDB on Atlas, create an Express server and API that interacts with a simple
                                     user account management form in a client app.
-                                    <LinkButton link="./NodeFun/ExpressBackend2" label="View the progress here" />
+                                    <LinkButton link="./NodeFun/ExpressBackend2" label="View the progress here" aria-label="view source code button" />
                                 </div>
                             </Grid>
                         </Grid>
